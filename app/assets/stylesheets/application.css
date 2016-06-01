@@ -1,0 +1,135 @@
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, h3, p, form,
+fieldset, label, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}*/
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main {
+  position:fixed;
+  padding:0;
+  margin:0;
+
+  top:0;
+  left:0;
+
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, #0052cc, #33cccc);
+}
+
+.form-signin {
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  margin-left: auto ;
+  margin-right: auto ;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: #eee;
+}
+
+.signin-input{
+  width: 340px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #bbb;
+
+}
+
+.signin-header {
+  width: 600px;
+  height: 140px;
+  position: relative;
+  text-align: center;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+.signin-header h2{
+  font-size: 30px;
+  color: white;
+  font-family: "Monsato", sans-serif;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+
+.signin-header h3{
+  font-size: 25px;
+  color: white;
+  font-family: "Monsato", sans-serif;
+}
+
+.signin-field {
+  padding: 1px;
+}
+
+.signin-submit {
+  width: 340px;
+  height: 40px;
+  background: linear-gradient(to top right, #000, #2646C7);
+  border-radius: 2px;
+  border: 1px solid #bbb;
+  position: relative;
+  top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.signin-login{
+  position: relative;
+  top: 50px;
+}
+.signin-label {
+  font-size: 12px;
+  color: #666666;
+  float: left;
+  position: relative;
+  left: 27px;
+}
