@@ -84,11 +84,11 @@ var LoginForm = React.createClass({
 	render: function () {
     var navLink;
     if (this.formType() === "login") {
-      navLink = <Link to="/signup">Sign up</Link>;
+      navLink = <Link className='login-link' to="/signup">Join now</Link>;
 			return (
         <div className='login'>
           <div className='login-header'>
-            <h3>Welcome to TunedIn! Please { this.formType() } or { navLink }</h3>
+          <h2></h2>
           </div>
         <div className="form-login">
   				<form onSubmit={this.handleSubmit}>
@@ -96,20 +96,23 @@ var LoginForm = React.createClass({
   					{ this.fieldErrors("base") }
 
   					<br />
-  					<label className='lohin-label'> Email </label> <br />
+  					<label className='login-label'> Email </label> <br />
   						{ this.fieldErrors("email") }
   						<input className="login-input" type="text" valueLink={this.linkState("email")} />
 
 
   					<br />
-  					<label className='lohin-label'> Password </label> <br />
+  					<label className='login-label'> Password </label> <br />
   						{ this.fieldErrors("password") }
   						<input className="login-input" type="password" valueLink={this.linkState("password")} />
 
 
   					<br />
-  					<input className="login-input" type="submit" value="Submit" />
+  					<input className="login-submit" type="submit" value="Sign In" />
   				</form>
+          <div className='login-signin'>
+            <h3>Not a member? {navLink}</h3>
+          </div>
           </div>
         </div>
 			);
