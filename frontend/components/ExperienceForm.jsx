@@ -1,6 +1,7 @@
+// var ProfileApiUtil = require('../util/profile_api_util');
+var React = require('react');
 
-
-module.exports = createClass({
+module.exports = React.createClass({
   getInitialState: function () {
     return {company: "", title: "", location: "", description: ""};
   },
@@ -27,7 +28,7 @@ module.exports = createClass({
 
   handleSubmit: function (event) {
     event.preventDefault();
-    ExperienceApiUtil.create(this.state);
+    ProfileApiUtil.createExperience(this.state);
   },
 
   render: function () {

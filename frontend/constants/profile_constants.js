@@ -1,7 +1,7 @@
 var ProfileConstants = {
-  GET_POSTS: "GET_POSTS",
-	CREATE_POST: "CREATE_POST",
-  REMOVE_POST: "REMOVE_POST"
+  GET_FORMS: "GET_FORMS",
+	CREATE_FORM: "CREATE_FORM",
+  REMOVE_FORM: "REMOVE_FORM"
 };
 
 module.exports = ProfileConstants;

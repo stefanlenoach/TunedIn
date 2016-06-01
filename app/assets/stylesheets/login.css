@@ -13,7 +13,8 @@
   top: 200px;
 }
 .login-header {
-  position: absolute;
+  float: left;
+  position: relative;
   width: 350px;
   height: 200px;
   left: 720px;
