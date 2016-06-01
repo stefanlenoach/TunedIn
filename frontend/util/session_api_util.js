@@ -12,7 +12,6 @@ var SessionApiUtil = {
         SessionActions.receiveCurrentUser(currentUser);
       },
 			error: function (xhr) {
-				debugger
 			  console.log("Login error in SessionApiUtil#login");
         var errors = xhr.responseJSON;
 	      ErrorActions.setErrors("login", errors);

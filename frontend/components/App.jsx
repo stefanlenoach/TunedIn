@@ -3,19 +3,20 @@ var Link = require('react-router').Link;
 var SessionStore = require('./../stores/session_store');
 var SessionApiUtil = require('./../util/session_api_util');
 
+var ProfileForm = require('./ProfileForm');
+
 var App = React.createClass({
 
   componentDidMount: function () {
+    SessionApiUtil.fetchCurrentUser();
     SessionStore.addListener(this.forceUpdate.bind(this));
   },
 
   greeting: function(){
     if (SessionStore.isUserLoggedIn()) {
-
     	return (
     		<hgroup>
-    			<h2>Hi, {SessionStore.currentUser().first_name}!</h2>
-    			<input type="submit" value="logout" onClick={ SessionApiUtil.logout } />
+          <ProfileForm/>
     		</hgroup>
     	);
     } else if (["/login", "/signup"].indexOf(this.props.location.pathname) === -1) {
@@ -36,6 +37,7 @@ var App = React.createClass({
           { this.greeting() }
         </header>
         {this.props.children}
+
       </div>
     );
   }
