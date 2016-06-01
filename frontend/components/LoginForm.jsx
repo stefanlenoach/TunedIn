@@ -114,7 +114,7 @@ var LoginForm = React.createClass({
         </div>
 			);
     } else {
-      navLink = <Link to="/login">Sign in</Link>;
+      navLink = <Link className= 'signin-link' to="/login">Sign in</Link>;
 
 
 			return (
@@ -159,7 +159,7 @@ var LoginForm = React.createClass({
   				<input className="signin-submit" type="submit" value="Join now" />
 
           <div className='signin-login'>
-            <h3>Already on TunedIn? { navLink }</h3>
+            <h3>Already on TunedIn? {navLink}</h3>
           </div>
   				</form>
           </div>

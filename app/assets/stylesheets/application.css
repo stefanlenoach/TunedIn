@@ -26,7 +26,7 @@ img {
   height: auto;
 }
 
-/*input[type="password"],
+input[type="password"],
 input[type="email"],
 input[type="text"],
 input[type="submit"],
@@ -39,7 +39,7 @@ button {
 button,
 input[type="submit"] {
   cursor: pointer;
-}*/
+}
 
 /* Clearfix */
 
@@ -59,7 +59,7 @@ main {
 
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top right, #0052cc, #33cccc);
+  background: linear-gradient(to top right, #2343AD, #33cccc);
 }
 
 .form-signin {
@@ -79,6 +79,8 @@ main {
   height: 30px;
   border-radius: 2px;
   border: 1px solid #bbb;
+  font-size: 17px;
+  padding-left: 7px;
 
 }
 
@@ -112,12 +114,12 @@ main {
 .signin-submit {
   width: 340px;
   height: 40px;
-  background: linear-gradient(to top right, #000, #2646C7);
-  border-radius: 2px;
-  border: 1px solid #bbb;
+  background: linear-gradient(to top right, #287bbc, #287aaa);
+  border-radius: 4px;
+  border: 1px solid #1b5480;
   position: relative;
   top: 30px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: white;
 }
@@ -125,7 +127,13 @@ main {
 .signin-login{
   position: relative;
   top: 50px;
+  font-size: 16px;
 }
+
+.signin-link {
+  color: blue;
+}
+
 .signin-label {
   font-size: 12px;
   color: #666666;
