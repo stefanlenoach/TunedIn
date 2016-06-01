@@ -1,0 +1,81 @@
+.form-login {
+  width: 455px;
+  height: 340px;
+  text-align: center;
+  margin-left: auto ;
+  margin-right: auto ;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: #eee;
+  background: rgba(238, 238, 238, 0.9);
+  position: relative;
+  top: 200px;
+}
+.login-header {
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  left: 720px;
+  top: 150px;
+  z-index: 1000;
+  background-image: url("TunedIn-logo.png");
+  background-repeat:no-repeat;
+  background-position: center center;
+
+}
+
+.login-input {
+  background: rgba(255, 255, 255, 1);
+  width: 340px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #bbb;
+  font-size: 17px;
+  padding-left: 7px;
+  opacity: 200;
+  position:relative;
+  top: 110px;
+}
+
+.login-submit {
+  width: 340px;
+  height: 40px;
+  background: linear-gradient(to top right, #287bbc, #287aaa);
+  border-radius: 4px;
+  border: 1px solid #1b5480;
+  position: relative;
+  top: 130px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+.login-submit:hover {
+  background: #1b5666;
+}
+
+.login-link {
+  color: #999999;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+.signin-link:hover {
+  text-decoration: underline;
+}
+
+.login-signin{
+  position: relative;
+  top: 150px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.login {
+  background-image: url("live-band.jpg");
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  height: 850px;
+}

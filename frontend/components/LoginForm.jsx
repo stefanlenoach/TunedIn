@@ -88,7 +88,6 @@ var LoginForm = React.createClass({
 			return (
         <div className='login'>
           <div className='login-header'>
-          <h2></h2>
           </div>
         <div className="form-login">
   				<form onSubmit={this.handleSubmit}>
@@ -96,15 +95,13 @@ var LoginForm = React.createClass({
   					{ this.fieldErrors("base") }
 
   					<br />
-  					<label className='login-label'> Email </label> <br />
   						{ this.fieldErrors("email") }
-  						<input className="login-input" type="text" valueLink={this.linkState("email")} />
+  						<input className="login-input" type="text" placeholder="Email Address" valueLink={this.linkState("email")} />
 
-
+              <br />
   					<br />
-  					<label className='login-label'> Password </label> <br />
   						{ this.fieldErrors("password") }
-  						<input className="login-input" type="password" valueLink={this.linkState("password")} />
+  						<input className="login-input" type="password" placeholder="Password" valueLink={this.linkState("password")} />
 
 
   					<br />
@@ -123,7 +120,7 @@ var LoginForm = React.createClass({
 			return (
         <div className='signin'>
           <div className='signin-header'>
-            <h2>TunedIn</h2>
+            <h2></h2>
             <h3>Make the most of your professional life</h3>
           </div>
         <div className='form-signin'>
@@ -157,7 +154,8 @@ var LoginForm = React.createClass({
     				{ this.fieldErrors("password") }
     				<input className="signin-input" type="password" valueLink={this.linkState("password")} />
           </div>
-
+          <br />
+          <p>By clicking Join now, you agree to TunedIn's User Agreement, Privacy Policy, and Cookie Policy.</p>
   				<br />
   				<input className="signin-submit" type="submit" value="Join now" />
 
