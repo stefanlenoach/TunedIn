@@ -1,6 +1,8 @@
 class Api::ExperiencesController < ApplicationController
 
-
+  def index
+    @exps = Experience.all
+  end
 
   def show
   end

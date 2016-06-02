@@ -2,7 +2,6 @@ var ProfileActions = require('../actions/profile_actions');
 
 module.exports = {
   getExperiences: function (formData) {
-
     $.ajax({
       url: '/api/experiences',
       dataType: 'json',

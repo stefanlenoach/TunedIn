@@ -7,20 +7,9 @@ var ErrorStore = require('../stores/error_store');
 var ProfileApiUtil = require('../util/profile_api_util');
 var SessionStore = require('../stores/session_store');
 var SessionApiUtil = require('../util/session_api_util');
+var ExpIndex = require('./ExpIndex');
+
 module.exports = React.createClass ({
-  getInitialState: function () {
-    return {forms: [] };
-  },
-
-  componentDidMount: function () {
-    this.formListener = ProfileStore.addListener(this.onChange);
-    this.setState( {forms: ProfileStore.all() } );
-  },
-
-  componentWillUnmount: function () {
-    this.formListener.remove();
-  },
-
   createExp: function (event) {
     event.preventDefault();
 
@@ -41,11 +30,7 @@ module.exports = React.createClass ({
           onClick={this.createExp}>+ Add position</button>&nbsp;
 
           <div className='exp-items'>
-            {
-              this.state.forms.map(function(form){
-                <ExpItem
-              })
-            }
+            <ExpIndex/>
           </div>
 
         </div>

@@ -1,3 +1,56 @@
 // Place all the styles related to the Experiences controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.exp-sec {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  border: 1px solid #ddd;
+  height: 100%;
+  width: 650px;
+  z-index: 5;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #aaa;
+  font-weight: lighter;
+  top: 300px;
+}
+
+.exp-sec h2{
+  padding: 30px;
+}
+
+.exp-item-show{
+  position: relative;
+  bottom: 50px;
+  border-bottom: 1px solid #bbb;
+  font-weight: normal;
+  padding: 30px;
+}
+
+.exp-title{
+  font-size: 20px;
+  color: black;
+
+  padding: 3px;
+}
+
+.exp-company-name{
+  font-size: 18px;
+  color: #666;
+  padding: 3px;
+
+}
+
+.exp-location{
+  font-size: 14px;
+  color: #999;
+  padding: 3px;
+}
+
+.exp-description{
+  font-size: 14px;
+  color: black;
+  padding: 3px;
+}

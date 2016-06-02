@@ -1,6 +1,7 @@
 // var ProfileApiUtil = require('../util/profile_api_util');
 var React = require('react');
 var ProfileApiUtil = require('../util/profile_api_util');
+
 module.exports = React.createClass({
   getInitialState: function () {
     return {user_id: "", company_name: "", title: "", location: "", description: ""};

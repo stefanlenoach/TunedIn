@@ -9,21 +9,21 @@ module.exports = {
 
   fetchForms: function (forms) {
     AppDispatcher.dispatch({
-      actionType: ProfileConstants.GET_POSTS,
+      actionType: ProfileConstants.GET_FORMS,
       forms: forms
     });
   },
 
   receiveForm: function (form) {
     AppDispatcher.dispatch({
-      actionType: ProfileConstants.CREATE_POST,
+      actionType: ProfileConstants.CREATE_FORM,
       form: form
     });
   },
 
   removeForm: function (form) {
     AppDispatcher.dispatch({
-      actionType: ProfileConstants.REMOVE_POST,
+      actionType: ProfileConstants.REMOVE_FORM,
       form: form
     });
   }
