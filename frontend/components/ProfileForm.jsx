@@ -21,13 +21,40 @@ module.exports = React.createClass ({
     this.formListener.remove();
   },
 
+  createExp: function (event) {
+    event.preventDefault();
+
+  },
+
   render: function () {
     return (
-      <div>
-      <h2>Hi, {SessionStore.currentUser().first_name}!</h2>
-      <input type="submit" value="logout" onClick={ SessionApiUtil.logout } />
+      <div className='profile'>
+        <nav className='mainnav'>
+        </nav>
 
-      <ExperienceForm/>
+        <nav className='subnav'>
+        </nav>
+
+        <div className='exp-sec'>
+          <h2>Experience</h2>
+          <button className='add-exp-btn'
+          onClick={this.createExp}>+ Add position</button>&nbsp;
+
+          <div className='exp-items'>
+            {
+              this.state.forms.map(function(form){
+                <ExpItem
+              })
+            }
+          </div>
+
+        </div>
+        <div className='profile-main'>
+          <h2>Hi, {SessionStore.currentUser().first_name}!</h2>
+          <input type="submit" value="logout" onClick={ SessionApiUtil.logout } />
+
+          <ExperienceForm/>
+        </div>
       </div>
     );
   }

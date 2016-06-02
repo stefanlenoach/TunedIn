@@ -1,0 +1,56 @@
+
+
+.mainnav {
+  height: 45px;
+  background: #333;
+  background-image: -webkit-linear-gradient(top, #555555 0%,#515151 18%,#373737 85%,#333333 100%);
+}
+
+.subnav {
+  height: 30px;
+  background: #222;
+}
+
+.profile {
+  background: #eee;
+  height: 100%;
+  margin: 0px;
+}
+
+.exp-sec {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  border: 1px solid #ddd;
+  height: 100%;
+  width: 650px;
+  z-index: 5;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #aaa;
+  font-weight: lighter;
+  top: 300px;
+}
+
+.exp-sec h2{
+  padding: 15px;
+}
+
+.add-exp-btn {
+  float: right;
+  font-size: 15px;
+  background: #eee;
+  color: #444;
+  padding: 6px;
+  font-weight:normal;
+  position: relative;
+  right: 20px;
+  bottom: 45px;
+}
+
+.add-exp-btn:hover {
+  transition: background-color 0.5s ease;
+  background-color: #66d9ff;
+  color: white;
+}
