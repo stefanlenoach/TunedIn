@@ -7,6 +7,10 @@
   background-image: -webkit-linear-gradient(top, #555555 0%,#515151 18%,#373737 85%,#333333 100%);
 }
 
+.navbar{
+  position: relative;
+}
+
 .subnav {
   height: 30px;
   background: #222;

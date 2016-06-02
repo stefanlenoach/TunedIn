@@ -44,7 +44,8 @@ function _ensureLoggedIn(nextState, replace, asyncDoneCallback) {
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-  Modal.setAppElement(document.main);
+  var profileNode = document.body;
+  Modal.setAppElement(profileNode);
   var root = document.getElementById('content');
   ReactDOM.render(Router, root);
 });
