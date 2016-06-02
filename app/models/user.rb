@@ -1,4 +1,3 @@
-require 'byebug'
 
 class User < ActiveRecord::Base
 

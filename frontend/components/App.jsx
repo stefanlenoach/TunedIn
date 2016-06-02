@@ -37,7 +37,6 @@ var App = React.createClass({
           { this.greeting() }
         </header>
         {this.props.children}
-
       </div>
     );
   }
