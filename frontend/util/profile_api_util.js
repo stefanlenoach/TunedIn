@@ -30,13 +30,13 @@ module.exports = {
   },
   removeExperience: function (id) {
     $.ajax({
-      url: '/api/experiences' + id,
+      url: '/api/experiences/' + id,
       type: 'DELETE',
       success: function (form) {
         ProfileActions.removeForm(form);
       },
       error: function (xhr) {
-        console.log('ProfileFormApiUtil#createForm error');
+        console.log('ProfileFormApiUtil#deleteForm error');
       }
     });
   }

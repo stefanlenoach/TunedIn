@@ -5,6 +5,7 @@ class Api::ExperiencesController < ApplicationController
   end
 
   def show
+    @exp = Experience.find(params[:id])
   end
 
   def create
@@ -18,12 +19,23 @@ class Api::ExperiencesController < ApplicationController
   end
 
   def update
-  end
+    @exp = Experience.find(params[:id])
 
-  def edit
+    if @exp.update(exp_params)
+      render :show
+    else
+      render json: @exp.errors.full_messages, status: 422
+    end
   end
 
   def destroy
+    @exp = Experience.find(params[:id])
+
+    if @exp.destroy
+      render :show
+    else
+      render json: @exp.errors.full_messages, status: 422
+    end
   end
 
   private

@@ -34,36 +34,36 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <form className='exp_form' onSubmit={this.handleSubmit}>
-        <label className = 'exp_label'>Company Name *</label>
+      <form className='exp-form' onSubmit={this.handleSubmit}>
+        <label className = 'exp-label'>Company Name *</label>
         <br/>
         <input
-        type='text' className = 'exp_input'
+        type='text' className = 'exp-input'
         value={this.state.company}
-        onChange={this.changeCompany}/><br/><br/>
-        <br/>
-        <label className = 'exp_label'>Title *</label>
+        onChange={this.changeCompany}/><br/>
+
+        <label className = 'exp-label'>Title *</label>
         <br/>
         <input
-        type='text' className = 'exp_input'
+        type='text' className = 'exp-input'
         value={this.state.title}
         onChange={this.changeTitle}/><br/><br/>
-        <br/>
-        <label className = 'exp_label'>Location</label>
+        
+        <label className = 'exp-label'>Location</label>
         <br/>
         <input
-        type='text' className = 'exp_input'
+        type='text' className = 'exp-input'
         value={this.state.location}
-        onChange={this.changeLocation}/><br/><br/>
+        onChange={this.changeLocation}/><br/>
+
+        <label className = 'exp-label'>Description</label>
         <br/>
-        <label className = 'exp_label'>Description</label>
-        <br/>
-        <textarea className = 'exp_txt_area'
+        <textarea className = 'exp-txt-area'
         value={this.state.description}
-        onChange={this.changeDescription}/><br/><br/>
+        onChange={this.changeDescription}/><br/>
 
         <input
-        type="submit" className = 'exp_submit'
+        type="submit" className = 'exp-submit'
         value="Save"/>
       </form>
     );

@@ -13,15 +13,26 @@ var ModalStyle = require('../constants/modal_style');
 
 module.exports = React.createClass ({
   getInitialState: function () {
-    return({ modalOpen: false});
+    return({ modalOpen: false, CE: false});
   },
 
   createExp: function () {
+    this.setState({ CE: true});
     this.setState({ modalOpen: true});
   },
 
   onModalClose: function(){
+    this.setState({ CE: false});
     this.setState({ modalOpen: false });
+  },
+
+  createOrUpdate: function () {
+    debugger
+    if (this.state.CE === true){
+      return (<ExperienceForm/>);
+    } else {
+      return(<ExperienceUpdate/>);
+    }
   },
 
   render: function () {
@@ -31,28 +42,31 @@ module.exports = React.createClass ({
           <nav className='mainnav'>
           </nav>
             <button className='logout-btn' onClick={ SessionApiUtil.logout }>Log out</button>
+
             <form className='search'>
               <input className='searchbar' type='text'
               placeholder='Search for people, jobs, companies and more...'/>
               <input className='search-btn' type='submit' value='Search'/>
             </form>
+
           <nav className='subnav'></nav>
         </nav>
         <div className='exp-sec'>
           <h2>Experience</h2>
+
           <button className='add-exp-btn'
-          onClick={this.createExp}>+ Add position</button>&nbsp;
+            onClick={this.createExp}>+ Add position</button>&nbsp;
 
           <div className='exp-items'>
             <ExpIndex/>
           </div>
+
           <Modal
             isOpen={this.state.modalOpen}
             onRequestClose={this.onModalClose}
             style={ModalStyle}>
-
             <ExperienceForm/>
-            <button onClick={this.onModalClose}>Cancel</button>
+            <button className='exp-cancel' onClick={this.onModalClose}>Cancel</button>
           </Modal>
         </div>
         <div className='profile-main'>
