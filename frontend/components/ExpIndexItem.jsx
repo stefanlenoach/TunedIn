@@ -52,12 +52,13 @@ module.exports = React.createClass({
           <ExpUpdate exp={this.props.exp} close={this.onModalCloseEdit}/>
           <button className='exp-cancel' onClick={this.onModalCloseEdit}>Cancel</button>
         </Modal>
+        <div className='exp-rmv-edit'>
+          <button className='exp-remove-btn' onClick={this.removeExp}>
+          Delete</button>
 
-        <button className='remove-exp-btn' onClick={this.removeExp}>
-        Delete</button>
-
-        <button className='edit-exp-btn' onClick={this.modalOpenEdit}>
-        Edit</button>
+          <button className='exp-edit-btn' onClick={this.modalOpenEdit}>
+          Edit</button>
+        </div>
       </div>
     );
   }

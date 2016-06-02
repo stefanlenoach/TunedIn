@@ -16,8 +16,64 @@
   top: 300px;
 }
 
+.add-exp-btn {
+  float: right;
+  font-size: 15px;
+  background: #eee;
+  color: #444;
+  padding: 6px;
+  font-weight:normal;
+  position: relative;
+  right: 20px;
+  bottom: 45px;
+}
+
+.add-exp-btn:hover {
+  transition: background-color 1s ease;
+  background-color: #66d9ff;
+  color: white;
+}
+
 .exp-sec h2{
   padding: 30px;
+}
+
+.exp-edit-btn{
+  float: right;
+  font-size: 15px;
+  background: #eee;
+  color: #444;
+  padding: 6px;
+  font-weight:normal;
+  position: relative;
+}
+
+.exp-edit-btn:hover{
+  transition: background-color 1s ease;
+  background-color: #66d9ff;
+  color: white;
+}
+
+.exp-remove-btn{
+  float: right;
+  font-size: 15px;
+  background: #eee;
+  color: #444;
+  padding: 6px;
+  font-weight:normal;
+  position: relative;
+  left: 5px;
+}
+.exp-rmv-edit{
+  padding: 15px;
+  position: relative;
+
+}
+
+.exp-remove-btn:hover{
+  transition: background-color 1s ease;
+  background-color: #66d9ff;
+  color: white;
 }
 
 .exp-item-show{

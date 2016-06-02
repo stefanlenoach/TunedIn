@@ -68,21 +68,3 @@
   font-size: 12px;
   padding-left: 7px;
 }
-
-.add-exp-btn {
-  float: right;
-  font-size: 15px;
-  background: #eee;
-  color: #444;
-  padding: 6px;
-  font-weight:normal;
-  position: relative;
-  right: 20px;
-  bottom: 45px;
-}
-
-.add-exp-btn:hover {
-  transition: background-color 1s ease;
-  background-color: #66d9ff;
-  color: white;
-}
