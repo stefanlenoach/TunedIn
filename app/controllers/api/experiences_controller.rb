@@ -24,7 +24,9 @@ class Api::ExperiencesController < ApplicationController
   def destroy
   end
 
-  private def exp_params
-    params.require(:experience).permit(:company_name, :title)
+  private
+  def exp_params
+    params.require(:experience).permit(:user_id, :company_name, :title, :location, :description)
+  end
 
 end

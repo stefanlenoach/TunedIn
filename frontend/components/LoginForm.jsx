@@ -88,6 +88,7 @@ var LoginForm = React.createClass({
 			return (
         <div className='login'>
           <div className='login-header'>
+          <h2></h2>
           </div>
         <div className="form-login">
   				<form onSubmit={this.handleSubmit}>

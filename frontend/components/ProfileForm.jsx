@@ -5,7 +5,8 @@ var ExperienceForm = require('./ExperienceForm');
 var ProfileStore = require('../stores/profile_store');
 var ErrorStore = require('../stores/error_store');
 var ProfileApiUtil = require('../util/profile_api_util');
-
+var SessionStore = require('../stores/session_store');
+var SessionApiUtil = require('../util/session_api_util');
 module.exports = React.createClass ({
   getInitialState: function () {
     return {forms: [] };
@@ -25,6 +26,8 @@ module.exports = React.createClass ({
       <div>
       <h2>Hi, {SessionStore.currentUser().first_name}!</h2>
       <input type="submit" value="logout" onClick={ SessionApiUtil.logout } />
+
+      <ExperienceForm/>
       </div>
     );
   }

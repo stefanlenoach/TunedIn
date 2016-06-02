@@ -2,6 +2,7 @@ var ProfileActions = require('../actions/profile_actions');
 
 module.exports = {
   getExperiences: function (formData) {
+
     $.ajax({
       url: '/api/experiences',
       dataType: 'json',
@@ -23,6 +24,7 @@ module.exports = {
         ProfileActions.receiveForm(form);
       },
       error: function (xhr) {
+
         console.log('ProfileFormApiUtil#createForm error');
       }
     });

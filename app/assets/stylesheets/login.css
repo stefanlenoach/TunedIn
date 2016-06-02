@@ -10,16 +10,25 @@
   background: #eee;
   background: rgba(238, 238, 238, 0.9);
   position: relative;
-  top: 200px;
+  top: 70px;
 }
+
 .login-header {
-  float: left;
+  width: 600px;
+  height: 140px;
   position: relative;
+  text-align: center;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+.login-header h2{
+  position: absolute;
   width: 350px;
   height: 200px;
-  left: 720px;
-  top: 150px;
-  z-index: 1000;
+  left: 135px;
+  bottom: -220px;
+  z-index: 100;
   background-image: url("TunedIn-logo.png");
   background-repeat:no-repeat;
   background-position: center center;
