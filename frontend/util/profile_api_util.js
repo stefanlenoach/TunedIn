@@ -22,7 +22,7 @@ module.exports = {
         ProfileActions.receiveForm(forms);
       },
       error: function (xhr) {
-        console.log('ProfileFormApiUtil#createForm error');
+        console.log('ProfileFormApiUtil#getForm error');
       }
     });
   },
@@ -54,11 +54,11 @@ module.exports = {
         ProfileActions.receiveForm(form);
       },
       error: function (xhr) {
-        console.log('ProfileFormApiUtil#createForm error');
+        console.log('ProfileFormApiUtil#updateForm error');
       }
     });
   },
-  
+
   removeExperience: function (id) {
     $.ajax({
       url: '/api/experiences/' + id,

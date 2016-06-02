@@ -2,18 +2,28 @@ var React = require('react');
 var ProfileApiUtil = require('../util/profile_api_util');
 var Link = require('react-router').Link;
 var hashHistory = require('react-router').hashHistory;
+var Modal = require('react-modal');
+var ModalStyle = require('../constants/modal_style');
 // var ProfileActions = require('../actions/profile_actions');
+var ExpUpdate = require('./ExpUpdate');
 
 module.exports = React.createClass({
+  getInitialState: function () {
+    return { modalOpen: false };
+  },
+
   removeExp: function () {
     event.preventDefault();
     ProfileApiUtil.removeExperience(this.props.exp.id);
   },
 
-  editExp: function (event) {
+  modalOpenEdit: function (event) {
     event.preventDefault();
-    var url = "/experiences/" + this.props.exp.id + "/edit";
-    hashHistory.push(url);
+    this.setState({ modalOpen: true });
+  },
+
+  onModalCloseEdit: function() {
+    this.setState({ modalOpen: false });
   },
 
   render: function () {
@@ -35,10 +45,18 @@ module.exports = React.createClass({
           {this.props.exp.description}
         </div>
 
+        <Modal
+          isOpen={this.state.modalOpen}
+          onRequestClose={this.onModalCloseEdit}
+          style={ModalStyle}>
+          <ExpUpdate exp={this.props.exp} close={this.onModalCloseEdit}/>
+          <button className='exp-cancel' onClick={this.onModalCloseEdit}>Cancel</button>
+        </Modal>
+
         <button className='remove-exp-btn' onClick={this.removeExp}>
         Delete</button>
 
-        <button className='edit-exp-btn' onClick={this.editExp}>
+        <button className='edit-exp-btn' onClick={this.modalOpenEdit}>
         Edit</button>
       </div>
     );

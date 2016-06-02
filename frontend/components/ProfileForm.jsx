@@ -13,26 +13,15 @@ var ModalStyle = require('../constants/modal_style');
 
 module.exports = React.createClass ({
   getInitialState: function () {
-    return({ modalOpen: false, CE: false});
+    return({ modalOpen: false});
   },
 
   createExp: function () {
-    this.setState({ CE: true});
     this.setState({ modalOpen: true});
   },
 
   onModalClose: function(){
-    this.setState({ CE: false});
     this.setState({ modalOpen: false });
-  },
-
-  createOrUpdate: function () {
-    debugger
-    if (this.state.CE === true){
-      return (<ExperienceForm/>);
-    } else {
-      return(<ExperienceUpdate/>);
-    }
   },
 
   render: function () {

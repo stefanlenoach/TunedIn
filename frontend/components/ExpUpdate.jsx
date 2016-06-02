@@ -2,18 +2,19 @@
 var React = require('react');
 var ProfileApiUtil = require('../util/profile_api_util');
 var ProfileStore = require('../stores/profile_store');
+var hashHistory = require('react-router').hashHistory;
 
 module.exports = React.createClass({
   getInitialState: function () {
-    var potExp = ProfileStore.find(this.props.params.expId);
+    var potExp = ProfileStore.find(this.props.exp.id);
     var exp = potExp ? potExp : {};
-    return {user_id: exp.user_id, company_name: exp.company_name, title: exp.title,
+    return {id: exp.id, user_id: exp.user_id, company_name: exp.company_name, title: exp.title,
             location: exp.location, description: exp.description};
   },
 
   componentDidMount: function () {
     this.expListener = ProfileStore.addListener(this.handleChange);
-    ProfileApiUtil.getExperience(parseInt(this.props.params.expId));
+    ProfileApiUtil.getExperience(parseInt(this.props.exp.id));
   },
 
   componentWillUnmount: function () {
@@ -21,9 +22,9 @@ module.exports = React.createClass({
   },
 
   handleChange: function () {
-    var potExp = ProfileStore.find(this.props.params.expId);
+    var potExp = ProfileStore.find(this.props.exp.id);
     var exp = potExp ? potExp : {};
-    this.setState({user_id: exp.user_id, company_name: exp.company_name,
+    this.setState({id: exp.id, user_id: exp.user_id, company_name: exp.company_name,
       title: exp.title, location: exp.location, description: exp.description});
   },
 
@@ -49,8 +50,8 @@ module.exports = React.createClass({
 
   handleSubmit: function (event) {
     event.preventDefault();
-    ProfileApiUtil.createExperience(this.state);
-    hashHistory.push("/");
+    ProfileApiUtil.updateExperience(this.state);
+    this.props.close();
   },
 
   render: function () {
@@ -60,7 +61,7 @@ module.exports = React.createClass({
         <br/>
         <input
         type='text' className = 'exp-input'
-        value={this.state.company}
+        value={this.state.company_name}
         onChange={this.changeCompany}/><br/>
 
         <label className = 'exp-label'>Title *</label>
