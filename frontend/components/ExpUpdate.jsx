@@ -1,10 +1,30 @@
 // var ProfileApiUtil = require('../util/profile_api_util');
 var React = require('react');
 var ProfileApiUtil = require('../util/profile_api_util');
+var ProfileStore = require('../stores/profile_store');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return {user_id: "", company_name: "", title: "", location: "", description: ""};
+    var potExp = ProfileStore.find(this.props.params.expId);
+    var exp = potExp ? potExp : {};
+    return {user_id: exp.user_id, company_name: exp.company_name, title: exp.title,
+            location: exp.location, description: exp.description};
+  },
+
+  componentDidMount: function () {
+    this.expListener = ProfileStore.addListener(this.handleChange);
+    ProfileApiUtil.getExperience(parseInt(this.props.params.expId));
+  },
+
+  componentWillUnmount: function () {
+    this.expListener.remove();
+  },
+
+  handleChange: function () {
+    var potExp = ProfileStore.find(this.props.params.expId);
+    var exp = potExp ? potExp : {};
+    this.setState({user_id: exp.user_id, company_name: exp.company_name,
+      title: exp.title, location: exp.location, description: exp.description});
   },
 
   changeCompany: function (event) {
@@ -29,7 +49,7 @@ module.exports = React.createClass({
 
   handleSubmit: function (event) {
     event.preventDefault();
-    ProfileApiUtil.updateExperience(this.state);
+    ProfileApiUtil.createExperience(this.state);
     hashHistory.push("/");
   },
 

@@ -13,6 +13,20 @@ module.exports = {
       }
     });
   },
+
+  getExperience: function (id) {
+    $.ajax({
+      url: '/api/experiences/' + id,
+      dataType: 'json',
+      success: function (forms) {
+        ProfileActions.receiveForm(forms);
+      },
+      error: function (xhr) {
+        console.log('ProfileFormApiUtil#createForm error');
+      }
+    });
+  },
+
   createExperience: function (formData) {
     $.ajax({
       url: '/api/experiences',
@@ -23,11 +37,28 @@ module.exports = {
         ProfileActions.receiveForm(form);
       },
       error: function (xhr) {
-
         console.log('ProfileFormApiUtil#createForm error');
       }
     });
   },
+
+  updateExperience: function (formData) {
+    $.ajax({
+      url: '/api/experiences/' + formData.id,
+      dataType: 'json',
+      type: 'PATCH',
+      data: {experience: {user_id: formData.user_id, company_name: formData.company_name,
+      title: formData.title, location: formData.location, description: formData.description}},
+
+      success: function (form) {
+        ProfileActions.receiveForm(form);
+      },
+      error: function (xhr) {
+        console.log('ProfileFormApiUtil#createForm error');
+      }
+    });
+  },
+  
   removeExperience: function (id) {
     $.ajax({
       url: '/api/experiences/' + id,

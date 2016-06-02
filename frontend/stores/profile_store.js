@@ -37,7 +37,7 @@ ProfileStore.__onDispatch = function (payload) {
     case ProfileConstants.GET_FORMS:
       resetForms(payload.forms);
       break;
-    case ProfileConstants.CREATE_FORM:
+    case ProfileConstants.RECEIVE_FORM:
       addForm(payload.form);
       break;
     case ProfileConstants.REMOVE_FORM:

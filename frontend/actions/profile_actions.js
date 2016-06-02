@@ -16,7 +16,7 @@ module.exports = {
 
   receiveForm: function (form) {
     AppDispatcher.dispatch({
-      actionType: ProfileConstants.CREATE_FORM,
+      actionType: ProfileConstants.RECEIVE_FORM,
       form: form
     });
   },
