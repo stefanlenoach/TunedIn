@@ -17,6 +17,18 @@ module.exports = React.createClass ({
     return({ modalOpen: false});
   },
 
+  componentDidMount: function () {
+    this.headerListener = SessionStore.addListener(this.onChange);
+  },
+
+  componentWillUnmount: function () {
+    this.headerListener.remove();
+  },
+
+  onChange: function () {
+    this.forceUpdate();
+  },
+
   createExp: function () {
     this.setState({ modalOpen: true});
   },
@@ -38,11 +50,14 @@ module.exports = React.createClass ({
             <form className='search'>
               <input className='searchbar' type='text'
               placeholder='Search for people, jobs, companies and more...'/>
-              
+
               <input className='search-btn' type='submit' value='Search'/>
             </form>
 
           <nav className='subnav'></nav>
+            <Link className='nav-link' to='/'>Home</Link>
+            <Link className='nav-link' to='/'>Profile</Link>
+            <Link className='nav-link' to='/'>Connections</Link>
         </nav>
 
         <div className='profile-main'>

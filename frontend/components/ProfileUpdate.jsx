@@ -1,12 +1,12 @@
 var React = require('react');
-var SessionApiUtil = require('../util/session_api_util');
+var UserApiUtil = require('../util/user_api_util');
 
 module.exports = React.createClass({
   getInitialState: function () {
     var user = this.props.user;
     return { id: user.id,
              location: user.location || "",
-             position: user.currentPosition || ""};
+             position: user.current_position || ""};
   },
 
   changePosition: function (event) {
@@ -21,7 +21,7 @@ module.exports = React.createClass({
 
   handleSubmit: function () {
     event.preventDefault();
-    SessionApiUtil.updateCurrentUser(this.state);
+    UserApiUtil.updateCurrentUser(this.state);
     this.props.close();
   },
 

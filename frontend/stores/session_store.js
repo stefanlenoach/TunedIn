@@ -40,6 +40,10 @@ SessionStore.__onDispatch = function (payload) {
     	_logout();
       SessionStore.__emitChange();
       break;
+    case SessionConstants.UPDATE:
+      _currentUser = payload.currentUser;
+      SessionStore.__emitChange();
+      break;
   }
 };
 

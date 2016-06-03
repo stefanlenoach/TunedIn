@@ -5,7 +5,7 @@ var ErrorActions = require('./../actions/error_actions');
 var UserApiUtil = {
   signup: function (formData) {
     $.ajax({
-      url: '/api/user',
+      url: '/api/users',
       type: 'POST',
       dataType: 'json',
       data: {user: formData},
@@ -16,6 +16,22 @@ var UserApiUtil = {
         console.log('UserApiUtil#createAccount error');
         var errors = xhr.responseJSON;
         ErrorActions.setErrors("signup", errors);
+      }
+    });
+  },
+
+  updateCurrentUser: function (usr) {
+    $.ajax({
+      url: '/api/users/' + usr.id,
+      dataType: 'json',
+      method: 'PATCH',
+      data: { user: { location: usr.location, current_position: usr.position } },
+
+      success: function (currentUser) {
+        SessionActions.updateCurrentUser(currentUser);
+      },
+      error: function (xhr) {
+        console.log("Error in SessionApiUtil#updateCurrentUser error");
       }
     });
   }

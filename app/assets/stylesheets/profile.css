@@ -17,6 +17,21 @@
   z-index: 2;
 }
 
+.nav-link{
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #ddd;
+  position: relative;
+  bottom: 25px;
+  left: 200px;
+  padding-left: 40px;
+}
+
+.nav-link:hover{
+  transition: color 1s ease;
+  color: #66d9ff;
+}
+
 .subnav {
   height: 30px;
   background: #222;

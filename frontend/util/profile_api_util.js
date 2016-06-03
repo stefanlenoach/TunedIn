@@ -47,8 +47,11 @@ module.exports = {
       url: '/api/experiences/' + formData.id,
       dataType: 'json',
       type: 'PATCH',
-      data: {experience: {user_id: formData.user_id, company_name: formData.company_name,
-      title: formData.title, location: formData.location, description: formData.description}},
+      data: { experience: { user_id: formData.user_id,
+                            company_name: formData.company_name,
+                            title: formData.title,
+                            location: formData.location,
+                            description: formData.description } },
 
       success: function (form) {
         ProfileActions.receiveForm(form);

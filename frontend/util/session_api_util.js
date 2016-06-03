@@ -12,7 +12,7 @@ var SessionApiUtil = {
         SessionActions.receiveCurrentUser(currentUser);
       },
 			error: function (xhr) {
-			  console.log("Login error in SessionApiUtil#login");
+			  console.log("Login error in SessionApiUtil#login error");
         var errors = xhr.responseJSON;
 	      ErrorActions.setErrors("login", errors);
 			}
@@ -28,7 +28,7 @@ var SessionApiUtil = {
         SessionActions.removeCurrentUser();
       },
 			error: function () {
-			  console.log("Logout error in SessionApiUtil#logout");
+			  console.log("Logout error in SessionApiUtil#logout error");
 			}
 		});
 	},
@@ -41,26 +41,12 @@ var SessionApiUtil = {
 			  SessionActions.receiveCurrentUser(currentUser);
 			},
 			error: function (xhr) {
-			  console.log("Error in SessionApiUtil#fetchCurrentUser");
+			  console.log("Error in SessionApiUtil#fetchCurrentUser error");
 			},
       complete: complete
 		});
-	},
+	}
 
-  updateCurrentUser: function (usr) {
-    $.ajax({
-      url: '/api/session',
-      dataType: 'json',
-      method: 'PATCH',
-      data: { user: { location: usr.location, current_position: usr.currentPosition } },
-      success: function (currentUser) {
-        SessionActions.receiveCurrentUser(currentUser);
-      },
-      error: function (xhr) {
-        console.log("Error in SessionApiUtil#updateCurrentUser");
-      }
-    });
-  }
 };
 
 module.exports = SessionApiUtil;

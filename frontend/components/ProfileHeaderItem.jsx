@@ -5,14 +5,11 @@ var hashHistory = require('react-router').hashHistory;
 var Modal = require('react-modal');
 var ModalStyle = require('../constants/modal_style');
 var ProfileUpdate = require('./ProfileUpdate');
+var SessionStore = require('../stores/session_store');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    var user = this.props.user;
-    return { name: user.first_name + " " + user.last_name,
-             location: user.location,
-             currentPosition: user.currentPosition,
-             modalOpen: false };
+    return { modalOpen: false };
   },
 
   edit: function () {
@@ -24,13 +21,15 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    var user = this.props.user;
+
     return (
       <div className='profile-header'>
         <div className='pro-pic'></div>
         <div className='pro-text'>
-          <div className='pro-name'>{this.state.name}</div>
-          <div className='pro-pos'>{this.state.currentPosition}</div>
-          <div className='pro-loc'>{this.state.location}</div>
+          <div className='pro-name'>{user.first_name + " " + user.last_name}</div>
+          <div className='pro-pos'>{user.current_position}</div>
+          <div className='pro-loc'>{user.location}</div>
           <button onClick={this.edit}>Edit</button>
         </div>
 
@@ -38,7 +37,7 @@ module.exports = React.createClass({
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
           style={ModalStyle}>
-          <ProfileUpdate close={this.onModalClose} user={this.props.user}/>
+          <ProfileUpdate close={this.onModalClose} user={user}/>
           <button className='pro-cancel' onClick={this.onModalClose}>Cancel</button>
         </Modal>
 
