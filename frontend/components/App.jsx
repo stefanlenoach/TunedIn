@@ -5,6 +5,7 @@ var SessionApiUtil = require('./../util/session_api_util');
 
 var ProfileForm = require('./ProfileForm');
 var HomeForm = require('./HomeForm');
+var LoginForm = require('./LoginForm');
 
 var App = React.createClass({
 
