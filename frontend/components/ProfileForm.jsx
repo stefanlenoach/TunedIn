@@ -42,23 +42,6 @@ module.exports = React.createClass ({
 
     return (
       <div className='profile'>
-        <nav className='navbar'>
-          <nav className='mainnav'>
-          </nav>
-            <button className='logout-btn' onClick={ SessionApiUtil.logout }>Log out</button>
-
-            <form className='search'>
-              <input className='searchbar' type='text'
-              placeholder='Search for people, jobs, companies and more...'/>
-
-              <input className='search-btn' type='submit' value='Search'/>
-            </form>
-
-          <nav className='subnav'></nav>
-            <Link className='nav-link' to='/'>Home</Link>
-            <Link className='nav-link' to='/'>Profile</Link>
-            <Link className='nav-link' to='/'>Connections</Link>
-        </nav>
 
         <div className='profile-main'>
           <ProfileHeaderItem user={user}/>

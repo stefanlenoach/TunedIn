@@ -11,6 +11,9 @@ var hashHistory = ReactRouter.hashHistory;
 //components
 var App = require('./components/App');
 var LoginForm = require('./components/LoginForm');
+var ProfileForm = require('./components/ProfileForm');
+var HomeForm = require('./components/HomeForm');
+var ConnectionsForm = require('./components/ConnectionsForm');
 
 //Auth
 var SessionStore = require('./stores/session_store');
@@ -21,6 +24,9 @@ var Router = (
     <Route path="/" component={ App }>
       <Route path="/login" component={ LoginForm } />
       <Route path="/signup" component={ LoginForm } />
+      <Route path="/profile" component={ ProfileForm } />
+      <Route path="/home" component={ HomeForm } />
+      <Route path="/connections" component={ConnectionsForm } />
     </Route>
   </Router>
 );
@@ -36,7 +42,6 @@ function _ensureLoggedIn(nextState, replace, asyncDoneCallback) {
 
   function redirectIfNotLoggedIn() {
     if (!SessionStore.isUserLoggedIn()) {
-
       replace('/login');
     }
     asyncDoneCallback();
