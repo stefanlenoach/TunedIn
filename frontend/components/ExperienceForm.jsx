@@ -4,7 +4,7 @@ var ProfileApiUtil = require('../util/profile_api_util');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return {user_id: "", company_name: "", title: "", location: "", description: ""};
+    return { company_name: "", title: "", location: "", description: "" };
   },
 
   changeCompany: function (event) {

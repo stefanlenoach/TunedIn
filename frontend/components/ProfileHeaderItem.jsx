@@ -9,7 +9,9 @@ var SessionStore = require('../stores/session_store');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return { modalOpen: false };
+    return { modalOpen: false,
+             imageFile: null,
+             imageUrl: null };
   },
 
   edit: function () {
@@ -20,12 +22,28 @@ module.exports = React.createClass({
     this.setState({ modalOpen: false });
   },
 
+  updateFile: function(event) {
+    var file = event.currentTarget.files[0];
+    var fileReader = new FileReader();
+    fileReader.onloadend = function () {
+      this.setState({imageFile: file, imageUrl: fileReader.result});
+    }.bind(this);
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
+  },
+
   render: function () {
     var user = this.props.user;
-
     return (
       <div className='profile-header'>
-        <div className='pro-pic'></div>
+        <div className='pro-pic'>
+          <input type='file' onChange={this.updateFile}/>
+          <img src={this.state.imageUrl}/>
+        </div>
+
+
         <div className='pro-text'>
           <div className='pro-name'>{user.first_name + " " + user.last_name}</div>
           <div className='pro-pos'>{user.current_position}</div>

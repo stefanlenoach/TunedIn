@@ -28,6 +28,7 @@ module.exports = {
   },
 
   createExperience: function (formData) {
+    debugger
     $.ajax({
       url: '/api/experiences',
       type: 'POST',
