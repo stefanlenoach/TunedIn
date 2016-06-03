@@ -50,11 +50,11 @@ module.exports = React.createClass ({
             <ExpIndex/>
           </div>
 
-          <Modal
+          <Modal className='modal'
             isOpen={this.state.modalOpen}
             onRequestClose={this.onModalClose}
             style={ModalStyle}>
-            <ExperienceForm/>
+            <ExperienceForm close={this.onModalClose}/>
             <button className='exp-cancel' onClick={this.onModalClose}>Cancel</button>
           </Modal>
         </div>

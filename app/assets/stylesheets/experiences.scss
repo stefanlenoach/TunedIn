@@ -67,7 +67,32 @@
 .exp-rmv-edit{
   padding: 15px;
   position: relative;
+}
 
+.exp-add-media{
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+}
+
+.exp-add-doc{
+  background: #eee;
+  padding: 7px;
+  position: relative;
+  bottom: 5px;
+}
+
+.exp-add-doc:hover{
+  transition: background-color 1s ease;
+  background-color: #66d9ff;
+  color: white;
+}
+
+.media-blocks{
+  padding: 5px;
+  float: left;
+  position: relative;
+  top: 15px;
 }
 
 .exp-remove-btn:hover{

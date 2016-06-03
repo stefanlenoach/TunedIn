@@ -29,8 +29,8 @@ module.exports = React.createClass({
 
   handleSubmit: function (event) {
     event.preventDefault();
-    ProfileApiUtil.updateExperience(this.state);
-    // hashHistory.push("/");
+    ProfileApiUtil.createExperience(this.state);
+    this.props.close();
   },
 
   render: function () {

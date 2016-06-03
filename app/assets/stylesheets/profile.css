@@ -7,8 +7,14 @@
   background-image: -webkit-linear-gradient(top, #555555 0%,#515151 18%,#373737 85%,#333333 100%);
 }
 
+.modal{
+  z-index: 1000;
+}
+
 .navbar{
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .subnav {

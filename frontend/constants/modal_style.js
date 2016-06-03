@@ -1,6 +1,7 @@
 module.exports = {
   overlay : {
   position          : 'fixed',
+  zIndex: 1000,
   top               : 0,
   left              : 0,
   right             : 0,
@@ -10,8 +11,8 @@ module.exports = {
 
   content : {
     position                   : 'absolute',
-    width: '650px',
-    height: '480px',
+    width                      : '650px',
+    height                     : '480px',
     top                        : '40px',
     left                       : '300px',
     right                      : '40px',
