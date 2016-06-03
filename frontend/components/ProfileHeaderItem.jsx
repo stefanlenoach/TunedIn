@@ -1,11 +1,12 @@
 var React = require('react');
-var ProfileApiUtil = require('../util/profile_api_util');
 var Link = require('react-router').Link;
 var hashHistory = require('react-router').hashHistory;
 var Modal = require('react-modal');
 var ModalStyle = require('../constants/modal_style');
 var ProfileUpdate = require('./ProfileUpdate');
 var SessionStore = require('../stores/session_store');
+var UserApiUtil = require('../util/user_api_util');
+
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -26,11 +27,15 @@ module.exports = React.createClass({
     var file = event.currentTarget.files[0];
     var fileReader = new FileReader();
     fileReader.onloadend = function () {
-      this.setState({imageFile: file, imageUrl: fileReader.result});
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
     }.bind(this);
 
     if (file) {
       fileReader.readAsDataURL(file);
+      debugger
+      var data = {imageFile: this.state.imageFile, imageUrl: this.state.imageUrl};
+      UserApiUtil.updateCurrentUser(data);
+      this.forceUpdate();
     }
   },
 

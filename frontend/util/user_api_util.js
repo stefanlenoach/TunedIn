@@ -25,7 +25,8 @@ var UserApiUtil = {
       url: '/api/users/' + usr.id,
       dataType: 'json',
       method: 'PATCH',
-      data: { user: { location: usr.location, current_position: usr.position } },
+      data: { user: { location: usr.location, current_position: usr.position,
+                      imageFile: usr.imageFile, imageUrl: usr.imageUrl} },
 
       success: function (currentUser) {
         SessionActions.updateCurrentUser(currentUser);

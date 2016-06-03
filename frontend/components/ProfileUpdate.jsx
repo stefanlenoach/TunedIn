@@ -20,7 +20,6 @@ module.exports = React.createClass({
   },
 
   handleSubmit: function () {
-    event.preventDefault();
     UserApiUtil.updateCurrentUser(this.state);
     this.props.close();
   },
