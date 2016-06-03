@@ -45,7 +45,22 @@ var SessionApiUtil = {
 			},
       complete: complete
 		});
-	}
+	},
+
+  updateCurrentUser: function (usr) {
+    $.ajax({
+      url: '/api/session',
+      dataType: 'json',
+      method: 'PATCH',
+      data: { user: { location: usr.location, current_position: usr.currentPosition } },
+      success: function (currentUser) {
+        SessionActions.receiveCurrentUser(currentUser);
+      },
+      error: function (xhr) {
+        console.log("Error in SessionApiUtil#updateCurrentUser");
+      }
+    });
+  }
 };
 
 module.exports = SessionApiUtil;

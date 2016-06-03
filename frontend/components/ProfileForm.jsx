@@ -10,6 +10,7 @@ var SessionApiUtil = require('../util/session_api_util');
 var ExpIndex = require('./ExpIndex');
 var Modal = require('react-modal');
 var ModalStyle = require('../constants/modal_style');
+var ProfileHeaderItem = require('./ProfileHeaderItem');
 
 module.exports = React.createClass ({
   getInitialState: function () {
@@ -25,6 +26,8 @@ module.exports = React.createClass ({
   },
 
   render: function () {
+    var user = SessionStore.currentUser();
+
     return (
       <div className='profile'>
         <nav className='navbar'>
@@ -35,11 +38,17 @@ module.exports = React.createClass ({
             <form className='search'>
               <input className='searchbar' type='text'
               placeholder='Search for people, jobs, companies and more...'/>
+              
               <input className='search-btn' type='submit' value='Search'/>
             </form>
 
           <nav className='subnav'></nav>
         </nav>
+
+        <div className='profile-main'>
+          <ProfileHeaderItem user={user}/>
+        </div>
+
         <div className='exp-sec'>
           <h2>Experience</h2>
 
@@ -58,11 +67,7 @@ module.exports = React.createClass ({
             <button className='exp-cancel' onClick={this.onModalClose}>Cancel</button>
           </Modal>
         </div>
-        <div className='profile-main'>
-          <h2>Hi, {SessionStore.currentUser().first_name}!</h2>
 
-
-        </div>
       </div>
     );
   }
