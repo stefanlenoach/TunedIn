@@ -20,6 +20,20 @@ var UserApiUtil = {
     });
   },
 
+  getUsers: function () {
+    $.ajax({
+      url: '/api/users',
+      dataType: 'json',
+      method: 'GET',
+      success: function (currentUser) {
+        SessionActions.updateCurrentUser(currentUser);
+      },
+      error: function (xhr) {
+        console.log("Error in SessionApiUtil#getUsers error");
+      }
+    });
+  },
+
   updateCurrentUser: function (usr) {
     $.ajax({
       url: '/api/users/' + usr.id,

@@ -1,21 +1,42 @@
 var React = require('react');
 var Link = require('react-router').Link;
-var SessionStore = require('./../stores/session_store');
-var SessionApiUtil = require('./../util/session_api_util');
+var SessionStore = require('../stores/session_store');
+var SessionApiUtil = require('../util/session_api_util');
+var UserApiUtil = require('../util/user_api_util');
 
 var ProfileForm = require('./ProfileForm');
 var HomeForm = require('./HomeForm');
 var LoginForm = require('./LoginForm');
 
 var App = React.createClass({
+  getInitialState: function () {
+    return{ searchString: "" };
+  },
 
   componentDidMount: function () {
     SessionApiUtil.fetchCurrentUser();
-    SessionStore.addListener(this.forceUpdate.bind(this));
+    this.forceListener = SessionStore.addListener(this.forceUpdate.bind(this));
+    UserApiUtil.getUsers();
+  },
+
+  handleChange: function(e){
+    this.setState({ searchString: e.target.value });
+  },
+
+  handleSubmit: function(e){
+
   },
 
   greeting: function(){
     if (SessionStore.isUserLoggedIn()) {
+      var users = SessionStore.all();
+      var searchString = this.state.searchString.trim().toLowerCase();
+      if(searchString.length > 0){
+          users = users.filter(function(user){
+              return (user.first_name + " " + user.last_name).toLowerCase().match( searchString );
+          });
+      }
+
     	return (
     		<hgroup>
         <nav className='navbar'>
@@ -23,8 +44,8 @@ var App = React.createClass({
           </nav>
             <button className='logout-btn' onClick={ SessionApiUtil.logout }>Log out</button>
 
-            <form className='search'>
-              <input className='searchbar' type='text'
+            <form className='search' onSubmit={this.handleSubmit}>
+              <input className='searchbar' type='text' onChange={this.handleChange}
               placeholder='Search for people, jobs, companies and more...'/>
 
               <input className='search-btn' type='submit' value='Search'/>

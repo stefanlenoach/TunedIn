@@ -13,6 +13,13 @@ var SessionActions = {
     });
   },
 
+  receiveUsers: function (users) {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.GET_USERS,
+      users: users
+    });
+  },
+
   removeCurrentUser: function () {
     AppDispatcher.dispatch({
       actionType: SessionConstants.LOGOUT

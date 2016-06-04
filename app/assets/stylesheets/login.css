@@ -59,7 +59,6 @@
   right: 89px;
   font-size: 18px;
   font-weight: lighter;
-  /*font-weight: bold;*/
   color: white;
 }
 
@@ -71,8 +70,8 @@
 }
 
 .guest-btn{
-  position: relative;
-  top: 10px;
+  width: 170px;
+  height: 40px;
 }
 
 .login-submit:hover {
@@ -98,7 +97,7 @@
 }
 
 .login {
-  background-image: url("live-band.jpg");
+  background-image: url("red_crowd.jpg");
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center center;
