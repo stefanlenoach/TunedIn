@@ -25,8 +25,8 @@ var UserApiUtil = {
       url: '/api/users',
       dataType: 'json',
       method: 'GET',
-      success: function (currentUser) {
-        SessionActions.updateCurrentUser(currentUser);
+      success: function (users) {
+        SessionActions.receiveUsers(users);
       },
       error: function (xhr) {
         console.log("Error in SessionApiUtil#getUsers error");
