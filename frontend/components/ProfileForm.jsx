@@ -54,7 +54,7 @@ module.exports = React.createClass ({
             onClick={this.createExp}>+ Add position</button>&nbsp;
 
           <div className='exp-items'>
-            <ExpIndex/>
+            <ExpIndex user={user}/>
           </div>
 
           <Modal className='modal'

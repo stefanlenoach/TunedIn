@@ -22,12 +22,16 @@ module.exports = React.createClass({
   },
 
   render: function () {
-
+    var id = this.props.user.id;
     return (
       <div>
       {
         this.state.exps.map(function(exp){
-          return (<ExpIndexItem key={exp.id} exp={exp}/>);
+          if (id === exp.user_id){
+            return (<ExpIndexItem key={exp.id} exp={exp}/>);
+          } else {
+            return (null);
+          }
         })
       }
       </div>
