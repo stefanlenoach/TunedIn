@@ -34,6 +34,21 @@ var UserApiUtil = {
     });
   },
 
+  getUser: function (id) {
+    $.ajax({
+      url: '/api/users/' + id,
+      dataType: 'json',
+      method: 'GET',
+      success: function (users) {
+
+        SessionActions.receiveUser(users);
+      },
+      error: function (xhr) {
+        console.log("Error in SessionApiUtil#getUser error");
+      }
+    });
+  },
+
   updateCurrentUser: function (usr) {
     $.ajax({
       url: '/api/users/' + usr.id,

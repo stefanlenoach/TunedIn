@@ -20,6 +20,13 @@ var SessionActions = {
     });
   },
 
+  receiveUser: function (user) {
+    AppDispatcher.dispatch({
+      actionType: SessionConstants.GET_USER,
+      user: user
+    });
+  },
+
   removeCurrentUser: function () {
     AppDispatcher.dispatch({
       actionType: SessionConstants.LOGOUT

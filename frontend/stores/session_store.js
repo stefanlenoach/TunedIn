@@ -18,6 +18,10 @@ function resetUsers(users) {
     });
 }
 
+function addUser(user) {
+  _users[user.id] = user;
+}
+
 function _login(currentUser) {
   _currentUser = currentUser;
   _currentUserHasBeenFetched = true;
@@ -32,6 +36,10 @@ SessionStore.all = function () {
   return Object.keys(_users).map(function(userId){
     return _users[userId];
   });
+};
+
+SessionStore.find = function(id) {
+  return _users[id];
 };
 
 SessionStore.currentUser = function () {
@@ -62,6 +70,10 @@ SessionStore.__onDispatch = function (payload) {
       break;
     case SessionConstants.GET_USERS:
       resetUsers(payload.users);
+      SessionStore.__emitChange();
+      break;
+    case SessionConstants.GET_USER:
+      addUser(payload.user);
       SessionStore.__emitChange();
       break;
   }

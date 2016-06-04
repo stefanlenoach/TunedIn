@@ -9,9 +9,6 @@ var LoginForm = require('./LoginForm');
 var Navbar = require('./Navbar');
 
 var App = React.createClass({
-  getInitialState: function () {
-    return{ searchString: "" };
-  },
 
   componentDidMount: function () {
     SessionApiUtil.fetchCurrentUser();

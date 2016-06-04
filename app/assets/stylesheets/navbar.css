@@ -4,18 +4,26 @@
   position: relative;
   border-bottom: 1px solid #ccc;
   font-family: sans-serif;
-  padding-top: 10px;
   padding-left: 10px;
 
 }
 
 .search-items{
   float: left;
-  width: 400px;
+  width: 350px;
   height: 100%;
   color: #555;
   background: white;
   position: relative;
-  left: 470px;
+  left: 494px;
   bottom: 50px;
+}
+.search-item-link{
+  width: 100%;
+  height: 100%;
+}
+
+.search-item:hover{
+  transition: background-color 1s ease;
+  background-color: #eee;
 }

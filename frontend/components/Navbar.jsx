@@ -55,11 +55,13 @@ module.exports = React.createClass({
             <nav>
             <ul className = 'search-items'>
             { users.map(function(user){
-              return (<li className='search-item'>
-              <a href={this.showUser}>{user.first_name + " " + user.last_name}</a>
+              return (<li className='search-item' key={user.id}>
+                <Link className='search-item-link' to={'/users/' + user.id}>
+                  {user.first_name + " " + user.last_name}
+                </Link>
               </li>);
-            })
-          }
+              })
+            }
           </ul>
           </nav>
         </nav>

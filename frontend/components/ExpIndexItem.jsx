@@ -1,10 +1,8 @@
 var React = require('react');
 var ProfileApiUtil = require('../util/profile_api_util');
-var Link = require('react-router').Link;
 var hashHistory = require('react-router').hashHistory;
 var Modal = require('react-modal');
 var ModalStyle = require('../constants/modal_style');
-// var ProfileActions = require('../actions/profile_actions');
 var ExpUpdate = require('./ExpUpdate');
 
 module.exports = React.createClass({
