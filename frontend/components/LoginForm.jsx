@@ -45,6 +45,15 @@ var LoginForm = React.createClass({
     }
   },
 
+  guestSignIn: function () {
+    var formData = {
+     email: "guestUser@tunedin.com",
+     password: "123123"
+   };
+   SessionApiUtil.login(formData);
+  },
+
+
 	handleSubmit: function (e) {
 		e.preventDefault();
     var formData;
@@ -104,13 +113,15 @@ var LoginForm = React.createClass({
   						{ this.fieldErrors("password") }
   						<input className="login-input" type="password" placeholder="Password" valueLink={this.linkState("password")} />
 
-
   					<br />
   					<input className="login-submit" type="submit" value="Sign In" />
   				</form>
           <div className='login-signin'>
             <h3>Not a member? {navLink}</h3>
           </div>
+            <div className='login-submit guest'>
+              <button className="guest-btn" onClick={this.guestSignIn}>Guest</button>
+            </div>
           </div>
         </div>
 			);

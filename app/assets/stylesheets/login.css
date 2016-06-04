@@ -49,19 +49,34 @@
 }
 
 .login-submit {
-  width: 340px;
+  width: 170px;
   height: 40px;
   background: linear-gradient(to top right, #287bbc, #287aaa);
   border-radius: 4px;
-  border: 1px solid #1b5480;
+  border: 1px solid transparent;
   position: relative;
   top: 130px;
-  font-size: 16px;
-  font-weight: bold;
+  right: 89px;
+  font-size: 18px;
+  font-weight: lighter;
+  /*font-weight: bold;*/
   color: white;
 }
+
+.guest{
+  position: relative;
+  top: 73px;
+  left: 230px;
+  text-align: center;
+}
+
+.guest-btn{
+  position: relative;
+  top: 10px;
+}
+
 .login-submit:hover {
-  background: #1b5666;
+  background: #33ccff;
 }
 
 .login-link {

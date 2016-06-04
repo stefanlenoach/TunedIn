@@ -28,13 +28,13 @@ module.exports = React.createClass({
     var fileReader = new FileReader();
     fileReader.onloadend = function () {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
+      var data = { id: this.props.user.id, imageFile: file, imageUrl: fileReader.result};
+      UserApiUtil.updateCurrentUser(data);
     }.bind(this);
+
 
     if (file) {
       fileReader.readAsDataURL(file);
-      debugger
-      var data = {imageFile: this.state.imageFile, imageUrl: this.state.imageUrl};
-      UserApiUtil.updateCurrentUser(data);
       this.forceUpdate();
     }
   },
