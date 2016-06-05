@@ -39,9 +39,8 @@ var UserApiUtil = {
       url: '/api/users/' + id,
       dataType: 'json',
       method: 'GET',
-      success: function (users) {
-
-        SessionActions.receiveUser(users);
+      success: function (user) {
+        SessionActions.receiveUser(user);
       },
       error: function (xhr) {
         console.log("Error in SessionApiUtil#getUser error");

@@ -3,6 +3,11 @@ var UserApiUtil = require('../util/user_api_util');
 var Link = require('react-router').Link;
 var SessionStore = require('../stores/session_store');
 var SessionApiUtil = require('../util/session_api_util');
+var ReactRouter = require('react-router');
+var router = ReactRouter.Router;
+var hashHistory = ReactRouter.hashHistory;
+
+
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -17,8 +22,16 @@ module.exports = React.createClass({
     this.setState({ searchString: e.target.value });
   },
 
-  showUser: function(){
+  reset: function () {
+  },
 
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
+  showUser: function(userId){
+    hashHistory.push('/users/' + userId);
+    this.setState({ searchString: "" });
   },
 
   handleSubmit: function(e){
@@ -26,6 +39,7 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    var that = this;
     var searchString = this.state.searchString.trim().toLowerCase();
     var users = [];
     if(searchString.length > 0){
@@ -56,9 +70,9 @@ module.exports = React.createClass({
             <ul className = 'search-items'>
             { users.map(function(user){
               return (<li className='search-item' key={user.id}>
-                <Link className='search-item-link' to={'/users/' + user.id}>
+                <button className='search-item-link' onClick={that.showUser(user.id)}>
                   {user.first_name + " " + user.last_name}
-                </Link>
+                </button>
               </li>);
               })
             }

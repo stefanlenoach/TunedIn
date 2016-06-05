@@ -44,7 +44,7 @@ module.exports = React.createClass({
     return (
       <div className='profile-header'>
         <div className='pro-pic'>
-          <input type='file' onChange={this.updateFile}/>
+          <input className='pic-upload' type='file' onChange={this.updateFile}/>
           <img src={this.state.imageUrl}/>
         </div>
 
@@ -53,7 +53,7 @@ module.exports = React.createClass({
           <div className='pro-name'>{user.first_name + " " + user.last_name}</div>
           <div className='pro-pos'>{user.current_position}</div>
           <div className='pro-loc'>{user.location}</div>
-          <button onClick={this.edit}>Edit</button>
+          <button className='pro-edit' onClick={this.edit}>Edit</button>
         </div>
 
         <Modal className='modal'

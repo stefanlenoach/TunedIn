@@ -6,12 +6,20 @@ var UserExp = require('./UserExp');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return {user: ""};
+    return {user: {id: "", first_name: "", last_name: "", current_position: "", location: "", imageUrl: ""} };
   },
 
   componentDidMount: function () {
+    this.userListener = SessionStore.addListener(this.onChange);
     UserApiUtil.getUser(this.props.params.userId);
-    this.setState({ user: SessionStore.find(this.props.params.id) });
+  },
+
+  componentWillUnmount: function () {
+    this.userListener.remove();
+  },
+
+  onChange: function () {
+    this.setState({ user: SessionStore.find(this.props.params.userId) });
   },
 
   render: function () {

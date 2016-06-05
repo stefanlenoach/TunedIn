@@ -1,11 +1,11 @@
 var React = require('react');
-var ProfileApiUtil = ('../util/profile_api_util');
-var ProfileStore = ('../stores/profile_store');
-var UserExpItem = ('./UserExpItem');
+var ProfileApiUtil = require('../util/profile_api_util');
+var ProfileStore = require('../stores/profile_store');
+var UserExpItem = require('./UserExpItem');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return {exps: ProfileStore.all() };
+    return { exps: [] };
   },
 
   componentDidMount: function () {

@@ -6,7 +6,7 @@ module.exports = React.createClass({
     return (
       <div className='profile-header'>
         <div className='pro-pic'>
-          <img src={this.state.imageUrl}/>
+          <img src={user.imageUrl}/>
         </div>
 
 

@@ -22,15 +22,16 @@ var removeForm = function(form) {
   delete _forms[form.id];
 };
 
-ProfileStore.find = function (id) {
-  return _forms[id];
-};
-
 ProfileStore.all = function () {
   return Object.keys(_forms).map(function (formId){
     return _forms[formId];
   });
 };
+
+ProfileStore.find = function (id) {
+  return _forms[id];
+};
+
 
 ProfileStore.__onDispatch = function (payload) {
   switch(payload.actionType){
