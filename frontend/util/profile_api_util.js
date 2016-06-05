@@ -73,6 +73,6 @@ module.exports = {
         console.log('ProfileFormApiUtil#deleteForm error');
       }
     });
-  }
+  },
 
 };

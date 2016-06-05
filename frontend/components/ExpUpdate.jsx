@@ -1,4 +1,3 @@
-// var ProfileApiUtil = require('../util/profile_api_util');
 var React = require('react');
 var ProfileApiUtil = require('../util/profile_api_util');
 var ProfileStore = require('../stores/profile_store');

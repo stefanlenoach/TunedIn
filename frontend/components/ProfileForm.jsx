@@ -29,7 +29,7 @@ module.exports = React.createClass ({
     this.forceUpdate();
   },
 
-  createExp: function () {
+  createForm: function () {
     this.setState({ modalOpen: true});
   },
 
@@ -51,7 +51,7 @@ module.exports = React.createClass ({
           <h2>Experience</h2>
 
           <button className='add-exp-btn'
-            onClick={this.createExp}>+ Add position</button>&nbsp;
+            onClick={this.createForm}>+ Add position</button>&nbsp;
 
           <div className='exp-items'>
             <ExpIndex user={user}/>
@@ -66,6 +66,17 @@ module.exports = React.createClass ({
           </Modal>
         </div>
 
+        <div className='edu-sec'>
+          <h2>Education</h2>
+
+          <button className='add-exp-btn'
+            onClick={this.createForm}>+ Add position</button>&nbsp;
+
+          <div className='exp-items'>
+            <EduIndex user={user}/>
+          </div>
+
+        </div>
       </div>
     );
   }
