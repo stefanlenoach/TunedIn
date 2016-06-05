@@ -4,6 +4,13 @@
 
 [heroku]: http://www.herokuapp.com
 
+##Plan for the week
+Monday: Fix Educations/Experiences, Searchbar, upload image, seed database, logging out, sign up page
+Tuesday: Add connections, working notifications UI
+Wednesday: ConnectionsPage, HomePage (Posts?)
+Thursday: Styling...
+Friday:
+
 ## Minimum Viable Product
 
 TunedIn is a web application inspired by LinkedIn that will be developed using

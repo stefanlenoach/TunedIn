@@ -27,16 +27,28 @@ module.exports = React.createClass({
   render: function () {
     return (
       <div className='edu-item-show'>
-        <div className='edu-title'>
-          {this.props.edu.title}
+        <div className='edu-school'>
+          {this.props.edu.school}
         </div>
 
-        <div className='edu-company-name'>
-          {this.props.edu.company_name}
+        <div className='edu-degree'>
+          {this.props.edu.degree}
         </div>
 
-        <div className='edu-location'>
-          {this.props.edu.location}
+        <div className='edu-field-of-study'>
+          {this.props.edu.field_of_study}
+        </div>
+
+        <div className='edu-dates-attended'>
+          {this.props.edu.dates_attended}
+        </div>
+
+        <div className='edu-grade'>
+          {this.props.edu.grade}
+        </div>
+
+        <div className='edu-activities'>
+          {this.props.edu.activities}
         </div>
 
         <div className='edu-description'>

@@ -22,14 +22,12 @@ module.exports = React.createClass({
     this.setState({ searchString: e.target.value });
   },
 
-  reset: function () {
-  },
-
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
 
   showUser: function(userId){
+    // that.showUser(user.id)
     hashHistory.push('/users/' + userId);
     this.setState({ searchString: "" });
   },
@@ -70,9 +68,9 @@ module.exports = React.createClass({
             <ul className = 'search-items'>
             { users.map(function(user){
               return (<li className='search-item' key={user.id}>
-                <button className='search-item-link' onClick={that.showUser(user.id)}>
+                <Link className='search-item-link' to={'/users/' + user.id}>
                   {user.first_name + " " + user.last_name}
-                </button>
+                </Link>
               </li>);
               })
             }

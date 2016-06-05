@@ -1,4 +1,4 @@
-class EducationsController < ApplicationController
+class Api::EducationsController < ApplicationController
   def index
     @edus = Education.all
   end

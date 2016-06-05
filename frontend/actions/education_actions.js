@@ -9,21 +9,21 @@ module.exports = {
 
   fetchForms: function (forms) {
     AppDispatcher.dispatch({
-      actionType: EducationConstants.GET_FORMS,
+      actionType: EducationConstants.GET_EDUS,
       forms: forms
     });
   },
 
   receiveForm: function (form) {
     AppDispatcher.dispatch({
-      actionType: EducationConstants.RECEIVE_FORM,
+      actionType: EducationConstants.RECEIVE_EDU,
       form: form
     });
   },
 
   removeForm: function (form) {
     AppDispatcher.dispatch({
-      actionType: EducationConstants.REMOVE_FORM,
+      actionType: EducationConstants.REMOVE_EDU,
       form: form
     });
   }

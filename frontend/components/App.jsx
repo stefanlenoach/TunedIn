@@ -4,7 +4,7 @@ var SessionStore = require('../stores/session_store');
 var SessionApiUtil = require('../util/session_api_util');
 
 var ProfileForm = require('./ProfileForm');
-var HomeForm = require('./HomeForm');
+var HomeForm = require('./home/HomeForm');
 var LoginForm = require('./LoginForm');
 var Navbar = require('./Navbar');
 
@@ -24,7 +24,6 @@ var App = React.createClass({
     	return (
     		<hgroup>
           <Navbar/>
-          <HomeForm/>
     		</hgroup>
     	);
     } else if (["/login", "/signup"].indexOf(this.props.location.pathname) === -1) {

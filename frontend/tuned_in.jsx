@@ -12,8 +12,8 @@ var hashHistory = ReactRouter.hashHistory;
 var App = require('./components/App');
 var LoginForm = require('./components/LoginForm');
 var ProfileForm = require('./components/ProfileForm');
-var HomeForm = require('./components/HomeForm');
-var ConnectionsForm = require('./components/ConnectionsForm');
+var HomeForm = require('./components/home/HomeForm');
+var ConnectionsForm = require('./components/connections/ConnectionsForm');
 var ShowUser = require('./components/ShowUser');
 
 //Auth
@@ -27,7 +27,7 @@ var Router = (
       <Route path="/signup" component={ LoginForm } />
       <Route path="/profile" component={ ProfileForm } />
       <Route path="/home" component={ HomeForm } />
-      <Route path="/connections" component={ConnectionsForm } />
+      <Route path="/connections" component={ ConnectionsForm } />
       <Route path='/users/:userId' component={ ShowUser } />
     </Route>
   </Router>

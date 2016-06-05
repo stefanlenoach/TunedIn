@@ -48,10 +48,13 @@ module.exports = {
       dataType: 'json',
       type: 'PATCH',
       data: { education: { user_id: formData.user_id,
-                            company_name: formData.company_name,
-                            title: formData.title,
-                            location: formData.location,
-                            description: formData.description } },
+                           school: formData.school,
+                           degree: formData.degree,
+                           field_of_study: formData.field_of_study,
+                           dates_attended: formData.dates_attended,
+                           grade: formData.grade,
+                           activities: formData.activities,
+                           description: formData.description } },
 
       success: function (form) {
         EducationActions.receiveForm(form);

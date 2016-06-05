@@ -1,7 +1,7 @@
 var EducationConstants = {
-  GET_FORMS: "GET_FORMS",
-	CREATE_FORM: "RECEIVE_FORM",
-  REMOVE_FORM: "REMOVE_FORM"
+  GET_EDUS: "GET_EDUS",
+	CREATE_EDU: "RECEIVE_EDU",
+  REMOVE_EDU: "REMOVE_EDU"
 };
 
 module.exports = EducationConstants;

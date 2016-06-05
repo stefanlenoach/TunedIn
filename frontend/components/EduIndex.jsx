@@ -3,7 +3,7 @@ var EducationApiUtil = require('../util/education_api_util');
 var EducationStore = require('../stores/education_store');
 var EduIndexItem = require('./EduIndexItem');
 
-module.eduorts = React.createClass({
+module.exports = React.createClass({
   getInitialState: function () {
     return {edus: EducationStore.all() };
   },

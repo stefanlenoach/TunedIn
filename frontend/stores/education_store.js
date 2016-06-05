@@ -35,16 +35,17 @@ EducationStore.find = function (id) {
 
 EducationStore.__onDispatch = function (payload) {
   switch(payload.actionType){
-    case EducationConstants.GET_FORMS:
+    case EducationConstants.GET_EDUS:
       resetForms(payload.forms);
       break;
-    case EducationConstants.RECEIVE_FORM:
+    case EducationConstants.RECEIVE_EDU:
       addForm(payload.form);
       break;
-    case EducationConstants.REMOVE_FORM:
+    case EducationConstants.REMOVE_EDU:
       removeForm(payload.form);
       break;
   }
   this.__emitChange();
 };
+
 module.exports = EducationStore;
