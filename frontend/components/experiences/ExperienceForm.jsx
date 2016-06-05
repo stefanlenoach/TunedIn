@@ -1,6 +1,6 @@
 // var ProfileApiUtil = require('../util/profile_api_util');
 var React = require('react');
-var ProfileApiUtil = require('../util/profile_api_util');
+var ProfileApiUtil = require('../../util/profile_api_util');
 
 module.exports = React.createClass({
   getInitialState: function () {

@@ -3,7 +3,7 @@ var Link = require('react-router').Link;
 var SessionStore = require('../stores/session_store');
 var SessionApiUtil = require('../util/session_api_util');
 
-var ProfileForm = require('./ProfileForm');
+var ProfileForm = require('./profile/ProfileForm');
 var HomeForm = require('./home/HomeForm');
 var LoginForm = require('./LoginForm');
 var Navbar = require('./Navbar');

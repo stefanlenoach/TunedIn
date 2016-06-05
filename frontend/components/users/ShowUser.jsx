@@ -1,6 +1,6 @@
 var React = require('react');
-var UserApiUtil = require('../util/user_api_util');
-var SessionStore = require('../stores/session_store');
+var UserApiUtil = require('../../util/user_api_util');
+var SessionStore = require('../../stores/session_store');
 var UserHeaderItem = require('./UserHeaderItem');
 var UserExp = require('./UserExp');
 

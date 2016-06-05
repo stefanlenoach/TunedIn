@@ -1,6 +1,6 @@
 var React = require('react');
-var EducationApiUtil = require('../util/education_api_util');
-var EducationStore = require('../stores/education_store');
+var EducationApiUtil = require('../../util/education_api_util');
+var EducationStore = require('../../stores/education_store');
 var EduIndexItem = require('./EduIndexItem');
 
 module.exports = React.createClass({

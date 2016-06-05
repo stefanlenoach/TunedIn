@@ -1,11 +1,11 @@
 var React = require('react');
-var ProfileApiUtil = require('../util/profile_api_util');
-var ProfileStore = require('../stores/profile_store');
-var UserExpItem = require('./UserExpItem');
+var ProfileApiUtil = require('../../util/profile_api_util');
+var ProfileStore = require('../../stores/profile_store');
+var ExpIndexItem = require('./ExpIndexItem');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return { exps: [] };
+    return {exps: ProfileStore.all() };
   },
 
   componentDidMount: function () {
@@ -28,7 +28,7 @@ module.exports = React.createClass({
       {
         this.state.exps.map(function(exp){
           if (id === exp.user_id){
-            return (<UserExpItem key={exp.id} exp={exp}/>);
+            return (<ExpIndexItem key={exp.id} exp={exp}/>);
           } else {
             return (null);
           }

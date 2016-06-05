@@ -1,6 +1,6 @@
 var React = require('react');
-var ProfileApiUtil = require('../util/profile_api_util');
-var ProfileStore = require('../stores/profile_store');
+var ProfileApiUtil = require('../../util/profile_api_util');
+var ProfileStore = require('../../stores/profile_store');
 var hashHistory = require('react-router').hashHistory;
 
 module.exports = React.createClass({

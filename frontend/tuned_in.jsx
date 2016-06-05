@@ -11,10 +11,10 @@ var hashHistory = ReactRouter.hashHistory;
 //components
 var App = require('./components/App');
 var LoginForm = require('./components/LoginForm');
-var ProfileForm = require('./components/ProfileForm');
+var ProfileForm = require('./components/profile/ProfileForm');
 var HomeForm = require('./components/home/HomeForm');
 var ConnectionsForm = require('./components/connections/ConnectionsForm');
-var ShowUser = require('./components/ShowUser');
+var ShowUser = require('./components/users/ShowUser');
 
 //Auth
 var SessionStore = require('./stores/session_store');

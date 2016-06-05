@@ -2,12 +2,12 @@ var React = require('react');
 var Link = require('react-router').Link;
 require('react-addons-linked-state-mixin');
 
-var ProfileStore = require('../stores/profile_store');
-var ErrorStore = require('../stores/error_store');
-var SessionStore = require('../stores/session_store');
+var ProfileStore = require('../../stores/profile_store');
+var ErrorStore = require('../../stores/error_store');
+var SessionStore = require('../../stores/session_store');
 
-var ExpSection = require('./ExpSection');
-var EduSection = require('./EduSection');
+var ExpSection = require('../experiences/ExpSection');
+var EduSection = require('../educations/EduSection');
 var ProfileHeaderItem = require('./ProfileHeaderItem');
 
 module.exports = React.createClass ({
@@ -22,7 +22,7 @@ module.exports = React.createClass ({
           <ProfileHeaderItem user={user}/>
         </div>
         <ExpSection user={user}/>
-        
+
       </div>
     );
   }

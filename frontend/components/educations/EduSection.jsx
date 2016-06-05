@@ -1,10 +1,9 @@
 var React = require('react');
-var ExpIndex = require('./ExpIndex');
+var EduIndex = require('./EduIndex');
+var EduForm = require('./EduForm');
+var SessionStore = require('../../stores/session_store');
 var Modal = require('react-modal');
-var ModalStyle = require('../constants/modal_style');
-var ExperienceForm = require('./ExperienceForm');
-var SessionStore = require('../stores/session_store');
-
+var ModalStyle = require('../../constants/modal_style');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -33,23 +32,24 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <div className='exp-sec'>
-        <h2>Experience</h2>
+      <div className='edu-sec'>
+        <h2>Education</h2>
 
         <button className='add-exp-btn'
-          onClick={this.createForm}>+ Add position</button>&nbsp;
+          onClick={this.createForm}>+ Add education</button>&nbsp;
 
         <div className='exp-items'>
-          <ExpIndex user={this.props.user}/>
+          <EduIndex user={this.props.user}/>
         </div>
 
         <Modal className='modal'
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
           style={ModalStyle}>
-          <ExperienceForm close={this.onModalClose}/>
+          <EduForm close={this.onModalClose}/>
           <button className='exp-cancel' onClick={this.onModalClose}>Cancel</button>
         </Modal>
+
       </div>
     );
   }

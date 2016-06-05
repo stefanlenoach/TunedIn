@@ -2,10 +2,10 @@ var React = require('react');
 var Link = require('react-router').Link;
 var hashHistory = require('react-router').hashHistory;
 var Modal = require('react-modal');
-var ModalStyle = require('../constants/modal_style');
+var ModalStyle = require('../../constants/modal_style');
 var ProfileUpdate = require('./ProfileUpdate');
-var SessionStore = require('../stores/session_store');
-var UserApiUtil = require('../util/user_api_util');
+var SessionStore = require('../../stores/session_store');
+var UserApiUtil = require('../../util/user_api_util');
 
 
 module.exports = React.createClass({

@@ -1,8 +1,8 @@
 var React = require('react');
-var EducationApiUtil = require('../util/education_api_util');
+var EducationApiUtil = require('../../util/education_api_util');
 var hashHistory = require('react-router').hashHistory;
 var Modal = require('react-modal');
-var ModalStyle = require('../constants/modal_style');
+var ModalStyle = require('../../constants/modal_style');
 var EduUpdate = require('./EduUpdate');
 
 module.exports = React.createClass({
