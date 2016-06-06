@@ -9,9 +9,10 @@ module.exports = React.createClass({
     var user = SessionStore.currentUser();
 
     return (
-      <div className='profile-header'>
-        <div className='pro-pic'>
-        </div>
+      <div className='home-header'>
+      <div className='pro-pic'>
+        <img src={user.image_url}/>
+      </div>
 
         <div className='pro-text'>
           <div className='pro-name'>{user.first_name + " " + user.last_name}</div>

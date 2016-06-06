@@ -28,12 +28,16 @@ module.exports = React.createClass({
     var fileReader = new FileReader();
     fileReader.onloadend = function () {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
-      var data = { id: this.props.user.id, imageFile: file, imageUrl: fileReader.result};
-      UserApiUtil.updateCurrentUser(data);
+
+      var formData = new FormData();
+      formData.append("id", this.props.user.id);
+      formData.append("user[image]", file);
+      // var data = { id: this.props.user.id, imageFile: file, imageUrl: fileReader.result};
+      UserApiUtil.updateImage(formData);
     }.bind(this);
 
-
     if (file) {
+
       fileReader.readAsDataURL(file);
       this.forceUpdate();
     }
@@ -45,7 +49,7 @@ module.exports = React.createClass({
       <div className='profile-header'>
         <div className='pro-pic'>
           <input className='pic-upload' type='file' onChange={this.updateFile}/>
-          <img src={this.state.imageUrl}/>
+          <img src={user.image_url}/>
         </div>
 
 

@@ -28,7 +28,7 @@ var Router = (
       <Route path="/profile" component={ ProfileForm } onEnter={_ensureLoggedIn}/>
       <Route path="/home" component={ HomeForm } onEnter={_ensureLoggedIn} />
       <Route path="/connections" component={ ConnectionsForm } onEnter={_ensureLoggedIn} />
-      <Route path='/users/:userId' component={ ShowUser }onEnter={_ensureLoggedIn} />
+      <Route path='/users/:userId' component={ ShowUser } onEnter={_ensureLoggedIn} />
     </Route>
   </Router>
 );

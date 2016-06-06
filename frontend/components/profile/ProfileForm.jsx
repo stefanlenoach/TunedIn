@@ -16,10 +16,7 @@ module.exports = React.createClass ({
     var user = SessionStore.currentUser();
     return (
       <div className='profile'>
-
-        <div className='profile-main'>
-          <ProfileHeaderItem user={user}/>
-        </div>
+        <ProfileHeaderItem user={user}/>
         <ExpSection user={user}/> <br/>
         <EduSection user={user}/>
       </div>

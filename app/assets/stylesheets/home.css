@@ -1,0 +1,11 @@
+.home-header{
+  position: absolute;
+  left: 265px;
+  top: 90px;
+  background: white;
+  border: 1px solid #ddd;
+  height: 160px;
+  width: 650px;
+  color: black;
+  font-family: sans-serif;
+}

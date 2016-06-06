@@ -53,14 +53,30 @@ var UserApiUtil = {
       url: '/api/users/' + usr.id,
       dataType: 'json',
       method: 'PATCH',
-      data: { user: { location: usr.location, current_position: usr.position,
-                      imageFile: usr.imageFile, imageUrl: usr.imageUrl} },
-
+      data: { user: {location: usr.location, position: usr.position} },
       success: function (currentUser) {
         SessionActions.updateCurrentUser(currentUser);
       },
       error: function (xhr) {
         console.log("Error in SessionApiUtil#updateCurrentUser error");
+      }
+    });
+  },
+
+  updateImage: function (usr) {
+    $.ajax({
+      url: '/api/users/' + usr.get('id'),
+      dataType: 'json',
+      method: 'PATCH',
+      processData: false,
+      contentType: false,
+      data: usr,
+
+      success: function (currentUser) {
+        SessionActions.updateCurrentUser(currentUser);
+      },
+      error: function (xhr) {
+        console.log("Error in SessionApiUtil#updateImage error");
       }
     });
   }

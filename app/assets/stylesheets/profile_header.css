@@ -1,6 +1,6 @@
 .profile-header{
   position: absolute;
-  left: 397px;
+  left: 265px;
   top: 90px;
   background: white;
   border: 1px solid #ddd;
@@ -12,7 +12,7 @@
 
 .pro-pic{
   position: relative;
-  top: 15px;
+  top: 0px;
   height: 170px;
   width: 160px;
 }

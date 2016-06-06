@@ -1,3 +1,14 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user-header{
+  position: absolute;
+  left: 265px;
+  top: 90px;
+  background: white;
+  border: 1px solid #ddd;
+  height: 160px;
+  width: 650px;
+  color: black;
+  font-family: sans-serif;
+}
