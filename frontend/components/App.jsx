@@ -26,15 +26,8 @@ var App = React.createClass({
           <Navbar/>
     		</hgroup>
     	);
-    } else if (["/login", "/signup"].indexOf(this.props.location.pathname) === -1) {
-      return (
-        <nav>
-          <Link to="/login" activeClassName="current">Login</Link>
-          &nbsp;or&nbsp;
-          <Link to="/signup" activeClassName="current">Sign up!</Link>
-        </nav>
-      );
     }
+    
   },
 
   render: function() {

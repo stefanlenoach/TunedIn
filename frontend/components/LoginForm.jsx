@@ -5,6 +5,9 @@ var SessionApiUtil = require('./../util/session_api_util');
 var SessionStore = require('./../stores/session_store');
 var ErrorStore = require('./../stores/error_store');
 var UserApiUtil = require('./../util/user_api_util');
+var ReactRouter = require('react-router');
+var Router = ReactRouter.Router;
+var hashHistory = ReactRouter.hashHistory;
 
 var LoginForm = React.createClass({
 	mixins: [LinkedStateMixin],
@@ -41,7 +44,7 @@ var LoginForm = React.createClass({
 
   redirectIfLoggedIn: function () {
     if (SessionStore.isUserLoggedIn()) {
-      this.context.router.push("/");
+      this.context.router.push("/home");
     }
   },
 
@@ -92,7 +95,7 @@ var LoginForm = React.createClass({
 
 	render: function () {
     var navLink;
-    if (this.formType() === "login") {
+    if (this.formType() === "") {
       navLink = <Link className='login-link' to="/signup">Join now</Link>;
 			return (
         <div className='login'>

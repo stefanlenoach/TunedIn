@@ -23,8 +23,7 @@ var SessionApiUtil = require('./util/session_api_util');
 var Router = (
   <Router history={ hashHistory }>
     <Route path="/" component={ App }>
-      <IndexRoute component={LoginForm}/>
-      <Route path="/login" component={ LoginForm } />
+      <IndexRoute component={ LoginForm } />
       <Route path="/signup" component={ LoginForm } />
       <Route path="/profile" component={ ProfileForm } onEnter={_ensureLoggedIn}/>
       <Route path="/home" component={ HomeForm } onEnter={_ensureLoggedIn} />
@@ -45,7 +44,7 @@ function _ensureLoggedIn(nextState, replace, asyncDoneCallback) {
 
   function redirectIfNotLoggedIn() {
     if (!SessionStore.isUserLoggedIn()) {
-      replace('/login');
+      replace('/');
     }
     asyncDoneCallback();
   }
