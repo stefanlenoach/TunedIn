@@ -1,3 +1,162 @@
 // Place all the styles related to the Educations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Experiences controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.edu-sec {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  border: 1px solid #ddd;
+  height: 100%;
+  width: 650px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #aaa;
+  font-weight: lighter;
+  top: 300px;
+}
+
+.add-edu-btn {
+  float: right;
+  font-size: 15px;
+  background: #eee;
+  color: #444;
+  padding: 6px;
+  font-weight:normal;
+  position: relative;
+  right: 40px;
+  bottom: 60px;
+}
+
+.add-edu-btn:hover {
+  transition: background-color 1s ease;
+  background-color: #66d9ff;
+  color: white;
+}
+
+.edu-sec h2{
+  padding: 30px;
+}
+
+.edu-edit-btn{
+  float: right;
+  font-size: 15px;
+  background: #eee;
+  color: #444;
+  padding: 6px;
+  font-weight:normal;
+  position: relative;
+}
+
+.edu-edit-btn:hover{
+  transition: background-color 1s ease;
+  background-color: #66d9ff;
+  color: white;
+}
+
+.edu-remove-btn{
+  float: right;
+  font-size: 15px;
+  background: #eee;
+  color: #444;
+  padding: 6px;
+  font-weight:normal;
+  position: relative;
+  left: 5px;
+}
+.edu-rmv-edit{
+  padding: 15px;
+  position: relative;
+}
+
+.edu-add-media{
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+}
+
+.edu-add-doc{
+  background: #eee;
+  padding: 7px;
+  position: relative;
+  bottom: 5px;
+}
+
+.edu-add-doc:hover{
+  transition: background-color 1s ease;
+  background-color: #66d9ff;
+  color: white;
+}
+
+.media-blocks{
+  padding: 5px;
+  float: left;
+  position: relative;
+  top: 15px;
+}
+
+.edu-remove-btn:hover{
+  transition: background-color 1s ease;
+  background-color: #66d9ff;
+  color: white;
+}
+
+.edu-item-show{
+  position: relative;
+  bottom: 50px;
+  border-bottom: 1px solid #bbb;
+  font-weight: normal;
+  padding: 30px;
+}
+
+.edu-school{
+  font-size: 20px;
+  color: black;
+  padding: 3px;
+}
+
+.edu-degree{
+  font-size: 18px;
+  color: #666;
+  padding: 3px;
+}
+
+.edu-item-show strong{
+  font-size: 14px;
+  color: #999;
+  padding: 3px;
+}
+
+.edu-field-of-study{
+  font-size: 14px;
+  color: #999;
+  padding: 3px;
+}
+
+.edu-dates-attended{
+  font-size: 14px;
+  color: #999;
+  padding: 3px;
+}
+
+.edu-grade{
+  font-size: 14px;
+  color: black;
+  padding: 3px;
+}
+
+.edu-activities{
+  font-size: 14px;
+  color: black;
+  padding: 3px;
+}
+
+.edu-description{
+  font-size: 14px;
+  color: black;
+  padding: 3px;
+  padding-top: 10px;
+}

@@ -25,10 +25,10 @@ var Router = (
     <Route path="/" component={ App }>
       <Route path="/login" component={ LoginForm } />
       <Route path="/signup" component={ LoginForm } />
-      <Route path="/profile" component={ ProfileForm } />
-      <Route path="/home" component={ HomeForm } />
-      <Route path="/connections" component={ ConnectionsForm } />
-      <Route path='/users/:userId' component={ ShowUser } />
+      <Route path="/profile" component={ ProfileForm } onEnter={_ensureLoggedIn}/>
+      <Route path="/home" component={ HomeForm } onEnter={_ensureLoggedIn} />
+      <Route path="/connections" component={ ConnectionsForm } onEnter={_ensureLoggedIn} />
+      <Route path='/users/:userId' component={ ShowUser }onEnter={_ensureLoggedIn} />
     </Route>
   </Router>
 );

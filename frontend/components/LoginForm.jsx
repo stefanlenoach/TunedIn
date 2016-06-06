@@ -101,16 +101,20 @@ var LoginForm = React.createClass({
           </div>
         <div className="form-login">
   				<form onSubmit={this.handleSubmit}>
-
-  					{ this.fieldErrors("base") }
-
+            <div className='error-login base'>
+  					     { this.fieldErrors("base") }
+            </div>
   					<br />
+            <div className='error-login email'>
   						{ this.fieldErrors("email") }
+            </div>
   						<input className="login-input" type="text" placeholder="Email Address" valueLink={this.linkState("email")} />
 
               <br />
   					<br />
+            <div className='error-login password'>
   						{ this.fieldErrors("password") }
+            </div>
   						<input className="login-input" type="password" placeholder="Password" valueLink={this.linkState("password")} />
 
   					<br />
@@ -137,33 +141,42 @@ var LoginForm = React.createClass({
           </div>
         <div className='form-signin'>
   				<form onSubmit={this.handleSubmit}>
-
-  				{ this.fieldErrors("base") }
+          <div className='error signup-base'>
+    				{ this.fieldErrors("base") }
+          </div>
   				<br />
           <div className='signin-field'>
     				<label className='signin-label'> First name </label><br />
-    				{ this.fieldErrors("first_name") }
+            <div className='error signup-first'>
+    				  { this.fieldErrors("first_name") }
+            </div>
     				<input className="signin-input" type="text" valueLink={this.linkState("first_name")} />
           </div>
 
   				<br />
             <div className='signin-field'>
     				<label className='signin-label'> Last name </label><br />
-    				{ this.fieldErrors("last_name") }
+            <div className='error signup-last'>
+    				  { this.fieldErrors("last_name") }
+            </div>
     				<input className="signin-input" type="text" valueLink={this.linkState("last_name")} />
           </div>
 
   				<br />
           <div className='signin-field'>
     				<label className='signin-label'> Email </label><br />
-    				{ this.fieldErrors("email") }
+            <div className='error signup-email'>
+    				  { this.fieldErrors("email") }
+            </div>
     				<input className="signin-input" type="text" valueLink={this.linkState("email")} />
           </div>
 
   				<br />
           <div className='signin-field'>
     				<label className='signin-label'> Password (6 or more characters)</label><br />
-    				{ this.fieldErrors("password") }
+            <div className='error signup-password'>
+    				  { this.fieldErrors("password") }
+            </div>
     				<input className="signin-input" type="password" valueLink={this.linkState("password")} />
           </div>
           <br />

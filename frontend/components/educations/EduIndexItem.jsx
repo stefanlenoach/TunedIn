@@ -43,16 +43,16 @@ module.exports = React.createClass({
           {this.props.edu.dates_attended}
         </div>
 
+        <div className='edu-description'>
+          {this.props.edu.description}
+        </div>
+
         <div className='edu-grade'>
-          {this.props.edu.grade}
+          <strong>GPA:</strong> {this.props.edu.grade}
         </div>
 
         <div className='edu-activities'>
-          {this.props.edu.activities}
-        </div>
-
-        <div className='edu-description'>
-          {this.props.edu.description}
+          <strong>Activities and Societies:</strong> {this.props.edu.activities}
         </div>
 
         <div className='edu-add-media'>

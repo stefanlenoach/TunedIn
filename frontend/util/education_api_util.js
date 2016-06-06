@@ -1,4 +1,4 @@
-var EducationActions = require('../actions/profile_actions');
+var EducationActions = require('../actions/education_actions');
 
 module.exports = {
   getEducations: function (formData) {

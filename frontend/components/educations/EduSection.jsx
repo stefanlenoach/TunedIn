@@ -35,10 +35,10 @@ module.exports = React.createClass({
       <div className='edu-sec'>
         <h2>Education</h2>
 
-        <button className='add-exp-btn'
+        <button className='add-edu-btn'
           onClick={this.createForm}>+ Add education</button>&nbsp;
 
-        <div className='exp-items'>
+        <div className='edu-items'>
           <EduIndex user={this.props.user}/>
         </div>
 
@@ -47,7 +47,7 @@ module.exports = React.createClass({
           onRequestClose={this.onModalClose}
           style={ModalStyle}>
           <EduForm close={this.onModalClose}/>
-          <button className='exp-cancel' onClick={this.onModalClose}>Cancel</button>
+          <button className='edu-cancel' onClick={this.onModalClose}>Cancel</button>
         </Modal>
 
       </div>

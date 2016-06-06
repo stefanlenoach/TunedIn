@@ -5,7 +5,7 @@ var hashHistory = require('react-router').hashHistory;
 
 module.exports = React.createClass({
   getInitialState: function () {
-    var potEdu = EducationStore.find(this.props.exp.id);
+    var potEdu = EducationStore.find(this.props.edu.id);
     var edu = potEdu ? potEdu : {};
     return {id: edu.id, user_id: edu.user_id, school: edu.school, degree: edu.degree,
             field_of_study: edu.field_of_study, dates_attended: edu.dates_attended,
@@ -14,7 +14,7 @@ module.exports = React.createClass({
 
   componentDidMount: function () {
     this.eduListener = EducationStore.addListener(this.handleChange);
-    EducationApiUtil.getEduerience(parseInt(this.props.edu.id));
+    EducationApiUtil.getEducation(parseInt(this.props.edu.id));
   },
 
   componentWillUnmount: function () {
@@ -27,11 +27,6 @@ module.exports = React.createClass({
     this.setState({id: edu.id, user_id: edu.user_id, school: edu.school, degree: edu.degree,
             field_of_study: edu.field_of_study, dates_attended: edu.dates_attended,
             grade: edu.grade, activities: edu.activities, description: edu.description});
-  },
-
-  changeSchool: function (event) {
-    var scho = event.target.value;
-    this.setState({school: scho});
   },
 
   changeDegree: function (event) {
@@ -72,56 +67,50 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <form className='exp-form' onSubmit={this.handleSubmit}>
-        <label className = 'exp-label'>School *</label>
-        <br/>
-        <input
-        type='text' className = 'exp-input'
-        value={this.state.company}
-        onChange={this.changeSchool}/><br/>
+      <form className='edu-form' onSubmit={this.handleSubmit}>
 
-        <label className = 'exp-label'>Degree</label>
+        <label className = 'edu-label'>Degree</label>
         <br/>
         <input
-        type='text' className = 'exp-input'
+        type='text' className = 'edu-input'
         value={this.state.degree}
         onChange={this.changeDegree}/><br/><br/>
 
-        <label className = 'exp-label'>Field of Study</label>
+        <label className = 'edu-label'>Field of Study</label>
         <br/>
         <input
-        type='text' className = 'exp-input'
+        type='text' className = 'edu-input'
         value={this.state.field_of_study}
         onChange={this.changeFieldOfStudy}/><br/>
 
-        <label className = 'exp-label'>Dates Attended</label>
+        <label className = 'edu-label'>Dates Attended</label>
         <br/>
         <input
-        type='text' className = 'exp-input'
+        type='text' className = 'edu-input'
         value={this.state.dates_attended}
         onChange={this.changeDatesAttended}/><br/>
 
-        <label className = 'exp-label'>Grade</label>
+        <label className = 'edu-label'>Grade</label>
         <br/>
         <input
-        type='text' className = 'exp-input'
+        type='text' className = 'edu-input'
         value={this.state.grade}
         onChange={this.changeGrade}/><br/>
 
-        <label className = 'exp-label'>Activities</label>
+        <label className = 'edu-label'>Activities</label>
         <br/>
-        <textarea className = 'exp-txt-area'
+        <textarea className = 'edu-txt-area'
         value={this.state.activities}
         onChange={this.changeActivities}/><br/>
 
-        <label className = 'exp-label'>Description</label>
+        <label className = 'edu-label'>Description</label>
         <br/>
-        <textarea className = 'exp-txt-area'
+        <textarea className = 'edu-txt-area'
         value={this.state.description}
         onChange={this.changeDescription}/><br/>
 
         <input
-        type="submit" className = 'exp-submit'
+        type="submit" className = 'edu-submit'
         value="Save"/>
       </form>
     );
