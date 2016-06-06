@@ -1,17 +1,22 @@
 .profile-header{
-  position: absolute;
-  left: 265px;
-  top: 90px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   background: white;
   border: 1px solid #ddd;
   height: 200px;
+
   width: 650px;
-  color: black;
+  font-size: 30px;
   font-family: sans-serif;
+  color: black;
+  font-weight: lighter;
+  top: 100px;
 }
 
 .pro-pic{
   position: relative;
+
   top: 0px;
   height: 170px;
   width: 160px;

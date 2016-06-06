@@ -32,6 +32,10 @@ module.exports = React.createClass({
     this.setState({ searchString: "" });
   },
 
+  hideSearch: function () {
+    this.setState({ searchString: "" });
+  },
+
   handleSubmit: function(e){
 
   },
@@ -55,7 +59,7 @@ module.exports = React.createClass({
 
             <form className='search' onSubmit={this.handleSubmit}>
               <input className='searchbar' type='text' onChange={this.handleChange}
-              placeholder='Search for people, jobs, companies and more...'/>
+              placeholder='Search for people, jobs, companies and more...' value={this.state.searchString}/>
 
               <input className='search-btn' type='submit' value='Search'/>
             </form>
@@ -67,12 +71,12 @@ module.exports = React.createClass({
             <nav>
             <ul className = 'search-items'>
             { users.map(function(user){
-              return (<li className='search-item' key={user.id}>
-                <Link className='search-item-link' to={'/users/' + user.id}>
+              return (<li className='search-item' key={user.id} onClick={this.hideSearch}>
+                <Link className='search-item-link' to={'/users/' + user.id} >
                   {user.first_name + " " + user.last_name}
                 </Link>
               </li>);
-              })
+            }.bind(this))
             }
           </ul>
           </nav>

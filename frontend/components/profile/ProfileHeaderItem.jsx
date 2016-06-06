@@ -32,7 +32,6 @@ module.exports = React.createClass({
       var formData = new FormData();
       formData.append("id", this.props.user.id);
       formData.append("user[image]", file);
-      // var data = { id: this.props.user.id, imageFile: file, imageUrl: fileReader.result};
       UserApiUtil.updateImage(formData);
     }.bind(this);
 

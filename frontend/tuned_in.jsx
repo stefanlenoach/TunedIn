@@ -23,6 +23,7 @@ var SessionApiUtil = require('./util/session_api_util');
 var Router = (
   <Router history={ hashHistory }>
     <Route path="/" component={ App }>
+      <IndexRoute component={LoginForm}/>
       <Route path="/login" component={ LoginForm } />
       <Route path="/signup" component={ LoginForm } />
       <Route path="/profile" component={ ProfileForm } onEnter={_ensureLoggedIn}/>

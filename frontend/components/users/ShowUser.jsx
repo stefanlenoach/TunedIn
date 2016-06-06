@@ -3,6 +3,7 @@ var UserApiUtil = require('../../util/user_api_util');
 var SessionStore = require('../../stores/session_store');
 var UserHeaderItem = require('./UserHeaderItem');
 var UserExp = require('./UserExp');
+var UserEdu = require('./UserEdu');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -12,6 +13,10 @@ module.exports = React.createClass({
   componentDidMount: function () {
     this.userListener = SessionStore.addListener(this.onChange);
     UserApiUtil.getUser(this.props.params.userId);
+  },
+
+  componentWillReceiveProps: function (newProps) {
+    UserApiUtil.getUser(newProps.params.userId);
   },
 
   componentWillUnmount: function () {
@@ -37,7 +42,12 @@ module.exports = React.createClass({
           <div className='exp-items'>
             <UserExp user={user}/>
           </div>
-
+          <div className='edu-sec'>
+          <h2>Education</h2>
+            <div className='edu-items'>
+              <UserEdu user={user}/>
+            </div>
+          </div>
         </div>
 
       </div>
