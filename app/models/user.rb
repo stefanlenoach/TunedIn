@@ -48,15 +48,17 @@ class User < ActiveRecord::Base
   end
 
   def connected_with?(user)
+    return nil if user.nil?
+
     user.received_connections.each do |connection|
       if self.requested_connections.include?(connection)
-        return connection.status
+        return [connection.status, "received"]
       end
     end
 
     user.requested_connections.each do |connection|
       if self.received_connections.include?(connection)
-        return connection.status
+        return [connection.status, "requested"]
       end
     end
 

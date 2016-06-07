@@ -1,4 +1,11 @@
 class Api::ConnectionsController < ApplicationController
+  def index
+    @connections = Connection.all
+  end
+
+  def show
+    @connection = Connection.find(params[:id])
+  end
 
   def create
     @connection = Connection.new(connection_params)

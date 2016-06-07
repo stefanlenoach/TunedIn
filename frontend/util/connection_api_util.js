@@ -9,7 +9,7 @@ module.exports = {
         ConnectionActions.fetchForms(forms);
       },
       error: function (xhr) {
-        console.log('ConnectionFormApiUtil#createConnection error');
+        console.log('ConnectionFormApiUtil#getConnections error');
       }
     });
   },
@@ -48,7 +48,7 @@ module.exports = {
       url: '/api/connections/' + formData.id,
       dataType: 'json',
       type: 'PATCH',
-      data: { connection: { status: formData.status} },
+      data: { connection: formData },
 
       success: function (form) {
         ConnectionActions.receiveForm(form);

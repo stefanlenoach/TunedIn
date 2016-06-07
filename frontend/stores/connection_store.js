@@ -32,6 +32,16 @@ ConnectionStore.find = function (id) {
   return _connections[id];
 };
 
+ConnectionStore.findByIds = function (connectorId, connecteeId) {
+  var connectId;
+  Object.keys(_connections).forEach(function (key){
+    if ((_connections[key].connector_id === parseInt(connecteeId)) && (_connections[key].connectee_id === connectorId)){
+      connectId = key;
+    }
+  });
+  return connectId;
+};
+
 
 ConnectionStore.__onDispatch = function (payload) {
   switch(payload.actionType){
