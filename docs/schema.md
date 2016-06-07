@@ -17,6 +17,14 @@ author_id   | integer   | not null, foreign key (references users), indexed
 post_id     | string    | not null
 body        | datetime  | not null
 
+## connections
+column name      | data type | details
+-----------------|-----------|-----------------------
+id               | integer   | not null, primary key
+connector_id     | integer   | not null, foreign key (references users), indexed
+connectee_id     | string    | not null
+status           | string    | not null, default: pending
+
 ## posts
 column name | data type | details
 ------------|-----------|-----------------------
@@ -24,8 +32,6 @@ id          | integer   | not null, primary key
 author_id   | string    | not null, foreign key (references users), indexed
 title       | string    | not null
 content     | string    | not null
-
-
 
 ## experiences
 column name      | data type | details

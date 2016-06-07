@@ -26,20 +26,22 @@ module.exports = React.createClass({
   updateFile: function(event) {
     var file = event.currentTarget.files[0];
     var fileReader = new FileReader();
+
     fileReader.onloadend = function () {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
 
       var formData = new FormData();
       formData.append("id", this.props.user.id);
       formData.append("user[image]", file);
+
       UserApiUtil.updateImage(formData);
     }.bind(this);
 
     if (file) {
-
       fileReader.readAsDataURL(file);
-      this.forceUpdate();
     }
+    
+    this.forceUpdate();
   },
 
   render: function () {
