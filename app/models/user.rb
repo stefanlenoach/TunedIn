@@ -50,16 +50,17 @@ class User < ActiveRecord::Base
   def connected_with?(user)
     user.received_connections.each do |connection|
       if self.requested_connections.include?(connection)
-        return true
+        return connection.status
       end
     end
 
     user.requested_connections.each do |connection|
       if self.received_connections.include?(connection)
-        return true
+        return connection.status
       end
     end
-    return false
+
+    return "false"
   end
 
   def self.find_by_credentials (email, password)
