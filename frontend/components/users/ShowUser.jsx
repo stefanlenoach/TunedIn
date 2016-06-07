@@ -5,6 +5,7 @@ var UserHeaderItem = require('./UserHeaderItem');
 var UserExp = require('./UserExp');
 var UserEdu = require('./UserEdu');
 
+
 module.exports = React.createClass({
   getInitialState: function () {
     return {user: {id: "", first_name: "", last_name: "", current_position: "", location: "", imageUrl: ""} };
@@ -29,11 +30,12 @@ module.exports = React.createClass({
 
   render: function () {
     var user = this.state.user;
+    var userId = this.props.params.userId;
     return (
       <div className='profile'>
 
         <div className='profile-main'>
-          <UserHeaderItem user={user}/>
+          <UserHeaderItem user={user} userId={userId} />
         </div>
 
         <div className='exp-sec'>

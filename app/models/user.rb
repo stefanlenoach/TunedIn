@@ -28,6 +28,20 @@ class User < ActiveRecord::Base
     foreign_key: :user_id
   )
 
+  has_many(
+    :requested_connections,
+    class_name: "Connection",
+    primary_key: :id,
+    foreign_key: :connector_id
+  )
+
+  has_many(
+    :received_connections,
+    class_name: "Connection",
+    primary_key: :id,
+    foreign_key: :connectee_id
+  )
+
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
     @password = password

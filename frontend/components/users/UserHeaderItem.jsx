@@ -1,4 +1,5 @@
 var React = require('react');
+var ConnectionsForm = require('../connections/ConnectionsForm');
 
 module.exports = React.createClass({
   render: function () {
@@ -8,7 +9,7 @@ module.exports = React.createClass({
         <div className='pro-pic'>
           <img src={user.image_url}/>
         </div>
-
+        <ConnectionsForm userId={this.props.userId}/>
         <div className='pro-text'>
           <div className='pro-name'>{user.first_name + " " + user.last_name}</div>
           <div className='pro-pos'>{user.current_position}</div>

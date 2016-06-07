@@ -1,0 +1,7 @@
+var ConnectionConstants = {
+  GET_CONNECTIONS: "GET_CONNECTIONS",
+	RECEIVE_CONNECTION: "RECEIVE_CONNECTION",
+  REMOVE_CONNECTION: "REMOVE_CONNECTION"
+};
+
+module.exports = ConnectionConstants;
