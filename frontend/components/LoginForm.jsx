@@ -55,6 +55,7 @@ var LoginForm = React.createClass({
 			email: this.state.email,
 			password: this.state.password
 		};
+    this.setState({email: "", password: ""});
     SessionApiUtil.login(formData);
 	},
 

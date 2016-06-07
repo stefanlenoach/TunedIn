@@ -27,7 +27,7 @@ module.exports = React.createClass({
       <div>
       {
         this.state.edus.map(function(edu){
-          if (id === edu.user_id){
+          if (id === edu.user_id && edu.school !== undefined){
             return (<EduIndexItem key={edu.id} edu={edu}/>);
           } else {
             return (null);

@@ -11,7 +11,7 @@ var hashHistory = ReactRouter.hashHistory;
 
 module.exports = React.createClass({
   mixins: [LinkedStateMixin],
-  
+
   getInitialState: function () {
 		return {
 			first_name: "",
@@ -50,7 +50,7 @@ module.exports = React.createClass({
       email: this.state.email,
       password: this.state.password
     };
-
+    this.setState({first_name: "", last_name: "", email: "", password: ""});
     UserApiUtil.signup(formData);
   },
 

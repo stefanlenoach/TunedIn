@@ -5,5 +5,8 @@
 }
 
 .error-login{
-  
+  color: red;
+  font-size: 12px;
+  position: relative;
+  top: 127px;
 }

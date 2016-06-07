@@ -27,7 +27,7 @@ module.exports = React.createClass({
       <div>
       {
         this.state.exps.map(function(exp){
-          if (id === exp.user_id){
+          if (id === exp.user_id && exp.title !== undefined){
             return (<ExpIndexItem key={exp.id} exp={exp}/>);
           } else {
             return (null);
