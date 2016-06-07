@@ -15,6 +15,7 @@ var ProfileForm = require('./components/profile/ProfileForm');
 var HomeForm = require('./components/home/HomeForm');
 var ConnectionsForm = require('./components/connections/ConnectionsForm');
 var ShowUser = require('./components/users/ShowUser');
+var SigninForm = require('./components/SigninForm');
 
 //Auth
 var SessionStore = require('./stores/session_store');
@@ -24,7 +25,8 @@ var Router = (
   <Router history={ hashHistory }>
     <Route path="/" component={ App }>
       <IndexRoute component={ LoginForm } />
-      <Route path="/signup" component={ LoginForm } />
+      <Route path='/login' component={ LoginForm } />
+      <Route path="/signup" component={ SigninForm } />
       <Route path="/profile" component={ ProfileForm } onEnter={_ensureLoggedIn}/>
       <Route path="/home" component={ HomeForm } onEnter={_ensureLoggedIn} />
       <Route path="/connections" component={ ConnectionsForm } onEnter={_ensureLoggedIn} />

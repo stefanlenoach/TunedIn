@@ -40,6 +40,11 @@ module.exports = React.createClass({
 
   },
 
+  logout: function () {
+    SessionApiUtil.logout();
+    hashHistory.push('/login');
+  },
+
   render: function () {
     var that = this;
     var searchString = this.state.searchString.trim().toLowerCase();
@@ -55,7 +60,7 @@ module.exports = React.createClass({
         <nav className='navbar'>
           <nav className='mainnav'>
           </nav>
-            <button className='logout-btn' onClick={ SessionApiUtil.logout }>Log out</button>
+            <button className='logout-btn' onClick={ this.logout }>Log out</button>
 
             <form className='search' onSubmit={this.handleSubmit}>
               <input className='searchbar' type='text' onChange={this.handleChange}

@@ -13,19 +13,10 @@ var LoginForm = React.createClass({
 	mixins: [LinkedStateMixin],
 
   getInitialState: function () {
-		if (this.props.location.pathname === "/login") {
 			return {
 				email: "",
 				password: ""
 			};
-		} else {
-			return {
-				first_name: "",
-				last_name: "",
-				email: "",
-				password: ""
-			};
-		}
   },
 
   contextTypes: {
@@ -60,22 +51,11 @@ var LoginForm = React.createClass({
 	handleSubmit: function (e) {
 		e.preventDefault();
     var formData;
-    if (this.props.location.pathname === "/login") {
-			 formData = {
-				email: this.state.email,
-				password: this.state.password
-			};
-      SessionApiUtil.login(formData);
-    } else {
-
-			 formData = {
-				first_name: this.state.first_name,
-				last_name: this.state.last_name,
-				email: this.state.email,
-				password: this.state.password
-			};
-      UserApiUtil.signup(formData);
-    }
+		formData = {
+			email: this.state.email,
+			password: this.state.password
+		};
+    SessionApiUtil.login(formData);
 	},
 
   fieldErrors: function (field) {
@@ -94,9 +74,7 @@ var LoginForm = React.createClass({
   },
 
 	render: function () {
-    var navLink;
-    if (this.formType() === "") {
-      navLink = <Link className='login-link' to="/signup">Join now</Link>;
+    var  navLink = <Link className='login-link' to="/signup">Join now</Link>;
 			return (
         <div className='login'>
           <div className='login-header'>
@@ -132,71 +110,7 @@ var LoginForm = React.createClass({
           </div>
         </div>
 			);
-    } else {
-      navLink = <Link className= 'signin-link' to="/login">Sign in</Link>;
-
-
-			return (
-        <div className='signin'>
-          <div className='signin-header'>
-            <h2></h2>
-            <h3>Make the most of your professional life</h3>
-          </div>
-        <div className='form-signin'>
-  				<form onSubmit={this.handleSubmit}>
-          <div className='error signup-base'>
-    				{ this.fieldErrors("base") }
-          </div>
-  				<br />
-          <div className='signin-field'>
-    				<label className='signin-label'> First name </label><br />
-            <div className='error signup-first'>
-    				  { this.fieldErrors("first_name") }
-            </div>
-    				<input className="signin-input" type="text" valueLink={this.linkState("first_name")} />
-          </div>
-
-  				<br />
-            <div className='signin-field'>
-    				<label className='signin-label'> Last name </label><br />
-            <div className='error signup-last'>
-    				  { this.fieldErrors("last_name") }
-            </div>
-    				<input className="signin-input" type="text" valueLink={this.linkState("last_name")} />
-          </div>
-
-  				<br />
-          <div className='signin-field'>
-    				<label className='signin-label'> Email </label><br />
-            <div className='error signup-email'>
-    				  { this.fieldErrors("email") }
-            </div>
-    				<input className="signin-input" type="text" valueLink={this.linkState("email")} />
-          </div>
-
-  				<br />
-          <div className='signin-field'>
-    				<label className='signin-label'> Password (6 or more characters)</label><br />
-            <div className='error signup-password'>
-    				  { this.fieldErrors("password") }
-            </div>
-    				<input className="signin-input" type="password" valueLink={this.linkState("password")} />
-          </div>
-          <br />
-          <p>By clicking Join now, you agree to TunedIn's User Agreement, Privacy Policy, and Cookie Policy.</p>
-  				<br />
-  				<input className="signin-submit" type="submit" value="Join now" />
-
-          <div className='signin-login'>
-            <h3>Already on TunedIn? {navLink}</h3>
-          </div>
-  				</form>
-          </div>
-        </div>
-			);
     }
-
-	}
 });
 
 module.exports = LoginForm;
