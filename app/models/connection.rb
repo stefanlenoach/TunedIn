@@ -1,5 +1,6 @@
 class Connection < ActiveRecord::Base
   validates :connector_id, :connectee_id, presence: true
+  validates :connector_id, uniqueness: { scope: :connectee_id }
 
   belongs_to(
     :connector,

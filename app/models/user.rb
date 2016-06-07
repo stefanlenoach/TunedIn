@@ -47,6 +47,21 @@ class User < ActiveRecord::Base
     @password = password
   end
 
+  def connected_with?(user)
+    user.received_connections.each do |connection|
+      if self.requested_connections.include?(connection)
+        return true
+      end
+    end
+
+    user.requested_connections.each do |connection|
+      if self.received_connections.include?(connection)
+        return true
+      end
+    end
+    return false
+  end
+
   def self.find_by_credentials (email, password)
     user = User.find_by(email: email)
     return nil unless user

@@ -11,7 +11,6 @@ class Api::ConnectionsController < ApplicationController
 
   def update
     @connection = Connection.find(params[:id])
-
     if @connection.update(connection_params)
       render :show
     else

@@ -28,6 +28,7 @@ module.exports = {
   },
 
   createConnection: function (formData) {
+
     $.ajax({
       url: '/api/connections',
       type: 'POST',
