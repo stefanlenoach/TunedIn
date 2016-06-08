@@ -7,6 +7,7 @@ var ReactRouter = require('react-router');
 var router = ReactRouter.Router;
 var hashHistory = ReactRouter.hashHistory;
 
+var Notifications = require('./connections/Notifications');
 
 
 module.exports = React.createClass({
@@ -27,7 +28,6 @@ module.exports = React.createClass({
   },
 
   showUser: function(userId){
-    // that.showUser(user.id)
     hashHistory.push('/users/' + userId);
     this.setState({ searchString: "" });
   },
@@ -58,9 +58,11 @@ module.exports = React.createClass({
     return (
       <div>
         <nav className='navbar'>
-          <nav className='mainnav'>
-          </nav>
-            <button className='logout-btn' onClick={ this.logout }>Log out</button>
+          <nav className='mainnav'></nav>
+            <div className='right-side'>
+              <button className='logout-btn' onClick={ this.logout }>Log out</button>
+              <Notifications/>
+            </div>
             <div className='search-div'>
               <form className='search' onSubmit={this.handleSubmit}>
                 <input className='searchbar' type='text' onChange={this.handleChange}
@@ -69,6 +71,7 @@ module.exports = React.createClass({
                 <input className='search-btn' type='submit' value='Search'/>
               </form>
             </div>
+
           <nav className='subnav'>
             <div className="subdiv">
               <Link className='nav-link' to='/home'>Home</Link>

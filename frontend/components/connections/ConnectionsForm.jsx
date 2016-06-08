@@ -32,7 +32,6 @@ module.exports = React.createClass({
 
   render: function () {
     var user = SessionStore.find(this.props.userId);
-
     if (!user) {
       return <div></div>;
     }

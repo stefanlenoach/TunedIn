@@ -49,21 +49,7 @@
   background-color: #eee;
 }
 
-.logout-btn{
-  float:right;
-  position: relative;
-  right: 50px;
-  bottom: 30px;
-  background: transparent;
-  color: white;
-  font-family: sans-serif;
 
-}
-
-.logout-btn:hover{
-  transition: color 1s ease;
-  color: #aaa;
-}
 
 .searchbar{
   width: 345px;

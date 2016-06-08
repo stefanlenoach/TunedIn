@@ -1,0 +1,52 @@
+.notification-icon{
+  float: right;
+  color: white;
+  position: relative;
+  right: 300px;
+  bottom: 30px;
+}
+
+.logout-btn{
+  float:right;
+  position: relative;
+  right: 50px;
+  bottom: 30px;
+  padding:left;
+}
+
+.dropdown {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    height: 60px;
+    display: inline-block;
+}
+
+.logout-btn:hover{
+  transition: color 1s ease;
+  color: #aaa;
+}
+
+.right-side{
+  float: right;
+  height: 100%;
+  width: 400px;
+  background: transparent;
+  color: white;
+  font-family: sans-serif;
+}
+
+.notification-item{
+  display: none;
+  color: #aaa;
+  background: white;
+}
+
+.notification-icon:hover .notification-item {
+  display:block;
+}
+
+.dropdown:hover .notification-item {
+  display:block;
+}

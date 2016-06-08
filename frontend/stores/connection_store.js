@@ -28,6 +28,30 @@ ConnectionStore.all = function () {
   });
 };
 
+ConnectionStore.allConnected = function (id) {
+  var connections = [];
+  Object.keys(_connections).forEach(function (key){
+    if ((_connections[key].connector_id === id) || (_connections[key].connectee_id === id)){
+      if (_connections[key].status === "connected") {
+        connections.push(_connections[key]);
+      }
+    }
+  });
+  return connections;
+};
+
+ConnectionStore.pendingForAccept = function (id) {
+  var connections = [];
+  Object.keys(_connections).forEach(function (key){
+    if (_connections[key].connectee_id === id){
+      if (_connections[key].status === "pending") {
+        connections.push(_connections[key]);
+      }
+    }
+  });
+  return connections;
+};
+
 ConnectionStore.find = function (id) {
   return _connections[id];
 };

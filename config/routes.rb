@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :educations
     resources :connections, only: [:index, :create, :destroy, :update, :show]
   end
-
+  
+  get '/auth/:provider/callback', to: 'sessions#create'
   root "static_pages#root"
 end
