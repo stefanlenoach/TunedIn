@@ -15,7 +15,9 @@
 }
 
 .pic-container {
-    width: 140px;
+    width: 170px;
+    position: relative;
+    bottom: 20px;
 }
 
 .pic-container img {

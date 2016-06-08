@@ -30,37 +30,73 @@ diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet
 user2 = User.create!(first_name: "Quee", last_name: "Queg", password: "123123", email: "queequeg@gmail.com",
             current_position: "Harpooner", location: "Boston" )
             Experience.create!(user_id: user2.id, company_name: "Whales4U",
-            title: "Harpooner", location: "Boston", description: "I throw harpoons at whales")
+            title: "Harpooner", location: "Boston", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Experience.create!(user_id: user2.id, company_name: "Cameroon general hospital",
-            title: "Witch Doctor", location: "Cameroon", description: "I heal people with black magic")
+            title: "Witch Doctor", location: "Cameroon", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Education.create!(user_id: user2.id, school: "Boston University", degree: "Bachelors of Science",
             field_of_study: "Marine Biology", dates_attended: "1920 - 1923", grade: "3.6", activities: "BU Fishermen, Sigma Alpha Theta",
-             description: "I had to leave a year early to go whaling" )
+             description: "Lorem ipsum dolor sit ame
+             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+             vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+          Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+          diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user3 = User.create!(first_name: "Azealia", last_name: "Banks", password: "123123", email: "banks@gmail.com",
             current_position: "Unemployed", location: "New York" )
             Experience.create!(user_id: user3.id, company_name: "Whales4U",
-            title: "Unemployed", location: "New York", description: "I start fights on Twitter")
+            title: "Unemployed", location: "New York", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Education.create!(user_id: user3.id, school: "New York University", degree: "Bachelors of Arts",
             field_of_study: "English", dates_attended: "2004 - 2008", grade: "2.9", activities: "Step Team, NYU Improv",
              description: "" )
 
 user4 = User.create!(first_name: "Rick", last_name: "Ross", password: "123123", email: "rickross@gmail.com",
             current_position: "Boss", location: "Miami" )
-            Experience.create!(user_id: user4.id, company_name: "Whales4U",
-            title: "Harpooner", location: "Boston", description: "I throw harpoons at whales")
-            Experience.create!(user_id: user4.id, company_name: "Cameroon general hospital",
-            title: "Witch Doctor", location: "Cameroon", description: "I heal people with black magic")
+            Experience.create!(user_id: user4.id, company_name: "Disney",
+            title: "Songwriter", location: "Boston", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
+            Experience.create!(user_id: user4.id, company_name: "Big boy records",
+            title: "CEO", location: "Miami", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Education.create!(user_id: user4.id, school: "University of Florida", degree: "Bachelors of Arts",
             field_of_study: "Economics", dates_attended: "2000 - 2004", grade: "3.3", activities: "President of UF business fraternity",
-             description: "" )
+             description: "Lorem ipsum dolor sit ame
+             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+             vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+          Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+          diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user5 = User.create!(first_name: "Kanye", last_name: "West", password: "123123", email: "kanyewest@gmail.com",
-            current_position: "God", location: "New York" )
+            current_position: "Fashion Designer", location: "New York" )
             Experience.create!(user_id: user5.id, company_name: "RocNation",
-            title: "Producer", location: "New York", description: "I make dope beats")
+            title: "Producer", location: "New York", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Experience.create!(user_id: user5.id, company_name: "Starbucks",
-            title: "Barista", location: "Chicago", description: "I make dope coffee")
+            title: "Barista", location: "Chicago", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Education.create!(user_id: user5.id, school: "University of Chicago", degree: "Bachelors of Arts",
             field_of_study: "Music theory", dates_attended: "2003 - 2006", grade: "3.0", activities: "Jazz band, Marching band",
              description: "" )
@@ -68,22 +104,42 @@ user5 = User.create!(first_name: "Kanye", last_name: "West", password: "123123",
 user6 = User.create!(first_name: "Biggie", last_name: "Smalls", password: "123123", email: "biggiesmalls@gmail.com",
             current_position: "Fry Cook", location: "Atlanta" )
             Experience.create!(user_id: user6.id, company_name: "PopEyes",
-            title: "Fry cook", location: "Atlanta", description: "I make fried chicken")
+            title: "Fry cook", location: "Atlanta", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Experience.create!(user_id: user6.id, company_name: "RocafellaRecords",
             title: "Rapper", location: "New York", description: "I rap")
             Education.create!(user_id: user6.id, school: "Fordham University", degree: "Bachelors of Arts",
             field_of_study: "Religion", dates_attended: "1992 - 1996", grade: "2.6", activities: "Fordham football captain and DL",
-             description: "" )
+             description: "Lorem ipsum dolor sit ame
+             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+             vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+          Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+          diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user7 = User.create!(first_name: "Lil", last_name:  "Wayne", password: "123123", email: "lilwayne@gmail.com",
             current_position: "Skateboarder", location: "New Orleans" )
             Experience.create!(user_id: user7.id, company_name: "WeezyBoards",
-            title: "CEO", location: "New Orleans", description: "I ride skateboards")
+            title: "CEO", location: "New Orleans", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Experience.create!(user_id: user7.id, company_name: "Young Money",
-            title: "Rapper", location: "Atlanta", description: "I drink cough syrup")
+            title: "Rapper", location: "Atlanta", description: "Lorem ipsum dolor sit ame
+            t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+            vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+         Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu")
             Education.create!(user_id: user7.id, school: "Alabama University", degree: "Bachelors of Science",
             field_of_study: "Physics", dates_attended: "2000 - 2004", grade: "3.8", activities: "AU Hybrid car team",
-             description: "" )
+             description: "Lorem ipsum dolor sit ame
+             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
+             vitate patrioque qui cu. Nam dicant oblique habemus te, sit dictas doctus mentitum at.
+          Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
+          diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 
 Connection.create!(connector_id: user2.id, connectee_id: user1.id)

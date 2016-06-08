@@ -96,7 +96,7 @@ class User < ActiveRecord::Base
       user = User.create!(
         twitter_uid: auth_hash[:uid],
         first_name: auth_hash[:info][:name],
-        last_name: " ",
+        last_name: "(via Twitter)",
         email: (auth_hash[:info][:name] + "@twitter.com"),
         password_digest: "kljabdfklvboasdflkjbadsglkjbadf"
       )
