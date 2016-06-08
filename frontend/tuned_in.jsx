@@ -13,7 +13,7 @@ var App = require('./components/App');
 var LoginForm = require('./components/LoginForm');
 var ProfileForm = require('./components/profile/ProfileForm');
 var HomeForm = require('./components/home/HomeForm');
-var ConnectionsForm = require('./components/connections/ConnectionsForm');
+var ConnectionsIndex = require('./components/connections/ConnectionsIndex');
 var ShowUser = require('./components/users/ShowUser');
 var SigninForm = require('./components/SigninForm');
 
@@ -29,7 +29,7 @@ var Router = (
       <Route path="/signup" component={ SigninForm } />
       <Route path="/profile" component={ ProfileForm } onEnter={_ensureLoggedIn}/>
       <Route path="/home" component={ HomeForm } onEnter={_ensureLoggedIn} />
-      <Route path="/connections" component={ ConnectionsForm } onEnter={_ensureLoggedIn} />
+      <Route path="/connections" component={ ConnectionsIndex } onEnter={_ensureLoggedIn} />
       <Route path='/users/:userId' component={ ShowUser } onEnter={_ensureLoggedIn} />
     </Route>
   </Router>

@@ -40,7 +40,7 @@ ConnectionStore.allConnected = function (id) {
   return connections;
 };
 
-ConnectionStore.pendingForAccept = function (id) {
+ConnectionStore.allPending = function (id) {
   var connections = [];
   Object.keys(_connections).forEach(function (key){
     if (_connections[key].connectee_id === id){

@@ -81,6 +81,7 @@ var LoginForm = React.createClass({
           <div className='login-header'>
           <h2></h2>
           </div>
+
         <div className="form-login">
   				<form onSubmit={this.handleSubmit}>
             <div className='error-login base'>
@@ -102,7 +103,10 @@ var LoginForm = React.createClass({
   					<br />
   					<input className="login-submit" type="submit" value="Sign In" />
   				</form>
+          <div className='twitter-login'>
+          </div>
           <div className='login-signin'>
+            <a href="auth/twitter/">Sign in with Twitter</a>
             <h3>Not a member? {navLink}</h3>
           </div>
             <div className='login-submit guest'>

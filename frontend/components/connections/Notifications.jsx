@@ -20,7 +20,7 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var connections = ConnectionStore.pendingForAccept(SessionStore.currentUser().id);
+    var connections = ConnectionStore.allPending(SessionStore.currentUser().id);
     return (
       <div className="notification-icon">
         <button>Notifications <h3 className="badge">{this.notificationNumber(connections.length)}</h3> </button>

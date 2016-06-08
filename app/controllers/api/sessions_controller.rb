@@ -1,5 +1,11 @@
 class Api::SessionsController < ApplicationController
 
+  def omni_create
+    @user = User.find_or_create_by_auth_hash(auth_hash)
+    self.current_user = @user
+    redirect_to '/'
+  end
+
 	def create
 		@user = User.find_by_credentials(
       params[:user][:email],
@@ -42,4 +48,11 @@ class Api::SessionsController < ApplicationController
 			render json: {}
 		end
 	end
+
+  protected
+
+  def auth_hash
+    request.env['omniauth.auth']
+  end
+
 end
