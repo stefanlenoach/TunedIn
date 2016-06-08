@@ -12,8 +12,11 @@ module.exports = React.createClass({
   getInitialState: function () {
     return { modalOpen: false,
              imageFile: null,
-             imageUrl: null };
+             imageUrl: null
+           };
   },
+
+
 
   edit: function () {
     this.setState({ modalOpen: true});
@@ -26,21 +29,18 @@ module.exports = React.createClass({
   updateFile: function(event) {
     var file = event.currentTarget.files[0];
     var fileReader = new FileReader();
-
     fileReader.onloadend = function () {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
-
       var formData = new FormData();
       formData.append("id", this.props.user.id);
       formData.append("user[image]", file);
-
       UserApiUtil.updateImage(formData);
     }.bind(this);
 
     if (file) {
       fileReader.readAsDataURL(file);
     }
-    
+
     this.forceUpdate();
   },
 
@@ -50,7 +50,9 @@ module.exports = React.createClass({
       <div className='profile-header'>
         <div className='pro-pic'>
           <input className='pic-upload' type='file' onChange={this.updateFile}/>
-          <img src={user.image_url}/>
+          <div className='pic-container'>
+            <img src={user.image_url}/>
+          </div>
         </div>
 
 

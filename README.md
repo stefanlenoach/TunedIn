@@ -5,11 +5,21 @@
 [heroku]: http://www.herokuapp.com
 
 ##Plan for the week
-Monday:  Searchbar, seed database, logging out, sign up page
-Tuesday: Add connections, working notifications UI
-Wednesday: ConnectionsPage, HomePage (Posts?)
-Thursday: Styling...
-Friday:
+Style Login and errors
+Style notifications
+Style connections
+Style modals
+
+Get logo and pictures on to heroku
+
+Get search button to work
+
+Get upload pictures working
+Make seeds more complete
+
+Style search
+posts?
+
 
 ## Minimum Viable Product
 

@@ -84,8 +84,8 @@ class User < ActiveRecord::Base
 
   def reset_session_token!
     self.session_token = new_session_token
-    ensure_session_token_uniqueness
-    self.save
+    # ensure_session_token_uniqueness
+    self.save!
     self.session_token
   end
 
@@ -96,7 +96,7 @@ class User < ActiveRecord::Base
       user = User.create!(
         twitter_uid: auth_hash[:uid],
         first_name: auth_hash[:info][:name],
-        last_name: auth_hash[:info][:name],
+        last_name: " ",
         email: (auth_hash[:info][:name] + "@twitter.com"),
         password_digest: "kljabdfklvboasdflkjbadsglkjbadf"
       )
@@ -116,7 +116,8 @@ class User < ActiveRecord::Base
   end
 
   def ensure_session_token_uniqueness
-    while User.find_by(session_token: self.session_token)
+    users = User.where.not(id: self.id)
+    while users.find_by(session_token: self.session_token)
       self.session_token = new_session_token
     end
   end

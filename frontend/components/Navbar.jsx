@@ -37,11 +37,13 @@ module.exports = React.createClass({
   },
 
   handleSubmit: function(e){
-
+    hashHistory.push('/usersearch');
+    this.setState({ searchString: "" });
   },
 
   logout: function () {
     SessionApiUtil.logout();
+
     hashHistory.push('/login');
   },
 

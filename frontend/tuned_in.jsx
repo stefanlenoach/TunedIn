@@ -16,7 +16,7 @@ var HomeForm = require('./components/home/HomeForm');
 var ConnectionsIndex = require('./components/connections/ConnectionsIndex');
 var ShowUser = require('./components/users/ShowUser');
 var SigninForm = require('./components/SigninForm');
-
+var UserSearch = require('./components/users/UserSearch');
 //Auth
 var SessionStore = require('./stores/session_store');
 var SessionApiUtil = require('./util/session_api_util');
@@ -31,6 +31,7 @@ var Router = (
       <Route path="/home" component={ HomeForm } onEnter={_ensureLoggedIn} />
       <Route path="/connections" component={ ConnectionsIndex } onEnter={_ensureLoggedIn} />
       <Route path='/users/:userId' component={ ShowUser } onEnter={_ensureLoggedIn} />
+      <Route path='usersearch' component={ UserSearch } onEnter={_ensureLoggedIn} />
     </Route>
   </Router>
 );

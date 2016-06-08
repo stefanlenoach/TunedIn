@@ -11,6 +11,21 @@ var EduSection = require('../educations/EduSection');
 var ProfileHeaderItem = require('./ProfileHeaderItem');
 
 module.exports = React.createClass ({
+  getInitialState: function () {
+    return {currentUser: SessionStore.currentUser() };
+  },
+
+  componentDidMount: function () {
+    this.profileListener = SessionStore.addListener(this.onChange);
+  },
+
+  componentWillUnmount: function () {
+    this.profileListener.remove();
+  },
+
+  onChange: function () {
+    this.setState({ currentUser: SessionStore.currentUser() });
+  },
 
   render: function () {
     var user = SessionStore.currentUser();
