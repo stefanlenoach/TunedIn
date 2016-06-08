@@ -61,18 +61,21 @@ module.exports = React.createClass({
           <nav className='mainnav'>
           </nav>
             <button className='logout-btn' onClick={ this.logout }>Log out</button>
+            <div className='search-div'>
+              <form className='search' onSubmit={this.handleSubmit}>
+                <input className='searchbar' type='text' onChange={this.handleChange}
+                placeholder='Search for people, jobs, companies and more...' value={this.state.searchString}/>
 
-            <form className='search' onSubmit={this.handleSubmit}>
-              <input className='searchbar' type='text' onChange={this.handleChange}
-              placeholder='Search for people, jobs, companies and more...' value={this.state.searchString}/>
-
-              <input className='search-btn' type='submit' value='Search'/>
-            </form>
-
-          <nav className='subnav'></nav>
-            <Link className='nav-link' to='/home'>Home</Link>
-            <Link className='nav-link' to='/profile'>Profile</Link>
-            <Link className='nav-link' to='/connections'>Connections</Link>
+                <input className='search-btn' type='submit' value='Search'/>
+              </form>
+            </div>
+          <nav className='subnav'>
+            <div className="subdiv">
+              <Link className='nav-link' to='/home'>Home</Link>
+              <Link className='nav-link' to='/profile'>Profile</Link>
+              <Link className='nav-link' to='/connections'>Connections</Link>
+            </div>
+          </nav>
             <nav>
             <ul className = 'search-items'>
             { users.map(function(user){

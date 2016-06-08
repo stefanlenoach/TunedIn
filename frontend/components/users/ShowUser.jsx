@@ -35,23 +35,25 @@ module.exports = React.createClass({
       <div className='profile'>
 
         <div className='profile-main'>
-          <UserHeaderItem user={user} userId={userId} />
-        </div>
-
-        <div className='exp-sec'>
-          <h2>Experience</h2>
-
-          <div className='exp-items'>
-            <UserExp user={user}/>
+          <div className='header-sec'>
+            <UserHeaderItem user={user} userId={userId} />
           </div>
-          <div className='edu-sec'>
-          <h2>Education</h2>
-            <div className='edu-items'>
-              <UserEdu user={user}/>
+          <div className='exp-sec'>
+            <h2>Experience</h2>
+
+            <div className='exp-items'>
+              <UserExp user={user}/>
             </div>
           </div>
-        </div>
+            <div className='edu-sec'>
 
+              <h2>Education</h2>
+              <div className='edu-items'>
+                <UserEdu user={user}/>
+              </div>
+
+            </div>
+          </div>
       </div>
     );
   }

@@ -1,7 +1,5 @@
 .home-header{
-  position: absolute;
-  left: 265px;
-  top: 90px;
+  margin: 0 auto;
   background: white;
   border: 1px solid #ddd;
   height: 160px;

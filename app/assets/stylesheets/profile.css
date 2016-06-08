@@ -1,91 +1,12 @@
 
-
-.mainnav {
-  position: relative;
-  height: 45px;
-  background: #333;
-  background-image: -webkit-linear-gradient(top, #555555 0%,#515151 18%,#373737 85%,#333333 100%);
-}
-
 .modal{
   z-index: 1000;
 }
 
-.navbar{
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-}
 
-.nav-link{
-  font-family: sans-serif;
-  font-size: 13px;
-  color: #ddd;
-  position: relative;
-  bottom: 25px;
-  left: 200px;
-  padding-left: 40px;
-}
-
-.nav-link:hover{
-  transition: color 1s ease;
-  color: #66d9ff;
-}
-
-.subnav {
-  height: 30px;
-  background: #222;
-}
 
 .profile {
   background: #eee;
   height: 100%;
   margin: 0px;
-}
-
-.logout-btn{
-  float:right;
-  position: relative;
-  right: 50px;
-  bottom: 30px;
-  background: transparent;
-  color: white;
-  font-family: sans-serif;
-
-}
-
-.search{
-  float:left;
-  position: relative;
-  left: 500px;
-  bottom: 35px;
-}
-
-.search-btn{
-  width: 50px;
-  height: 28px;
-  background: #0099ff;
-  background-image: -webkit-linear-gradient(top,#0099ff, #0099ee);
-  border: 1px solid transparent;
-  color: white;
-  font-family: sans-serif;
-  border-radius: 3px;
-  position: relative;
-  bottom: 2px;
-}
-
-.logout-btn:hover{
-  transition: color 1s ease;
-  color: #aaa;
-}
-
-.searchbar{
-  width: 345px;
-  height: 25px;
-  position: relative;
-  right: 5px;
-  border-radius: 2px;
-  border: 1px solid #bbb;
-  font-size: 12px;
-  padding-left: 7px;
 }

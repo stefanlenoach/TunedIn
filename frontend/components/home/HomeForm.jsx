@@ -5,7 +5,9 @@ module.exports = React.createClass({
   render: function () {
     return (
       <div>
-      <HomeHeaderItem/>
+        <div className="header-sec">
+          <HomeHeaderItem/>
+        </div>
       </div>
     );
   }
