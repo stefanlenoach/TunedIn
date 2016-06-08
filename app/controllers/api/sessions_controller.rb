@@ -2,7 +2,7 @@ class Api::SessionsController < ApplicationController
 
   def omni_create
     @user = User.find_or_create_by_auth_hash(auth_hash)
-    self.current_user = @user
+    login(@user)
     redirect_to '/'
   end
 

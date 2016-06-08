@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: :true
+  validate :has_password_digest_or_titter_uid
 
   has_attached_file :image, default_url: "default_user.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
@@ -41,6 +42,12 @@ class User < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :connectee_id
   )
+
+  def has_password_digest_or_titter_uid
+    if (!password_digest && !twitter_uid)
+      console.log('password_digest/twitter_uid validation breached')
+    end
+  end
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
@@ -88,7 +95,10 @@ class User < ActiveRecord::Base
     if user.nil?
       user = User.create!(
         twitter_uid: auth_hash[:uid],
-        name: auth_hash[:info][:name]
+        first_name: auth_hash[:info][:name],
+        last_name: auth_hash[:info][:name],
+        email: (auth_hash[:info][:name] + "@twitter.com"),
+        password_digest: "kljabdfklvboasdflkjbadsglkjbadf"
       )
     end
 
