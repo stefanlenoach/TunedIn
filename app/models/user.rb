@@ -23,6 +23,13 @@ class User < ActiveRecord::Base
   )
 
   has_many(
+    :posts,
+    class_name: "Post",
+    primary_key: :id,
+    foreign_key: :user_id
+  )
+
+  has_many(
     :educations,
     class_name: "Education",
     primary_key: :id,

@@ -28,21 +28,21 @@ module.exports = React.createClass({
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label className = 'exp-label'>Current Position</label>
+          <label className='exp-label'>Current Position</label>
           <br/>
           <input
-          type='text' className = 'exp-input'
+          type='text' className='exp-input'
           value={this.state.position}
           onChange={this.changePosition}/><br/>
 
-          <label className = 'exp-label'>Location</label>
+          <label className='exp-label'>Location</label>
           <br/>
           <input
-          type='text' className = 'exp-input'
+          type='text' className='exp-input'
           value={this.state.location}
           onChange={this.changeLocation}/><br/>
 
-          <input
+          <input className='exp-submit'
           type='submit'
           value='Update'/>
         </form>

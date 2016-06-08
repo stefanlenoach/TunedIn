@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :experiences
     resources :educations
+    resources :posts
     resources :connections, only: [:index, :create, :destroy, :update, :show]
   end
 

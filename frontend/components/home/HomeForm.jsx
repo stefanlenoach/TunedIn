@@ -1,4 +1,6 @@
 var React = require('react');
+
+var PostSection = require('../posts/PostSection');
 var HomeHeaderItem = require('./HomeHeaderItem');
 
 module.exports = React.createClass({
@@ -7,6 +9,7 @@ module.exports = React.createClass({
       <div>
         <div className="header-sec">
           <HomeHeaderItem/>
+          <PostSection/>
         </div>
       </div>
     );
