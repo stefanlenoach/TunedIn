@@ -6,7 +6,7 @@
 #   cities = City.create!([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create!(name: 'Emanuel', city: cities.first)
 user1 = User.create!(first_name: "Guest", last_name: "User", password: "123123", email: "guestUser@tunedin.com",
-  current_position: "Sample Current Position", location: "Sample Location", image: File.open('app/assets/images/pic1.jpeg', 'rb'))
+  current_position: "Sample Current Position", location: "Sample Location")
   Experience.create!(user_id: user1.id, company_name: "Columbia Records",
   title: "Producer", location: "New York, New York", description: "Lorem ipsum dolor sit ame
   t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -28,7 +28,7 @@ Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electr
 diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qualisque pro ea." )
 
 user2 = User.create!(first_name: "Quee", last_name: "Queg", password: "123123", email: "queequeg@gmail.com",
-            current_position: "Harpooner", location: "Boston" )
+            current_position: "Harpooner", location: "Boston", image: File.open('app/assets/images/pic1.jpeg', 'rb') )
             Experience.create!(user_id: user2.id, company_name: "Whales4U",
             title: "Harpooner", location: "Boston", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -50,7 +50,7 @@ user2 = User.create!(first_name: "Quee", last_name: "Queg", password: "123123", 
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user3 = User.create!(first_name: "Azealia", last_name: "Banks", password: "123123", email: "banks@gmail.com",
-            current_position: "Unemployed", location: "New York" )
+            current_position: "Unemployed", location: "New York", image: File.open('app/assets/images/pic2.jpeg', 'rb') )
             Experience.create!(user_id: user3.id, company_name: "Whales4U",
             title: "Unemployed", location: "New York", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -62,7 +62,7 @@ user3 = User.create!(first_name: "Azealia", last_name: "Banks", password: "12312
              description: "" )
 
 user4 = User.create!(first_name: "Rick", last_name: "Ross", password: "123123", email: "rickross@gmail.com",
-            current_position: "Boss", location: "Miami" )
+            current_position: "Boss", location: "Miami", image: File.open('app/assets/images/pic3.jpeg', 'rb') )
             Experience.create!(user_id: user4.id, company_name: "Disney",
             title: "Songwriter", location: "Boston", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -84,7 +84,7 @@ user4 = User.create!(first_name: "Rick", last_name: "Ross", password: "123123", 
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user5 = User.create!(first_name: "Kanye", last_name: "West", password: "123123", email: "kanyewest@gmail.com",
-            current_position: "Fashion Designer", location: "New York" )
+            current_position: "Fashion Designer", location: "New York", image: File.open('app/assets/images/pic4.jpeg', 'rb') )
             Experience.create!(user_id: user5.id, company_name: "RocNation",
             title: "Producer", location: "New York", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -102,7 +102,7 @@ user5 = User.create!(first_name: "Kanye", last_name: "West", password: "123123",
              description: "" )
 
 user6 = User.create!(first_name: "Biggie", last_name: "Smalls", password: "123123", email: "biggiesmalls@gmail.com",
-            current_position: "Fry Cook", location: "Atlanta" )
+            current_position: "Fry Cook", location: "Atlanta", image: File.open('app/assets/images/pic5.jpeg', 'rb') )
             Experience.create!(user_id: user6.id, company_name: "PopEyes",
             title: "Fry cook", location: "Atlanta", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -123,7 +123,7 @@ user6 = User.create!(first_name: "Biggie", last_name: "Smalls", password: "12312
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user7 = User.create!(first_name: "Marky", last_name: "Mark", password: "123123", email: "markymark@gmail.com",
-            current_position: "Actor", location: "Boston" )
+            current_position: "Actor", location: "Boston", image: File.open('app/assets/images/pic6.jpeg', 'rb') )
             Experience.create!(user_id: user7.id, company_name: "Boston Records",
             title: "Manager", location: "Boston", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -144,7 +144,7 @@ user7 = User.create!(first_name: "Marky", last_name: "Mark", password: "123123",
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user8 = User.create!(first_name: "P", last_name: "Diddy", password: "123123", email: "pdiddy@gmail.com",
-            current_position: "Fry Cook", location: "Atlanta" )
+            current_position: "Fry Cook", location: "Atlanta", image: File.open('app/assets/images/pic7.jpeg', 'rb') )
             Experience.create!(user_id: user8.id, company_name: "MTV",
             title: "Director", location: "New York", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -165,7 +165,7 @@ user8 = User.create!(first_name: "P", last_name: "Diddy", password: "123123", em
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user9 = User.create!(first_name: "John", last_name:  "Smith", password: "123123", email: "johnsmith@gmail.com",
-            current_position: "Manager", location: "Oklahoma" )
+            current_position: "Manager", location: "Oklahoma", image: File.open('app/assets/images/pic8.jpeg', 'rb') )
             Experience.create!(user_id: user9.id, company_name: "OKC Records",
             title: "Manager", location: "Oklahoma", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -187,7 +187,7 @@ user9 = User.create!(first_name: "John", last_name:  "Smith", password: "123123"
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user10 = User.create!(first_name: "Davey", last_name:  "Crocket", password: "123123", email: "daveycrocket@gmail.com",
-            current_position: "Sound Engineer", location: "Los Angeles" )
+            current_position: "Sound Engineer", location: "Los Angeles", image: File.open('app/assets/images/pic9.jpeg', 'rb') )
             Experience.create!(user_id: user10.id, company_name: "LA Sound",
             title: "Sound Engineer", location: "Los Angeles", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -209,7 +209,7 @@ user10 = User.create!(first_name: "Davey", last_name:  "Crocket", password: "123
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user11 = User.create!(first_name: "Jordan", last_name:  "Cushman", password: "123123", email: "jcush@gmail.com",
-            current_position: "Drummer", location: "Colorado" )
+            current_position: "Drummer", location: "Colorado", image: File.open('app/assets/images/pic10.jpeg', 'rb') )
             Experience.create!(user_id: user11.id, company_name: "Disney",
             title: "Drummer", location: "Colorado", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -232,7 +232,7 @@ user11 = User.create!(first_name: "Jordan", last_name:  "Cushman", password: "12
 
 
 user12 = User.create!(first_name: "Corey", last_name:  "Kibwe", password: "123123", email: "coreykibwe@gmail.com",
-            current_position: "Sound Engineer", location: "Virginia" )
+            current_position: "Sound Engineer", location: "Virginia", image: File.open('app/assets/images/pic11.jpeg', 'rb') )
             Experience.create!(user_id: user12.id, company_name: "VA Records",
             title: "Sound Engineer", location: "Virginia", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -248,7 +248,7 @@ user12 = User.create!(first_name: "Corey", last_name:  "Kibwe", password: "12312
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user13 = User.create!(first_name: "Greg", last_name:  "Vogt", password: "123123", email: "gregvogt@gmail.com",
-            current_position: "Sound Engineer", location: "Texas" )
+            current_position: "Sound Engineer", location: "Texas", image: File.open('app/assets/images/pic12.jpeg', 'rb') )
             Experience.create!(user_id: user13.id, company_name: "Texas Music",
             title: "Sound Engineer", location: "San Antonio, Texas", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -265,7 +265,7 @@ user13 = User.create!(first_name: "Greg", last_name:  "Vogt", password: "123123"
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user14 = User.create!(first_name: "John", last_name:  "Cusack", password: "123123", email: "johncusack@gmail.com",
-            current_position: "Composer", location: "Alaska" )
+            current_position: "Composer", location: "Alaska", image: File.open('app/assets/images/pic13.jpeg', 'rb') )
             Experience.create!(user_id: user14.id, company_name: "AK Music",
             title: "Composer", location: "Anchorage, Alaska", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -282,7 +282,7 @@ user14 = User.create!(first_name: "John", last_name:  "Cusack", password: "12312
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user15 = User.create!(first_name: "Vincent", last_name:  "Antonio", password: "123123", email: "vincentantonio@gmail.com",
-            current_position: "Composer", location: "North Carolina" )
+            current_position: "Composer", location: "North Carolina", image: File.open('app/assets/images/pic14.jpeg', 'rb') )
             Experience.create!(user_id: user15.id, company_name: "NC Music",
             title: "Composer", location: "Raleigh, North Carolina", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -299,7 +299,7 @@ user15 = User.create!(first_name: "Vincent", last_name:  "Antonio", password: "1
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user16 = User.create!(first_name: "Emily", last_name:  "Jackson", password: "123123", email: "petermitchell@gmail.com",
-          current_position: "Mixer/Masterer", location: "Washington" )
+          current_position: "Mixer/Masterer", location: "Washington", image: File.open('app/assets/images/pic15.jpeg', 'rb') )
           Experience.create!(user_id: user16.id, company_name: "WA Music",
           title: "Mixer/Masterer", location: "Washington", description: "Lorem ipsum dolor sit ame
           t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
@@ -317,7 +317,7 @@ user16 = User.create!(first_name: "Emily", last_name:  "Jackson", password: "123
 
 
 user17 = User.create!(first_name: "Jesse", last_name:  "Jones", password: "123123", email: "denisecurr@gmail.com",
-            current_position: "Composer", location: "Boston" )
+            current_position: "Composer", location: "Boston", image: File.open('app/assets/images/pic1.jpeg', 'rb') )
             Experience.create!(user_id: user17.id, company_name: "Boston Music Company",
             title: "Composer", location: "Boston Massachusettes", description: "Lorem ipsum dolor sit ame
             t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
