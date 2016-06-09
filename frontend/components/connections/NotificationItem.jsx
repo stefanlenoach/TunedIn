@@ -7,8 +7,17 @@ var ConnectionStore = require('../../stores/connection_store');
 module.exports = React.createClass({
 
   componentDidMount: function () {
+    this.connectionListener = ConnectionStore.addListener(this.onChange);
     ConnectionApiUtil.getConnections();
     UserApiUtil.getUsers();
+  },
+
+  componentWillUnmount: function () {
+    this.connectionListener.remove();
+  },
+
+  onChange: function () {
+    this.forceUpdate();
   },
 
   acceptRequest: function () {
@@ -22,7 +31,7 @@ module.exports = React.createClass({
   },
 
   declineRequest: function () {
-    ConnectionApiUtil.deleteConnection(this.props.connection.id);
+    ConnectionApiUtil.removeConnection(this.props.connection.id);
   },
 
   render: function () {
@@ -30,8 +39,10 @@ module.exports = React.createClass({
     return (
       <div className="notification-item">
         <h2>{user.first_name + " " + user.last_name + " wants to connect with you"} </h2>
-        <button onClick={this.acceptRequest}>Accept</button>
-        <button onClick={this.declineRequest}>Decline</button>
+        <div className='noti-buttons'>
+          <button className="noti-accept" onClick={this.acceptRequest}>Accept</button>&nbsp;&nbsp;
+          <button className="noti-decline" onClick={this.declineRequest}>Decline</button>
+        </div>
       </div>
     );
   }

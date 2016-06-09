@@ -50,8 +50,7 @@
   color: #555;
   background: white;
   position: relative;
-  left: 515px;
-  bottom: 35px;
+  z-index: 15;
 }
 .search-item-link{
   width: 100%;
@@ -90,11 +89,11 @@
 .navbar{
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
 }
 
 .subdiv{
-  position: relative;
+  position: absolute;
   width: 900px;
   height: 100%;
   margin: 0 auto;
@@ -107,6 +106,7 @@
   color: #ddd;
   padding-left: 40px;
   top: 5px;
+  left: 250px;
 }
 
 .nav-link:hover{

@@ -72,7 +72,25 @@ module.exports = React.createClass({
 
                 <input className='search-btn' type='submit' value='Search'/>
               </form>
+
+              <ul className = 'search-items'>
+              { users.map(function(user){
+                return (<li className='search-item' key={user.id} onClick={this.hideSearch}>
+                  <Link className='search-item-link' to={'/users/' + user.id} >
+                    <div className= 'search-pic'>
+                      <img src={user.image_url}/>
+                    </div>
+                    <div className='search-name'>
+                      {user.first_name + " " + user.last_name}
+                    </div>
+                  </Link>
+                </li>);
+              }.bind(this))
+              }
+              </ul>
+              
             </div>
+
           </nav>
           <nav className='subnav'>
             <div className="subdiv">
@@ -81,23 +99,7 @@ module.exports = React.createClass({
               <Link className='nav-link' to='/connections'>Connections</Link>
             </div>
           </nav>
-            <nav>
-            <ul className = 'search-items'>
-            { users.map(function(user){
-              return (<li className='search-item' key={user.id} onClick={this.hideSearch}>
-                <Link className='search-item-link' to={'/users/' + user.id} >
-                  <div className= 'search-pic'>
-                    <img src={user.image_url}/>
-                  </div>
-                  <div className='search-name'>
-                    {user.first_name + " " + user.last_name}
-                  </div>
-                </Link>
-              </li>);
-            }.bind(this))
-            }
-          </ul>
-          </nav>
+
         </nav>
     </div>
     );

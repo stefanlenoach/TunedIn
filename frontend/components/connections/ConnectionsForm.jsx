@@ -39,6 +39,10 @@ module.exports = React.createClass({
     ConnectionApiUtil.updateConnection(formData);
   },
 
+  removeConnection: function() {
+    ConnectionApiUtil.removeConnection(this.props.connection.id);
+  },
+
   render: function () {
     var user = SessionStore.find(this.props.userId);
     if (!user) {
@@ -65,7 +69,7 @@ module.exports = React.createClass({
     } else if (user.connection_status[0] === "connected") {
       return (
         <div className='connections-button'>
-          <button>Disconnect</button>
+          <button onClick={this.removeConnection}>Disconnect</button>
         </div>
       );
     } else {
