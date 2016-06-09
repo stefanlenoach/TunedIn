@@ -3,14 +3,12 @@
   color: white;
   position: relative;
   right: 300px;
-  bottom: 30px;
 }
 
 .logout-btn{
   float:right;
   position: relative;
   right: 50px;
-  bottom: 30px;
   padding:left;
 }
 
@@ -35,6 +33,8 @@
   background: transparent;
   color: white;
   font-family: sans-serif;
+  position: relative;
+  top: 15px;
 }
 
 .notification-item{

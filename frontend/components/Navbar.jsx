@@ -60,7 +60,7 @@ module.exports = React.createClass({
     return (
       <div>
         <nav className='navbar'>
-          <nav className='mainnav'></nav>
+          <nav className='mainnav'>
             <div className='right-side'>
               <button className='logout-btn' onClick={ this.logout }>Log out</button>
               <Notifications/>
@@ -73,7 +73,7 @@ module.exports = React.createClass({
                 <input className='search-btn' type='submit' value='Search'/>
               </form>
             </div>
-
+          </nav>
           <nav className='subnav'>
             <div className="subdiv">
               <Link className='nav-link' to='/home'>Home</Link>

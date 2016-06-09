@@ -62,9 +62,13 @@
   color: white;
 }
 
+.login-submit .guest{
+  height: 20px;
+}
+
 .guest{
   position: relative;
-  top: 73px;
+  top: 58px;
   left: 230px;
   text-align: center;
 }
@@ -101,5 +105,5 @@
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center center;
-  height: 850px;
+  height: 985px;
 }
