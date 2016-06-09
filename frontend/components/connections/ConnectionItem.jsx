@@ -23,14 +23,14 @@ module.exports = React.createClass({
     var user = this.findUser();
     return (
       <div className='connections' >
-        <div className='pro-pic'>
+        <div className='connect-pic'>
           <img src={user.image_url}/>
         </div>
 
-        <div className='pro-text'>
-          <Link to={'/users/' + user.id} className='pro-name'>{user.first_name + " " + user.last_name}</Link><br/><br/>
-          <Link to={'/users/' + user.id} className='pro-pos'>{user.current_position}</Link><br/><br/>
-          <Link to={'/users/' + user.id} className='pro-loc'>{user.location}</Link>
+        <div className='connect-text'>
+          <Link to={'/users/' + user.id} className='connect-name'>{user.first_name + " " + user.last_name}</Link><br/><br/>
+          <Link to={'/users/' + user.id} className='connect-pos'>{user.current_position}</Link><br/><br/>
+          <Link to={'/users/' + user.id} className='connect-loc'>{user.location}</Link>
         </div>
       </div>
     );

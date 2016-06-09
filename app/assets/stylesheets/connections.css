@@ -3,11 +3,66 @@
 .connections{
   margin: 0 auto;
   border: 1px solid #ddd;
-  height: 130px;
+  height: 100px;
   width: 650px;
   color: black;
   position: relative;
   top: 100px;
   font-family: sans-serif;
   margin-bottom: 20px;
+}
+
+.connect-text{
+  position: relative;
+  bottom: 90px;
+  left: 130px;
+}
+.connect-name{
+  position: relative;
+  font-size: 18px;
+  top: 10px;
+}
+
+.connect-pos{
+  font-size: 15px;
+  color: #aaa;
+  position: relative;
+}
+
+.connect-loc{
+  font-size: 14px;
+  color: #666;
+  position: relative;
+  bottom: 10px;
+}
+
+.connect-name:hover{
+  transition: color 1s ease;
+  color: #66d9ff;
+}
+.connect-pos:hover{
+  transition: color 1s ease;
+  color: #66d9ff;
+}
+.connect-loc:hover{
+  transition: color 1s ease;
+  color: #66d9ff;
+}
+
+
+.connections-button{
+  position: relative;
+  bottom: 130px;
+  left: 500px;
+  z-index: 2;
+}
+
+.connections .connect-pic{
+  width: 100px;
+  height: 100px;
+}
+
+.connections-button:hover{
+  transition: color 1s ease;
+  color: #66d9ff;
 }

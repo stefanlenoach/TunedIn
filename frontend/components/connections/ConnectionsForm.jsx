@@ -7,7 +7,16 @@ var ConnectionStore = require('../../stores/connection_store');
 module.exports = React.createClass({
 
   componentDidMount: function () {
+    this.connectionListener = ConnectionStore.addListener(this.onChange);
     ConnectionApiUtil.getConnections();
+  },
+
+  componentWillUnmount: function () {
+    this.connectionListener.remove();
+  },
+
+  onChange: function () {
+    this.forceUpdate();
   },
 
   formConnection: function () {
