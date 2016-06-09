@@ -5,6 +5,9 @@ var UserApiUtil = require('../../util/user_api_util');
 var ConnectionStore = require('../../stores/connection_store');
 
 module.exports = React.createClass({
+  getInitialState: function () {
+    return { connection: ConnectionStore.findByIds(SessionStore.currentUser().id, this.props.userId) };
+  },
 
   componentDidMount: function () {
     this.connectionListener = ConnectionStore.addListener(this.onChange);
@@ -16,7 +19,7 @@ module.exports = React.createClass({
   },
 
   onChange: function () {
-    this.forceUpdate();
+    this.setState({connection:  ConnectionStore.findByIds(SessionStore.currentUser().id, this.props.userId) });
   },
 
   formConnection: function () {
@@ -29,9 +32,9 @@ module.exports = React.createClass({
   },
 
   acceptConnection: function () {
-    var id = ConnectionStore.findByIds(SessionStore.currentUser().id, this.props.userId);
+    var connection = ConnectionStore.findByIds(SessionStore.currentUser().id, this.props.userId);
     var formData = {
-      id: id,
+      id: connection.id,
       connector_id: SessionStore.currentUser().id,
       connectee_id: this.props.userId,
       status: "connected"
@@ -45,28 +48,28 @@ module.exports = React.createClass({
 
   render: function () {
     var user = SessionStore.find(this.props.userId);
-    if (!user) {
+    if (!user || !this.state.connection) {
       return <div></div>;
     }
-    if (user.connection_status === "false"){
+    if (this.state.connection.connection_status === "false"){
       return (
         <div className='connections-button'>
           <button onClick={this.formConnection}>Connect</button>
         </div>
       );
-    } else if (user.connection_status[0] === "pending" && user.connection_status[1] === "requested"){
+    } else if (this.state.connection.connection_status[0] === "pending" && this.state.connection.connection_status[1] === "requested"){
       return (
         <div className='connections-button'>
           <button onClick={this.acceptConnection}>Accept?</button>
         </div>
       );
-    } else if (user.connection_status[0] === "pending" && user.connection_status[1] === "received"){
+    } else if (this.state.connection.connection_status[0] === "pending" && this.state.connection.connection_status[1] === "received"){
       return (
         <div className='connections-button'>
           <button>Pending</button>
         </div>
       );
-    } else if (user.connection_status[0] === "connected") {
+    } else if (this.state.connection.connection_status[0] === "connected") {
       return (
         <div className='connections-button'>
           <button onClick={this.removeConnection}>Disconnect</button>

@@ -57,13 +57,11 @@ ConnectionStore.find = function (id) {
 };
 
 ConnectionStore.findByIds = function (connectorId, connecteeId) {
-  var connectId;
   Object.keys(_connections).forEach(function (key){
     if ((_connections[key].connector_id === parseInt(connecteeId)) && (_connections[key].connectee_id === connectorId)){
-      connectId = key;
+      return _connections[key];
     }
   });
-  return connectId;
 };
 
 
@@ -71,15 +69,20 @@ ConnectionStore.__onDispatch = function (payload) {
   switch(payload.actionType){
     case ConnectionConstants.GET_CONNECTIONS:
       resetConnections(payload.connections);
+      this.__emitChange();
       break;
     case ConnectionConstants.RECEIVE_CONNECTION:
       addConnection(payload.connection);
+      console.log(_connections);
+      this.__emitChange();
       break;
     case ConnectionConstants.REMOVE_CONNECTION:
       removeConnection(payload.connection);
+      console.log(_connections);
+      this.__emitChange();
       break;
   }
-  this.__emitChange();
+
 };
 
 module.exports = ConnectionStore;

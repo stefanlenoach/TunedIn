@@ -15,4 +15,14 @@ class Connection < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :connectee_id
   )
+
+  def status_info(id)
+    if connectee_id == id
+      return [status, "received"]
+    elsif connector_id == id
+      return [status,"requested"]
+    else
+      return "false"
+    end
+  end
 end
