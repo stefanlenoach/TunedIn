@@ -6,7 +6,7 @@
 #   cities = City.create!([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create!(name: 'Emanuel', city: cities.first)
 user1 = User.create!(first_name: "Guest", last_name: "User", password: "123123", email: "guestUser@tunedin.com",
-  current_position: "Sample Current Position", location: "Sample Location")
+  current_position: "Sample Current Position", location: "Sample Location" image: File.open('app/assets/images/pic1.jpeg', 'rb'))
   Experience.create!(user_id: user1.id, company_name: "Columbia Records",
   title: "Producer", location: "New York, New York", description: "Lorem ipsum dolor sit ame
   t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
