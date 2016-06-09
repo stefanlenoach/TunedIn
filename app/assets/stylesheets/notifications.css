@@ -1,8 +1,8 @@
 .notification-icon{
-  float: right;
+  /*float: right;*/
   color: white;
   position: relative;
-  right: 300px;
+  /*right: 300px;*/
 }
 
 .logout-btn{
@@ -12,13 +12,16 @@
   padding:left;
 }
 
+
+
 .dropdown {
   position: absolute;
-  top: 20px;
+  top: 18px;
   left: 0px;
   width: 300px;
   height: 60px;
   display: inline-block;
+  display: none;
 }
 
 .logout-btn:hover{
@@ -38,7 +41,7 @@
 }
 
 .notification-item{
-  display: none;
+  /*display: none;*/
   position: absolute;
   color: black;
   left: -1px;
@@ -51,14 +54,15 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   overflow: hidden;
+  z-index: 3;
 }
-
+/*
 .notification-icon:hover .notification-item {
   display:block;
-}
+}*/
 
-.dropdown:hover .notification-item {
-  display:block;
+.notification-icon:hover .dropdown {
+  display: block;
 }
 
 .badge {

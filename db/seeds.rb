@@ -316,7 +316,7 @@ user16 = User.create!(first_name: "Emily", last_name:  "Jackson", password: "123
         diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 
-user17 = User.create!(first_name: "Denise", last_name:  "Curr", password: "123123", email: "denisecurr@gmail.com",
+user17 = User.create!(first_name: "Jesse", last_name:  "Jones", password: "123123", email: "denisecurr@gmail.com",
             current_position: "Composer", location: "Boston" )
             Experience.create!(user_id: user17.id, company_name: "Boston Music Company",
             title: "Composer", location: "Boston Massachusettes", description: "Lorem ipsum dolor sit ame
@@ -338,17 +338,14 @@ user17 = User.create!(first_name: "Denise", last_name:  "Curr", password: "12312
           Cibo vituperata constituam cu his. In per rebum congue vidisse, sit modus electram intellegat ei, an qui oratio decore nominati. Nisl au
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
-Connection.create!(connector_id: user2.id, connectee_id: user1.id)
-Connection.create!(connector_id: user3.id, connectee_id: user1.id)
+Connection.create!(connector_id: user17.id, connectee_id: user1.id)
+Connection.create!(connector_id: user16.id, connectee_id: user1.id)
 Connection.create!(connector_id: user4.id, connectee_id: user1.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user5.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user6.id, status: "connected")
-Connection.create!(connector_id: user4.id, connectee_id: user1.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user7.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user8.id, status: "connected")
 Connection.create!(connector_id: user4.id, connectee_id: user9.id, status: "connected")
-Connection.create!(connector_id: user1.id, connectee_id: user10.id, status: "connected")
-Connection.create!(connector_id: user1.id, connectee_id: user11.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user10.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user11.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user12.id, status: "connected")

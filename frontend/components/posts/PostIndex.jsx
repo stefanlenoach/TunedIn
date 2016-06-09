@@ -37,11 +37,15 @@ module.exports = React.createClass({
             }
         });
     });
+    
+    var uniq_posts = posts.filter(function(post, pos){
+      return posts.indexOf(post) === pos;
+    });
 
     return (
       <div>
       {
-        posts.map(function(post){
+        uniq_posts.map(function(post){
             return (<PostItem key={post.id} post={post}/>);
         })
       }

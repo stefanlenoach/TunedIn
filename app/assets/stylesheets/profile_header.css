@@ -82,4 +82,5 @@
   top: 150px;
   width: 100%;
   color: transparent;
+  z-index: 1;
 }

@@ -23,6 +23,7 @@ module.exports = React.createClass({
     var user = this.findUser();
     return (
       <div className='connections' >
+      <Link to={'/users/' + user.id} className="connect-background">
         <div className='connect-pic'>
           <img src={user.image_url}/>
         </div>
@@ -32,6 +33,7 @@ module.exports = React.createClass({
           <Link to={'/users/' + user.id} className='connect-pos'>{user.current_position}</Link><br/><br/>
           <Link to={'/users/' + user.id} className='connect-loc'>{user.location}</Link>
         </div>
+        </Link>
       </div>
     );
   }

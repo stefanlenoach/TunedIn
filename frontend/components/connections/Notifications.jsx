@@ -23,16 +23,14 @@ module.exports = React.createClass({
     var connections = ConnectionStore.allPending(SessionStore.currentUser().id);
     return (
       <div className="notification-icon">
-        <button>Notifications <h3 className="badge">{this.notificationNumber(connections.length)}</h3> </button>
-        <div className= 'dropdown'>
-          <ul>
+        <div>Notifications <h3 className="badge">{this.notificationNumber(connections.length)}</h3> </div>
+          <ul className= 'dropdown'>
             {
               connections.map(function(connection){
                 return (<NotificationItem key={connection.id} connection={connection} />);
               })
             }
           </ul>
-        </div>
       </div>
     );
   }
