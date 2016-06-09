@@ -33,13 +33,12 @@ module.exports = React.createClass({
   render: function () {
     return (
       <div className='post-sec'>
-        <h2>Post</h2>
 
         <button className='add-post-btn'
-          onClick={this.createForm}>+ Add post</button>&nbsp;
+          onClick={this.createForm}> + Publish a post</button>&nbsp;
 
         <div className='post-items'>
-          <PostIndex user={SessionStore.currentUser()}/>
+          <PostIndex/>
         </div>
 
         <Modal className='modal'

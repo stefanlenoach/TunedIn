@@ -19,14 +19,27 @@
   bottom: 2px;
 }
 
+.search-pic{
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  position: relative;
+  top: 2px;
+}
+
 .search-item{
   width: 100%;
-  height: 30px;
+  height: 40px;
   position: relative;
   border-bottom: 1px solid #ccc;
   font-family: sans-serif;
-  padding-left: 10px;
 
+}
+
+.search-name{
+  position: relative;
+  left: 40px;
+  bottom: 23px;
 }
 
 .search-items{

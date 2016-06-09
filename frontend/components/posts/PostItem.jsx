@@ -4,10 +4,17 @@ var hashHistory = require('react-router').hashHistory;
 var Modal = require('react-modal');
 var ModalStyle = require('../../constants/modal_style');
 var PostUpdate = require('./PostUpdate');
+var SessionStore = require('../../stores/session_store');
+var UserApiUtil = require('../../util/user_api_util');
 
 module.exports = React.createClass({
   getInitialState: function () {
     return { modalOpen: false };
+  },
+
+  componentDidMount: function () {
+    // this.userListener= SessionStore.addListener(this.onChange);
+    UserApiUtil.getUsers();
   },
 
   removePost: function () {
@@ -25,8 +32,35 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    var user = SessionStore.find(this.props.post.user_id);
+    var mod;
+
+    if (user.id === SessionStore.currentUser().id) {
+       mod =  <div class='post-mod'><Modal className='modal'
+                isOpen={this.state.modalOpen}
+                onRequestClose={this.onModalCloseEdit}
+                style={ModalStyle}>
+                <PostUpdate post={this.props.post} close={this.onModalCloseEdit}/>
+                <button className='post-cancel' onClick={this.onModalCloseEdit}>Cancel</button>
+              </Modal>
+              <div className='post-rmv-edit'>
+                <button className='post-remove-btn' onClick={this.removePost}>
+                Delete</button>
+
+                <button className='post-edit-btn' onClick={this.modalOpenEdit}>
+                Edit</button>
+              </div></div>;
+    } else {
+      mod = <div></div>;
+    }
+
+
     return (
-      <div>
+      <div className='post-item'>
+
+        <div className= 'post-pic'>
+          <img src={user.image_url}/>
+        </div>
         <div className='post-item-show'>
           <div className='post-title'>
             {this.props.post.title}
@@ -35,22 +69,13 @@ module.exports = React.createClass({
           <div className='post-body'>
             {this.props.post.body}
           </div>
-        </div>
-        
-        <Modal className='modal'
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.onModalCloseEdit}
-          style={ModalStyle}>
-          <PostUpdate post={this.props.post} close={this.onModalCloseEdit}/>
-          <button className='post-cancel' onClick={this.onModalCloseEdit}>Cancel</button>
-        </Modal>
-        <div className='post-rmv-edit'>
-          <button className='post-remove-btn' onClick={this.removePost}>
-          Delete</button>
 
-          <button className='post-edit-btn' onClick={this.modalOpenEdit}>
-          Edit</button>
+          <div className='post-author'>
+          {"By: " + user.first_name + " " + user.last_name}
+          </div>
         </div>
+        {mod}
+
       </div>
     );
   }

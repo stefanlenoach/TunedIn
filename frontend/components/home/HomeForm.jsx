@@ -6,7 +6,7 @@ var HomeHeaderItem = require('./HomeHeaderItem');
 module.exports = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className='home'>
         <div className="header-sec">
           <HomeHeaderItem/>
           <PostSection/>

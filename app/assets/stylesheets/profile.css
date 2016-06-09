@@ -6,7 +6,6 @@
 
 
 .profile {
-  background: #eee;
-  height: 100%;
-  margin: 0px;
+  background-size: auto;;
+  background: #fff;
 }

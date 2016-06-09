@@ -86,7 +86,12 @@ module.exports = React.createClass({
             { users.map(function(user){
               return (<li className='search-item' key={user.id} onClick={this.hideSearch}>
                 <Link className='search-item-link' to={'/users/' + user.id} >
-                  {user.first_name + " " + user.last_name}
+                  <div className= 'search-pic'>
+                    <img src={user.image_url}/>
+                  </div>
+                  <div className='search-name'>
+                    {user.first_name + " " + user.last_name}
+                  </div>
                 </Link>
               </li>);
             }.bind(this))

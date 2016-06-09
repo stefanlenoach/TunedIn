@@ -26,13 +26,13 @@ module.exports = React.createClass({
   },
 
   changeTitle: function (event) {
-    var deg = event.target.value;
-    this.setState({degree: deg});
+    var tit = event.target.value;
+    this.setState({title: tit});
   },
 
   changeBody: function (event) {
-    var desc = event.target.value;
-    this.setState({description: desc});
+    var bod = event.target.value;
+    this.setState({body: bod});
   },
 
   handleSubmit: function (event) {
@@ -49,13 +49,13 @@ module.exports = React.createClass({
         <br/>
         <input
         type='text' className = 'post-input'
-        value={this.state.degree}
+        value={this.state.title}
         onChange={this.changeTitle}/><br/><br/>
 
         <label className = 'post-label'>Body</label>
         <br/>
         <textarea className = 'post-txt-area'
-        value={this.state.description}
+        value={this.state.body}
         onChange={this.changeBody}/><br/>
 
         <input

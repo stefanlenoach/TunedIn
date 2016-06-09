@@ -22,16 +22,12 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    var id = this.props.user.id;
+
     return (
       <div>
       {
         this.state.posts.map(function(post){
-          if (id === post.user_id && post.school !== undefined){
             return (<PostItem key={post.id} post={post}/>);
-          } else {
-            return (null);
-          }
         })
       }
       </div>
