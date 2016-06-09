@@ -106,7 +106,7 @@ var LoginForm = React.createClass({
           <div className='twitter-login'>
           </div>
           <div className='login-signin'>
-            <a href="auth/twitter/">Sign in with Twitter</a>
+            <a className='twitter-login' href="auth/twitter/">Sign in with Twitter</a>
             <h3>Not a member? {navLink}</h3>
           </div>
             <div className='login-submit guest'>

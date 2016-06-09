@@ -57,6 +57,8 @@ module.exports = React.createClass({
             return (user.first_name + " " + user.last_name).toLowerCase().match( searchString );
         });
     }
+    users = users.slice(0,6);
+    
     return (
       <div>
         <nav className='navbar'>
@@ -88,7 +90,7 @@ module.exports = React.createClass({
               }.bind(this))
               }
               </ul>
-              
+
             </div>
 
           </nav>
