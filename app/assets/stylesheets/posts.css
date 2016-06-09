@@ -16,7 +16,8 @@
   color: #777;
   font-size: 15px;
   position: relative;
-  top: 40px;
+  left: 10px;
+  top: 7px;
 }
 
 .add-post-btn{
@@ -69,9 +70,8 @@
 
 
 .post-edit-btn{
-  float: right;
+
   font-size: 15px;
-  background: #eee;
   color: #444;
   padding: 6px;
   font-weight:normal;
@@ -79,23 +79,26 @@
 }
 
 .post-edit-btn:hover{
-  transition: background-color 1s ease;
-  background-color: #66d9ff;
-  color: white;
+  transition: color 1s ease;
+  color: #66d9ff;
 }
 
 .post-remove-btn{
-  float: right;
   font-size: 15px;
-  background: #eee;
   color: #444;
   padding: 6px;
   font-weight:normal;
   position: relative;
   left: 5px;
 }
+
+.post-remove-btn:hover{
+  transition: color 1s ease;
+  color: #66d9ff;
+}
+
 .post-rmv-edit{
-  padding: 15px;
+  float: right;
   position: relative;
-  bottom: 80px;
+  bottom: 20px;
 }

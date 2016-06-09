@@ -36,10 +36,6 @@ module.exports = React.createClass({
     this.setState({ searchString: "" });
   },
 
-  handleSubmit: function(e){
-    hashHistory.push('/usersearch');
-    this.setState({ searchString: "" });
-  },
 
   logout: function () {
     SessionApiUtil.logout();
@@ -47,18 +43,24 @@ module.exports = React.createClass({
     hashHistory.push('/login');
   },
 
+  handleSubmit: function(){
+    var params = encodeURI(this.state.searchString);
+    hashHistory.push('/usersearch/&param=1');
+    this.setState({ searchString: "" });
+  },
+
   render: function () {
     var that = this;
     var searchString = this.state.searchString.trim().toLowerCase();
-    var users = [];
+    var allUsers = [];
     if(searchString.length > 0){
-        users = SessionStore.all();
-        users = users.filter(function(user){
+        allUsers = SessionStore.all();
+        allUsers = allUsers.filter(function(user){
             return (user.first_name + " " + user.last_name).toLowerCase().match( searchString );
         });
     }
-    users = users.slice(0,6);
-    
+    users = allUsers.slice(0,6);
+
     return (
       <div>
         <nav className='navbar'>

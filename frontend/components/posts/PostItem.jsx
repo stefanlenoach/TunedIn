@@ -36,20 +36,22 @@ module.exports = React.createClass({
     var mod;
 
     if (user.id === SessionStore.currentUser().id) {
-       mod =  <div class='post-mod'><Modal className='modal'
-                isOpen={this.state.modalOpen}
-                onRequestClose={this.onModalCloseEdit}
-                style={ModalStyle}>
-                <PostUpdate post={this.props.post} close={this.onModalCloseEdit}/>
-                <button className='post-cancel' onClick={this.onModalCloseEdit}>Cancel</button>
-              </Modal>
-              <div className='post-rmv-edit'>
-                <button className='post-remove-btn' onClick={this.removePost}>
-                Delete</button>
-
-                <button className='post-edit-btn' onClick={this.modalOpenEdit}>
-                Edit</button>
-              </div></div>;
+       mod =  <div class='post-mod'>
+                <Modal className='modal'
+                  isOpen={this.state.modalOpen}
+                  onRequestClose={this.onModalCloseEdit}
+                  style={ModalStyle}>
+                  <PostUpdate post={this.props.post} close={this.onModalCloseEdit}/>
+                  <button className='post-cancel' onClick={this.onModalCloseEdit}>Cancel</button>
+                </Modal>
+                <div className='post-rmv-edit'>
+                  <button className='post-edit-btn' onClick={this.modalOpenEdit}>
+                  Edit</button>
+                  
+                  <button className='post-remove-btn' onClick={this.removePost}>
+                  Delete</button>
+                </div>
+              </div>;
     } else {
       mod = <div></div>;
     }
@@ -69,12 +71,13 @@ module.exports = React.createClass({
           <div className='post-body'>
             {this.props.post.body}
           </div>
-
-          <div className='post-author'>
-          {"By: " + user.first_name + " " + user.last_name}
+          <div className='post-footer'>
+            <div className='post-author'>
+              {"By: " + user.first_name + " " + user.last_name}
+            </div>
+            {mod}
           </div>
         </div>
-        {mod}
 
       </div>
     );
