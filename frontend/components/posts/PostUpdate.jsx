@@ -45,16 +45,16 @@ module.exports = React.createClass({
     return (
       <form className='post-form' onSubmit={this.handleSubmit}>
 
-        <label className = 'post-label'>Title</label>
+        <label className='post-label'>Title</label>
         <br/>
         <input
-        type='text' className = 'post-input'
+        type='text' className='post-input'
         value={this.state.title}
         onChange={this.changeTitle}/><br/><br/>
 
-        <label className = 'post-label'>Body</label>
+        <label className='post-label'>Body</label>
         <br/>
-        <textarea className = 'post-txt-area'
+        <textarea className='post-txt-area'
         value={this.state.body}
         onChange={this.changeBody}/><br/>
 

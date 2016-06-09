@@ -1,4 +1,4 @@
-.exp-form{
+.post-form{
   font-family: sans-serif;
   font-size: 17px;
   margin-left: auto;
@@ -6,34 +6,30 @@
   padding: 20px;
 }
 
-.exp-label{
+.post-label{
   position: relative;
   left: 3px;
 }
 
-.exp-input{
-  width: 600px;
+.post-input{
+  width: 300px;
   height: 20px;
   border: 1px solid #ccc;
   border-radius: 3px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.exp-txt-area{
-  width: 600px;
+.post-txt-area{
+  width: 300px;
   height: 100px;
   border: 1px solid #ccc;
   border-radius: 3px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.exp-submit{
+.post-submit{
   border: 1px solid transparent;
-  background:  #44b7dd;
+  background: #44b7dd;
   color: white;
   height: 40px;
   width: 70px;
@@ -42,7 +38,7 @@
 
 }
 
-.exp-cancel{
+.post-cancel{
   height: 40px;
   width: 70px;
   border: 1px solid transparent;

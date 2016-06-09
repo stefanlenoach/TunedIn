@@ -3,7 +3,7 @@ var PostIndex = require('./PostIndex');
 var PostForm = require('./PostForm');
 var SessionStore = require('../../stores/session_store');
 var Modal = require('react-modal');
-var ModalStyle = require('../../constants/modal_style');
+var ModalStyle = require('../../constants/modal_style_post');
 
 module.exports = React.createClass({
   getInitialState: function () {

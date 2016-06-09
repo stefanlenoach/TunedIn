@@ -2,7 +2,7 @@ var React = require('react');
 var PostApiUtil = require('../../util/post_api_util');
 var hashHistory = require('react-router').hashHistory;
 var Modal = require('react-modal');
-var ModalStyle = require('../../constants/modal_style');
+var ModalStyle = require('../../constants/modal_style_post');
 var PostUpdate = require('./PostUpdate');
 var SessionStore = require('../../stores/session_store');
 var UserApiUtil = require('../../util/user_api_util');
@@ -47,7 +47,7 @@ module.exports = React.createClass({
                 <div className='post-rmv-edit'>
                   <button className='post-edit-btn' onClick={this.modalOpenEdit}>
                   Edit</button>
-                  
+
                   <button className='post-remove-btn' onClick={this.removePost}>
                   Delete</button>
                 </div>
