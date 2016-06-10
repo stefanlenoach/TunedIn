@@ -4,9 +4,26 @@
 
 }
 
+ .signup-first {
+
+}
+
+.signup-last{
+
+}
+
+.signup-email{
+
+}
+
+.signup-password{
+
+}
+
 .error-login{
   color: red;
   font-size: 12px;
-  position: relative;
-  top: 127px;
+  position: absolute;
+  top: 90px;
+  left: 130px;
 }
