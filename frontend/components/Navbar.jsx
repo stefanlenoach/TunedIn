@@ -45,7 +45,7 @@ module.exports = React.createClass({
 
   handleSubmit: function(){
     var params = encodeURI(this.state.searchString);
-    hashHistory.push('/usersearch/&param=1');
+    hashHistory.push('/usersearch?query=' + params);
     this.setState({ searchString: "" });
   },
 
