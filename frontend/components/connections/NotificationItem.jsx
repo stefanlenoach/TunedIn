@@ -6,13 +6,13 @@ var ConnectionStore = require('../../stores/connection_store');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return { connection: "" };
+    return { connection: undefined };
   },
 
   componentDidMount: function () {
     this.connectionListener = ConnectionStore.addListener(this.onChange);
-    ConnectionApiUtil.getConnections();
     UserApiUtil.getUsers();
+    ConnectionApiUtil.getConnections();
   },
 
   componentWillUnmount: function () {
@@ -20,25 +20,29 @@ module.exports = React.createClass({
   },
 
   onChange: function () {
-    this.forceUpdate();
+
+    this.setState({connection:  ConnectionStore.findByIds(this.props.connection.connector_id, SessionStore.currentUser().id) });
   },
 
   acceptRequest: function () {
     var formData = {
-      id: this.props.connection.id,
-      connector_id: this.props.connection.connector_id,
-      connectee_id: this.props.connection.connectee_id,
+      id: this.state.connection.id,
+      connector_id: this.state.connection.connector_id,
+      connectee_id: this.state.connection.connectee_id,
       status: "connected"
     };
     ConnectionApiUtil.updateConnection(formData);
   },
 
   declineRequest: function () {
-    ConnectionApiUtil.removeConnection(this.props.connection.id);
+    ConnectionApiUtil.removeConnection(this.state.connection.id);
   },
 
   render: function () {
     var user = SessionStore.find(this.props.connection.connector_id);
+    if (!user) {
+      return (<div></div>);
+    }
     return (
       <div className="notification-item">
         <h2>{user.first_name + " " + user.last_name + " wants to connect with you"} </h2>

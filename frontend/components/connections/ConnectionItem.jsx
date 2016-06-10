@@ -21,20 +21,26 @@ module.exports = React.createClass({
 
   render: function () {
     var user = this.findUser();
-    return (
-      <div className='connections' >
-      <Link to={'/users/' + user.id} className="connect-background">
+
+    if (!user) {
+      return(<div></div>);
+    } else {
+
+      return (
+        <div className='connections' >
+        <Link to={'/users/' + user.id} className="connect-background">
         <div className='connect-pic'>
-          <img src={user.image_url}/>
+        <img src={user.image_url}/>
         </div>
 
         <div className='connect-text'>
-          <Link to={'/users/' + user.id} className='connect-name'>{user.first_name + " " + user.last_name}</Link><br/><br/>
-          <Link to={'/users/' + user.id} className='connect-pos'>{user.current_position}</Link><br/><br/>
-          <Link to={'/users/' + user.id} className='connect-loc'>{user.location}</Link>
+        <div to={'/users/' + user.id} className='connect-name'>{user.first_name + " " + user.last_name}</div><br/>
+        <div to={'/users/' + user.id} className='connect-pos'>{user.current_position}</div><br/>
+        <div to={'/users/' + user.id} className='connect-loc'>{user.location}</div>
         </div>
         </Link>
-      </div>
-    );
+        </div>
+      );
+    }
   }
 });

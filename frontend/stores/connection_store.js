@@ -61,7 +61,6 @@ ConnectionStore.findByIds = function (connectorId, connecteeId) {
   Object.keys(_connections).forEach(function (key){
     if ((_connections[key].connector_id === connectorId) && (_connections[key].connectee_id === parseInt(connecteeId))){
       connect = _connections[key];
-
     }
   });
   return connect;
