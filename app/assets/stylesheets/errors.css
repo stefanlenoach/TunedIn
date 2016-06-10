@@ -1,23 +1,27 @@
 .error{
   color: red;
   font-size: 12px;
-
+  position: absolute;
+left: 0;
+right: 0;
+margin-left: auto;
+margin-right: auto;
 }
 
  .signup-first {
-
+   top: 215px;
 }
 
 .signup-last{
-
+  top: 286px;
 }
 
 .signup-email{
-
+  top: 357px;
 }
 
 .signup-password{
-
+  top: 429px;
 }
 
 .error-login{
