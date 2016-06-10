@@ -68,7 +68,7 @@ module.exports = React.createClass({
           onRequestClose={this.onModalClose}
           style={ModalStyle}>
           <ProfileUpdate close={this.onModalClose} user={user}/>
-          <button className='pro-cancel' onClick={this.onModalClose}>Cancel</button>
+          <button className='profile-cancel' onClick={this.onModalClose}>Cancel</button>
         </Modal>
 
       </div>

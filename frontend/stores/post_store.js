@@ -37,15 +37,17 @@ PostStore.__onDispatch = function (payload) {
   switch(payload.actionType){
     case PostConstants.GET_POSTS:
       resetForms(payload.posts);
+      this.__emitChange();
       break;
     case PostConstants.RECEIVE_POST:
       addForm(payload.post);
+      this.__emitChange();
       break;
     case PostConstants.REMOVE_POST:
       removeForm(payload.post);
+      this.__emitChange();
       break;
   }
-  this.__emitChange();
 };
 
 module.exports = PostStore;

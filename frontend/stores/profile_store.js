@@ -37,14 +37,16 @@ ProfileStore.__onDispatch = function (payload) {
   switch(payload.actionType){
     case ProfileConstants.GET_FORMS:
       resetForms(payload.forms);
+      this.__emitChange();
       break;
     case ProfileConstants.RECEIVE_FORM:
       addForm(payload.form);
+      this.__emitChange();
       break;
     case ProfileConstants.REMOVE_FORM:
       removeForm(payload.form);
+      this.__emitChange();
       break;
   }
-  this.__emitChange();
 };
 module.exports = ProfileStore;

@@ -340,6 +340,9 @@ user17 = User.create!(first_name: "Jesse", last_name:  "Jones", password: "12312
 
 Connection.create!(connector_id: user17.id, connectee_id: user1.id)
 Connection.create!(connector_id: user16.id, connectee_id: user1.id)
+Connection.create!(connector_id: user15.id, connectee_id: user1.id)
+Connection.create!(connector_id: user14.id, connectee_id: user1.id)
+Connection.create!(connector_id: user13.id, connectee_id: user1.id)
 Connection.create!(connector_id: user4.id, connectee_id: user1.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user5.id, status: "connected")
 Connection.create!(connector_id: user1.id, connectee_id: user6.id, status: "connected")

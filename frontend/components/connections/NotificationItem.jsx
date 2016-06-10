@@ -5,6 +5,9 @@ var UserApiUtil = require('../../util/user_api_util');
 var ConnectionStore = require('../../stores/connection_store');
 
 module.exports = React.createClass({
+  getInitialState: function () {
+    return { connection: "" };
+  },
 
   componentDidMount: function () {
     this.connectionListener = ConnectionStore.addListener(this.onChange);

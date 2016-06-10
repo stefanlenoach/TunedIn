@@ -26,7 +26,7 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className='profile-form'>
         <form onSubmit={this.handleSubmit}>
           <label className='profile-label'>Current Position</label>
           <br/>

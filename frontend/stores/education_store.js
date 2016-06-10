@@ -37,15 +37,18 @@ EducationStore.__onDispatch = function (payload) {
   switch(payload.actionType){
     case EducationConstants.GET_EDUS:
       resetForms(payload.forms);
+      this.__emitChange();
       break;
     case EducationConstants.RECEIVE_EDU:
       addForm(payload.form);
+      this.__emitChange();
       break;
     case EducationConstants.REMOVE_EDU:
       removeForm(payload.form);
+      this.__emitChange();
       break;
   }
-  this.__emitChange();
+
 };
 
 module.exports = EducationStore;
