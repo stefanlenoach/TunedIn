@@ -299,7 +299,7 @@ user15 = User.create!(first_name: "Vincent", last_name:  "Antonio", password: "1
           diam eloquentiam in ius. At cum ancillae sapientem, est in augue lucilius, movet qu" )
 
 user16 = User.create!(first_name: "Emily", last_name:  "Jackson", password: "123123", email: "petermitchell@gmail.com",
-          current_position: "Mixer/Masterer", location: "Washington", image: File.open('app/assets/images/pic15.jpeg', 'rb') )
+          current_position: "Producer", location: "Washington", image: File.open('app/assets/images/pic15.jpeg', 'rb') )
           Experience.create!(user_id: user16.id, company_name: "WA Music",
           title: "Mixer/Masterer", location: "Washington", description: "Lorem ipsum dolor sit ame
           t, elit voluptua sea an. Posse ridens eam cu. Mundi sua
