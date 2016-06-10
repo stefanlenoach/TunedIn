@@ -24,10 +24,9 @@ inspired by LinkedIn and built using Ruby on Rails, and React.js / Flux
 [![welcome](./docs/images/connections_view.png)]
 
 ###Technical Details:
-* TunedIn allows for users to create a custom profile page,
+TunedIn allows for users to create a custom profile page,
 detail their experience and education, connect with
 other users, and create posts. Information from the database is rendered in JSON.
-
 
 The following table illustrates how I implemented making connections:
 
@@ -38,6 +37,7 @@ id               | integer   | not null, primary key
 connector_id     | integer   | not null, foreign key (references users), indexed
 connectee_id     | string    | not null
 status           | string    | not null, default: pending
+
 
 I made it a priority to avoid duplicating data. Accordingly, this table encapsulates both
 connection requests and made connections. To do that I had to create
