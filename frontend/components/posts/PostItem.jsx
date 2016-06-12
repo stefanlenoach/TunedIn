@@ -13,7 +13,6 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function () {
-    // this.userListener= SessionStore.addListener(this.onChange);
     UserApiUtil.getUsers();
   },
 

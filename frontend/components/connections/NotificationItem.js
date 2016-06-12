@@ -1,10 +1,9 @@
-var React = require('react');
 var ConnectionApiUtil = require('../../util/connection_api_util');
 var SessionStore = require('../../stores/session_store');
 var UserApiUtil = require('../../util/user_api_util');
 var ConnectionStore = require('../../stores/connection_store');
 
-module.exports = React.createClass({
+module.exports = React.createClass({displayName: "exports",
   getInitialState: function () {
     return { connection: undefined };
   },
@@ -38,16 +37,16 @@ module.exports = React.createClass({
   render: function () {
     var user = SessionStore.find(this.props.connection.connector_id);
     if (!user) {
-      return (<div></div>);
+      return (React.createElement("div", null));
     }
     return (
-      <div className="notification-item">
-        <h2>{user.first_name + " " + user.last_name + " wants to connect with you"} </h2>
-        <div className='noti-buttons'>
-          <button className="noti-accept" onClick={this.acceptRequest}>Accept</button>&nbsp;&nbsp;
-          <button className="noti-decline" onClick={this.declineRequest}>Decline</button>
-        </div>
-      </div>
+      React.createElement("div", {className: "notification-item"}, 
+        React.createElement("h2", null, user.first_name + " " + user.last_name + " wants to connect with you", " "), 
+        React.createElement("div", {className: "noti-buttons"}, 
+          React.createElement("button", {className: "noti-accept", onClick: this.acceptRequest}, "Accept"), "  ", 
+          React.createElement("button", {className: "noti-decline", onClick: this.declineRequest}, "Decline")
+        )
+      )
     );
   }
 });

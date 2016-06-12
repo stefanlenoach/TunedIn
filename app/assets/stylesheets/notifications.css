@@ -37,7 +37,8 @@
   background: transparent;
   color: white;
   font-family: sans-serif;
-  position: relative;
+  position: absolute;
+  left: 900px;
   top: 15px;
 }
 
