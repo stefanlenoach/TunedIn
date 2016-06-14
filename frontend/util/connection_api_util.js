@@ -7,10 +7,6 @@ module.exports = {
       dataType: 'json',
       success: function (forms) {
         ConnectionActions.fetchForms(forms);
-      },
-      error: function (xhr) {
-        debugger
-        console.log('ConnectionFormApiUtil#getConnections error');
       }
     });
   },
@@ -21,9 +17,6 @@ module.exports = {
       dataType: 'json',
       success: function (forms) {
         ConnectionActions.receiveForm(forms);
-      },
-      error: function (xhr) {
-        console.log('ConnectionFormApiUtil#getConnection error');
       }
     });
   },
@@ -37,9 +30,6 @@ module.exports = {
       data: { connection: formData },
       success: function (form) {
         ConnectionActions.receiveForm(form);
-      },
-      error: function (xhr) {
-        console.log('ConnectionFormApiUtil#createConnection error');
       }
     });
   },
@@ -53,9 +43,6 @@ module.exports = {
 
       success: function (form) {
         ConnectionActions.receiveForm(form);
-      },
-      error: function (xhr) {
-        console.log('ConnectionFormApiUtil#updateConnection error');
       }
     });
   },
@@ -66,9 +53,6 @@ module.exports = {
       type: 'DELETE',
       success: function (form) {
         ConnectionActions.removeForm(form);
-      },
-      error: function (xhr) {
-        console.log('ConnectionFormApiUtil#deleteConnection error');
       }
     });
   },

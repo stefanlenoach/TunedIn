@@ -7,9 +7,6 @@ module.exports = {
       dataType: 'json',
       success: function (forms) {
         EducationActions.fetchForms(forms);
-      },
-      error: function (xhr) {
-        console.log('EducationFormApiUtil#createEdu error');
       }
     });
   },
@@ -20,9 +17,6 @@ module.exports = {
       dataType: 'json',
       success: function (forms) {
         EducationActions.receiveForm(forms);
-      },
-      error: function (xhr) {
-        console.log('EducationFormApiUtil#getEdu error');
       }
     });
   },
@@ -35,9 +29,6 @@ module.exports = {
       data: { education: formData },
       success: function (form) {
         EducationActions.receiveForm(form);
-      },
-      error: function (xhr) {
-        console.log('EducationFormApiUtil#createEdu error');
       }
     });
   },
@@ -58,9 +49,6 @@ module.exports = {
 
       success: function (form) {
         EducationActions.receiveForm(form);
-      },
-      error: function (xhr) {
-        console.log('EducationFormApiUtil#updateEdu error');
       }
     });
   },
@@ -71,9 +59,6 @@ module.exports = {
       type: 'DELETE',
       success: function (form) {
         EducationActions.removeForm(form);
-      },
-      error: function (xhr) {
-        console.log('EducationFormApiUtil#deleteEdu error');
       }
     });
   },

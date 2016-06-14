@@ -7,9 +7,6 @@ module.exports = {
       dataType: 'json',
       success: function (forms) {
         PostActions.fetchPosts(forms);
-      },
-      error: function (xhr) {
-        console.log('PostPostApiUtil#createPost error');
       }
     });
   },
@@ -20,9 +17,6 @@ module.exports = {
       dataType: 'json',
       success: function (forms) {
         PostActions.receivePost(forms);
-      },
-      error: function (xhr) {
-        console.log('PostPostApiUtil#getPost error');
       }
     });
   },
@@ -35,9 +29,6 @@ module.exports = {
       data: { post: formData },
       success: function (form) {
         PostActions.receivePost(form);
-      },
-      error: function (xhr) {
-        console.log('PostPostApiUtil#createPost error');
       }
     });
   },
@@ -53,9 +44,6 @@ module.exports = {
                     } },
       success: function (form) {
         PostActions.receivePost(form);
-      },
-      error: function (xhr) {
-        console.log('PostPostApiUtil#updatePost error');
       }
     });
   },
@@ -66,9 +54,6 @@ module.exports = {
       type: 'DELETE',
       success: function (form) {
         PostActions.removePost(form);
-      },
-      error: function (xhr) {
-        console.log('PostPostApiUtil#deletePost error');
       }
     });
   },

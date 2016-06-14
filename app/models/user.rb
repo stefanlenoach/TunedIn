@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
 
   def has_password_digest_or_titter_uid
     if (!password_digest && !twitter_uid)
-      console.log('password_digest/twitter_uid validation breached')
+      
     end
   end
 

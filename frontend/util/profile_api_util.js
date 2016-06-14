@@ -7,9 +7,6 @@ module.exports = {
       dataType: 'json',
       success: function (forms) {
         ProfileActions.fetchForms(forms);
-      },
-      error: function (xhr) {
-        console.log('ProfileFormApiUtil#createForm error');
       }
     });
   },
@@ -20,9 +17,6 @@ module.exports = {
       dataType: 'json',
       success: function (forms) {
         ProfileActions.receiveForm(forms);
-      },
-      error: function (xhr) {
-        console.log('ProfileFormApiUtil#getForm error');
       }
     });
   },
@@ -35,9 +29,6 @@ module.exports = {
       data: { experience: formData },
       success: function (form) {
         ProfileActions.receiveForm(form);
-      },
-      error: function (xhr) {
-        console.log('ProfileFormApiUtil#createForm error');
       }
     });
   },
@@ -55,9 +46,6 @@ module.exports = {
 
       success: function (form) {
         ProfileActions.receiveForm(form);
-      },
-      error: function (xhr) {
-        console.log('ProfileFormApiUtil#updateForm error');
       }
     });
   },
@@ -68,9 +56,6 @@ module.exports = {
       type: 'DELETE',
       success: function (form) {
         ProfileActions.removeForm(form);
-      },
-      error: function (xhr) {
-        console.log('ProfileFormApiUtil#deleteForm error');
       }
     });
   },

@@ -11,11 +11,6 @@ var UserApiUtil = {
       data: {user: formData},
       success: function (currentUser) {
         SessionActions.receiveCurrentUser(currentUser);
-      },
-      error: function (xhr) {
-        console.log('UserApiUtil#createAccount error');
-        var errors = xhr.responseJSON;
-        ErrorActions.setErrors("signup", errors);
       }
     });
   },
@@ -27,9 +22,6 @@ var UserApiUtil = {
       method: 'GET',
       success: function (users) {
         SessionActions.receiveUsers(users);
-      },
-      error: function (xhr) {
-        console.log("Error in SessionApiUtil#getUsers error");
       }
     });
   },
@@ -41,9 +33,6 @@ var UserApiUtil = {
       method: 'GET',
       success: function (user) {
         SessionActions.receiveUser(user);
-      },
-      error: function (xhr) {
-        console.log("Error in SessionApiUtil#getUser error");
       }
     });
   },
@@ -56,9 +45,6 @@ var UserApiUtil = {
       data: { user: {location: usr.location, position: usr.position} },
       success: function (currentUser) {
         SessionActions.updateCurrentUser(currentUser);
-      },
-      error: function (xhr) {
-        console.log("Error in SessionApiUtil#updateCurrentUser error");
       }
     });
   },
@@ -74,9 +60,6 @@ var UserApiUtil = {
 
       success: function (currentUser) {
         SessionActions.updateCurrentUser(currentUser);
-      },
-      error: function (xhr) {
-        console.log("Error in SessionApiUtil#updateImage error");
       }
     });
   }

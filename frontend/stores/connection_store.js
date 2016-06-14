@@ -77,12 +77,10 @@ ConnectionStore.__onDispatch = function (payload) {
       break;
     case ConnectionConstants.RECEIVE_CONNECTION:
       addConnection(payload.connection);
-      console.log(_connections);
       this.__emitChange();
       break;
     case ConnectionConstants.REMOVE_CONNECTION:
       removeConnection(payload.connection);
-      console.log(_connections);
       this.__emitChange();
       break;
   }
