@@ -37,11 +37,10 @@ module.exports = React.createClass({
             }
         });
     });
-    
+
     var uniq_posts = posts.filter(function(post, pos){
       return posts.indexOf(post) === pos;
     });
-
     return (
       <div>
       {

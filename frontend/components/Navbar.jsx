@@ -38,9 +38,8 @@ module.exports = React.createClass({
 
 
   logout: function () {
-    SessionApiUtil.logout();
-
     hashHistory.push('/login');
+    SessionApiUtil.logout();
   },
 
   handleSubmit: function(){

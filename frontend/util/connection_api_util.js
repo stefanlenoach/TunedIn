@@ -9,6 +9,7 @@ module.exports = {
         ConnectionActions.fetchForms(forms);
       },
       error: function (xhr) {
+        debugger
         console.log('ConnectionFormApiUtil#getConnections error');
       }
     });
