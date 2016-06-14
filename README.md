@@ -5,23 +5,23 @@ inspired by LinkedIn and built using Ruby on Rails, and React.js / Flux
 
 ###Login View:
 
-[![welcome](./docs/images/login_view.png)]
+![welcome](./docs/images/login_view.png)
 
 ###Create View:
 
-[![welcome](./docs/images/create_view.png)]
+![welcome](./docs/images/create_view.png)
 
 ###Home View:
 
-[![welcome](./docs/images/home_view.png)]
+![welcome](./docs/images/home_view.png)
 
 ###Profile View:
 
-[![welcome](./docs/images/profile_view.png)]
+![welcome](./docs/images/profile_view.png)
 
 ###Connections View:
 
-[![welcome](./docs/images/connections_view.png)]
+![welcome](./docs/images/connections_view.png)
 
 ###Technical Details:
 TunedIn allows for users to create a custom profile page,
