@@ -26,7 +26,6 @@ var App = React.createClass({
     		</hgroup>
     	);
     }
-
   },
 
   render: function() {

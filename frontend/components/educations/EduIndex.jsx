@@ -25,15 +25,15 @@ module.exports = React.createClass({
     var id = this.props.user.id;
     return (
       <div>
-      {
-        this.state.edus.map(function(edu){
-          if (id === edu.user_id && edu.school !== undefined){
-            return (<EduIndexItem key={edu.id} edu={edu}/>);
-          } else {
-            return (null);
-          }
-        })
-      }
+        {
+          this.state.edus.map(function(edu){
+            if (id === edu.user_id && edu.school !== undefined){
+              return (<EduIndexItem key={edu.id} edu={edu}/>);
+            } else {
+              return (null);
+            }
+          })
+        }
       </div>
     );
   }

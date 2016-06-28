@@ -43,6 +43,7 @@ module.exports = React.createClass({
                   <PostUpdate post={this.props.post} close={this.onModalCloseEdit}/>
                   <button className='post-cancel' onClick={this.onModalCloseEdit}>Cancel</button>
                 </Modal>
+
                 <div className='post-rmv-edit'>
                   <button className='post-edit-btn' onClick={this.modalOpenEdit}>
                   Edit</button>
@@ -58,7 +59,6 @@ module.exports = React.createClass({
 
     return (
       <div className='post-item'>
-
         <div className= 'post-pic'>
           <img src={user.image_url}/>
         </div>
@@ -66,7 +66,6 @@ module.exports = React.createClass({
           <div className='post-title'>
             {this.props.post.title}
           </div>
-
           <div className='post-body'>
             {this.props.post.body}
           </div>
@@ -77,7 +76,6 @@ module.exports = React.createClass({
             {mod}
           </div>
         </div>
-
       </div>
     );
   }

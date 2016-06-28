@@ -39,14 +39,14 @@ module.exports = React.createClass({
 
       return (
         <div className="notification-icon">
-        <div>Notifications <h3 className="badge">{this.notificationNumber(connections.length)}</h3> </div>
-        <ul className= 'dropdown'>
-        {
-          connections.map(function(connection){
-            return (<NotificationItem key={connection.id} connection={connection} />);
-          })
-        }
-        </ul>
+          <div>Notifications <h3 className="badge">{this.notificationNumber(connections.length)}</h3> </div>
+          <ul className= 'dropdown'>
+            {
+              connections.map(function(connection){
+                return (<NotificationItem key={connection.id} connection={connection} />);
+              })
+            }
+          </ul>
         </div>
       );
     }

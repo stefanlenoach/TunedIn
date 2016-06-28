@@ -43,11 +43,11 @@ module.exports = React.createClass({
     });
     return (
       <div>
-      {
-        uniq_posts.map(function(post){
-            return (<PostItem key={post.id} post={post}/>);
-        })
-      }
+        {
+          uniq_posts.map(function(post){
+              return (<PostItem key={post.id} post={post}/>);
+          })
+        }
       </div>
     );
   }

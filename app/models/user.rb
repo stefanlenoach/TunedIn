@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
 
   def has_password_digest_or_titter_uid
     if (!password_digest && !twitter_uid)
-      
+
     end
   end
 
@@ -91,7 +91,6 @@ class User < ActiveRecord::Base
 
   def reset_session_token!
     self.session_token = new_session_token
-    # ensure_session_token_uniqueness
     self.save!
     self.session_token
   end
@@ -108,7 +107,6 @@ class User < ActiveRecord::Base
         password_digest: "kljabdfklvboasdflkjbadsglkjbadf"
       )
     end
-
     user
   end
 

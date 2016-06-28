@@ -11,8 +11,6 @@ var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 //components
 var App = require('./components/App.jsx');
-debugger
-
 var LoginForm = require('./components/LoginForm');
 var ProfileForm = require('./components/profile/ProfileForm');
 var HomeForm = require('./components/home/HomeForm');

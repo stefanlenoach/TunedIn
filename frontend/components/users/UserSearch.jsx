@@ -15,11 +15,11 @@ module.exports = React.createClass({
 
     return (
       <div>
-      {
-        allUsers.map(function(user){
-          return (<UserSearchItem key={user.id} user={user} />);
-        })
-      }
+        {
+          allUsers.map(function(user){
+            return (<UserSearchItem key={user.id} user={user} />);
+          })
+        }
       </div>
     );
   }

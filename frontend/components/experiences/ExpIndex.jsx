@@ -25,15 +25,15 @@ module.exports = React.createClass({
     var id = this.props.user.id;
     return (
       <div>
-      {
-        this.state.exps.map(function(exp){
-          if (id === exp.user_id && exp.title !== undefined){
-            return (<ExpIndexItem key={exp.id} exp={exp}/>);
-          } else {
-            return (null);
-          }
-        })
-      }
+        {
+          this.state.exps.map(function(exp){
+            if (id === exp.user_id && exp.title !== undefined){
+              return (<ExpIndexItem key={exp.id} exp={exp}/>);
+            } else {
+              return (null);
+            }
+          })
+        }
       </div>
     );
   }

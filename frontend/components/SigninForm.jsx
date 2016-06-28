@@ -77,55 +77,55 @@ module.exports = React.createClass({
           <h2></h2>
           <h3>Make the most of your professional life</h3>
         </div>
-      <div className='form-signin'>
-        <form onSubmit={this.handleSubmit}>
-        <div className='error signup-base'>
-          { this.fieldErrors("base") }
-        </div>
-        <br />
-        <div className='signin-field'>
-          <label className='signin-label'> First name </label><br />
-          <div className='error signup-first'>
-            { this.fieldErrors("first_name") }
-          </div>
-          <input className="signin-input" type="text" valueLink={this.linkState("first_name")} />
-        </div>
+          <div className='form-signin'>
+            <form onSubmit={this.handleSubmit}>
+              <div className='error signup-base'>
+                { this.fieldErrors("base") }
+              </div>
+              <br />
+              <div className='signin-field'>
+                <label className='signin-label'> First name </label><br />
+                <div className='error signup-first'>
+                  { this.fieldErrors("first_name") }
+                </div>
+                <input className="signin-input" type="text" valueLink={this.linkState("first_name")} />
+              </div>
 
-        <br />
-          <div className='signin-field'>
-          <label className='signin-label'> Last name </label><br />
-          <div className='error signup-last'>
-            { this.fieldErrors("last_name") }
-          </div>
-          <input className="signin-input" type="text" valueLink={this.linkState("last_name")} />
-        </div>
+              <br />
+              <div className='signin-field'>
+                <label className='signin-label'> Last name </label><br />
+                <div className='error signup-last'>
+                  { this.fieldErrors("last_name") }
+                </div>
+                <input className="signin-input" type="text" valueLink={this.linkState("last_name")} />
+              </div>
 
-        <br />
-        <div className='signin-field'>
-          <label className='signin-label'> Email </label><br />
-          <div className='error signup-email'>
-            { this.fieldErrors("email") }
-          </div>
-          <input className="signin-input" type="text" valueLink={this.linkState("email")} />
-        </div>
+              <br />
+              <div className='signin-field'>
+                <label className='signin-label'> Email </label><br />
+                <div className='error signup-email'>
+                  { this.fieldErrors("email") }
+                </div>
+                <input className="signin-input" type="text" valueLink={this.linkState("email")} />
+              </div>
 
-        <br />
-        <div className='signin-field'>
-          <label className='signin-label'> Password (6 or more characters)</label><br />
-          <div className='error signup-password'>
-            { this.fieldErrors("password") }
-          </div>
-          <input className="signin-input" type="password" valueLink={this.linkState("password")} />
-        </div>
-        <br />
-        <p>By clicking Join now, you agree to TunedIn's User Agreement, Privacy Policy, and Cookie Policy.</p>
-        <br />
-        <input className="signin-submit" type="submit" value="Join now" />
+              <br />
+              <div className='signin-field'>
+                <label className='signin-label'> Password (6 or more characters)</label><br />
+                <div className='error signup-password'>
+                  { this.fieldErrors("password") }
+                </div>
+                <input className="signin-input" type="password" valueLink={this.linkState("password")} />
+              </div>
+              <br />
+              <p>By clicking Join now, you agree to TunedIn's User Agreement, Privacy Policy, and Cookie Policy.</p>
+              <br />
+              <input className="signin-submit" type="submit" value="Join now" />
 
-        <div className='signin-login'>
-          <h3>Already on TunedIn? {navLink}</h3>
-        </div>
-        </form>
+              <div className='signin-login'>
+                <h3>Already on TunedIn? {navLink}</h3>
+              </div>
+            </form>
         </div>
       </div>
     );

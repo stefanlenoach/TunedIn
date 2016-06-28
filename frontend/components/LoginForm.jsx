@@ -82,38 +82,34 @@ var LoginForm = React.createClass({
           <h2></h2>
           </div>
 
-        <div className="form-login">
-  				<form onSubmit={this.handleSubmit}>
-            <div className='error-login base'>
-  					     { this.fieldErrors("base") }
-            </div>
-  					<br />
-            <div className='error-login email'>
-  						{ this.fieldErrors("email") }
-            </div>
+        	<div className="form-login">
+  					<form onSubmit={this.handleSubmit}>
+            	<div className='error-login base'>
+  							{ this.fieldErrors("base") }
+            	</div>
+  						<br />
+            	<div className='error-login email'>
+  							{ this.fieldErrors("email") }
+            	</div>
   						<input className="login-input" type="text" placeholder="Email Address" valueLink={this.linkState("email")} />
-
-              <br />
-  					<br />
-            <div className='error-login password'>
-  						{ this.fieldErrors("password") }
-            </div>
+              <br /><br />
+            	<div className='error-login password'>
+  							{ this.fieldErrors("password") }
+            	</div>
   						<input className="login-input" type="password" placeholder="Password" valueLink={this.linkState("password")} />
-
-  					<br />
-  					<input className="login-submit user" type="submit" value="Sign In" />
-  				</form>
-          <div className='twitter-login'>
-          </div>
+  						<br />
+  						<input className="login-submit user" type="submit" value="Sign In" />
+  					</form>
+          <div className='twitter-login'></div>
           <div className='login-signin'>
             <a className='twitter-login' href="auth/twitter/">Sign in with Twitter</a>
             <h3>Not a member? {navLink}</h3>
           </div>
-            <div className='login-submit guest'>
-              <button className="guest-btn" onClick={this.guestSignIn}>Guest</button>
-            </div>
+          <div className='login-submit guest'>
+            <button className="guest-btn" onClick={this.guestSignIn}>Guest</button>
           </div>
         </div>
+      </div>
 			);
     }
 });
