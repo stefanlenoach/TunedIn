@@ -36,7 +36,6 @@ module.exports = React.createClass({
     this.setState({ searchString: "" });
   },
 
-
   logout: function () {
     hashHistory.push('/login');
     SessionApiUtil.logout();

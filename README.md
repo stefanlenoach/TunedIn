@@ -74,9 +74,9 @@ beginning, but after I wrapped my head around it I realized it's not so complica
 * PostgreSQL
 * Figaro
 * Twitter-OmniAuth
-* React Router
-* Webpack
-* Heroku
+  * React Router
+  * Webpack
+  * Heroku
 
 ###To-Do:
 * [ ] Allow users to comment on posts

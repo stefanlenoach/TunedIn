@@ -101,7 +101,7 @@ var LoginForm = React.createClass({
   						<input className="login-input" type="password" placeholder="Password" valueLink={this.linkState("password")} />
 
   					<br />
-  					<input className="login-submit" type="submit" value="Sign In" />
+  					<input className="login-submit user" type="submit" value="Sign In" />
   				</form>
           <div className='twitter-login'>
           </div>
