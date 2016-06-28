@@ -1,9 +1,7 @@
 .notification-icon{
-  /*float: right;*/
   color: white;
   position: relative;
   width: 200px;
-  /*right: 300px;*/
 }
 
 .logout-btn{
@@ -18,7 +16,6 @@
 .dropdown {
   position: absolute;
   top: 18px;
-
   width: 300px;
   height: 60px;
   display: inline-block;
@@ -67,10 +64,6 @@
   transition: background-color 1s ease;
   background-color: #ccc;
 }
-/*
-.notification-icon:hover .notification-item {
-  display:block;
-}*/
 
 .noti-buttons{
   padding-top: 5px;
