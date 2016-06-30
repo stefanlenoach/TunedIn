@@ -74,6 +74,14 @@ var LoginForm = React.createClass({
     return this.props.location.pathname.slice(1);
   },
 
+	handleEM: function (event) {
+		this.setState({email: event.target.value});
+	},
+
+	handlePW: function (event) {
+		this.setState({password: event.target.value});
+	},
+
 	render: function () {
     var  navLink = <Link className='login-link' to="/signup">Join now</Link>;
 			return (
@@ -91,12 +99,12 @@ var LoginForm = React.createClass({
             	<div className='error-login email'>
   							{ this.fieldErrors("email") }
             	</div>
-  						<input className="login-input" type="text" placeholder="Email Address" valueLink={this.linkState("email")} />
+  						<input className="login-input" type="text" placeholder="Email Address" onChange={this.handleEM} />
               <br /><br />
             	<div className='error-login password'>
   							{ this.fieldErrors("password") }
             	</div>
-  						<input className="login-input" type="password" placeholder="Password" valueLink={this.linkState("password")} />
+  						<input className="login-input" type="password" placeholder="Password" onChange={this.handlePW} />
   						<br />
   						<input className="login-submit user" type="submit" value="Sign In" />
   					</form>

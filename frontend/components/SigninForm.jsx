@@ -69,6 +69,22 @@ module.exports = React.createClass({
     return this.props.location.pathname.slice(1);
   },
 
+  handleFN: function (event) {
+    this.setState({first_name: event.target.value});
+  },
+
+  handleLN: function (event) {
+    this.setState({last_name: event.target.value});
+  },
+
+  handleEM: function (event) {
+    this.setState({email: event.target.value});
+  },
+
+  handlePW: function (event) {
+    this.setState({password: event.target.value});
+  },
+
   render: function () {
     var navLink = <Link className= 'signin-link' to="/login">Sign in</Link>;
     return (
@@ -88,7 +104,7 @@ module.exports = React.createClass({
                 <div className='error signup-first'>
                   { this.fieldErrors("first_name") }
                 </div>
-                <input className="signin-input" type="text" valueLink={this.linkState("first_name")} />
+                <input className="signin-input" type="text" onChange={this.handleFN} />
               </div>
 
               <br />
@@ -97,7 +113,7 @@ module.exports = React.createClass({
                 <div className='error signup-last'>
                   { this.fieldErrors("last_name") }
                 </div>
-                <input className="signin-input" type="text" valueLink={this.linkState("last_name")} />
+                <input className="signin-input" type="text" onChange={this.handleLN} />
               </div>
 
               <br />
@@ -106,7 +122,7 @@ module.exports = React.createClass({
                 <div className='error signup-email'>
                   { this.fieldErrors("email") }
                 </div>
-                <input className="signin-input" type="text" valueLink={this.linkState("email")} />
+                <input className="signin-input" type="text" onChange={this.handleEM} />
               </div>
 
               <br />
@@ -115,7 +131,7 @@ module.exports = React.createClass({
                 <div className='error signup-password'>
                   { this.fieldErrors("password") }
                 </div>
-                <input className="signin-input" type="password" valueLink={this.linkState("password")} />
+                <input className="signin-input" type="password" onChange={this.handlePW} />
               </div>
               <br />
               <p>By clicking Join now, you agree to TunedIn's User Agreement, Privacy Policy, and Cookie Policy.</p>
