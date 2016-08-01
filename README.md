@@ -3,6 +3,8 @@
 TunedIn is a web application for musicians and music professionals to connect with one another. It was
 inspired by LinkedIn and built using Ruby on Rails, and React.js / Flux
 
+Live: http://tunedin.site
+
 ###Login View:
 
 ![welcome](./docs/images/login_view.png)
