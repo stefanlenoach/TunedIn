@@ -1,3 +1,10 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: #ddd;
+}
+
+
 .home-header{
   margin: 0 auto;
   background: white;
